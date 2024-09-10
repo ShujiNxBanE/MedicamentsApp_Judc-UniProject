@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="550dp"
+    android:orientation="vertical">
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner" />
+
+    <EditText
+        android:id="@+id/etDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Días"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/etWeeks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Semanas"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/etMonths"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meses"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Programar"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
