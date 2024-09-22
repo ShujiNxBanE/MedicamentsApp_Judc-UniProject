@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="550dp"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar fecha de inicio:" />
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Fecha" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar hora de inicio:" />
 
     <TimePicker
         android:id="@+id/timePicker"
@@ -11,34 +29,35 @@
         android:layout_height="wrap_content"
         android:timePickerMode="spinner" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cada cuántas horas:" />
+
+    <EditText
+        android:id="@+id/etHours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por cuántos días:" />
+
     <EditText
         android:id="@+id/etDays"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Días"
+        android:inputType="number"
         android:minHeight="48dp"
-        tools:ignore="Autofill,HardcodedText,TextFields" />
-
-    <EditText
-        android:id="@+id/etWeeks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Semanas"
-        android:minHeight="48dp"
-        tools:ignore="Autofill,HardcodedText,TextFields" />
-
-    <EditText
-        android:id="@+id/etMonths"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Meses"
-        android:minHeight="48dp"
-        tools:ignore="Autofill,HardcodedText,TextFields" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnSchedule"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Programar"
-        tools:ignore="HardcodedText" />
+        android:text="Programar" />
 </LinearLayout>

@@ -1,8 +1,12 @@
 package com.example.medicametos_judc
 
-import NotificationWorker
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.app.Dialog
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
@@ -21,12 +25,12 @@ import com.example.medicametos_judc.databinding.ActivityMedicamentoDetailBinding
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
 
-@Suppress("DEPRECATION")
+@Suppress("DEPRECATION", "LABEL_NAME_CLASH")
 class MedicamentoDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMedicamentoDetailBinding
 
-    @SuppressLint("DiscouragedApi")
+    @SuppressLint("DiscouragedApi", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMedicamentoDetailBinding.inflate(layoutInflater)
@@ -94,8 +98,87 @@ class MedicamentoDetailActivity : AppCompatActivity() {
             // Ahora generar los TextViews dinámicamente para las indicaciones
             generarIndicaciones(medicamento.indicaciones)
 
+            createNotificationChannel()
+
+            if (isMedicamentoProgrammed(medicamento)) {
+                binding.btnTakeMedicament.text = "Cancelar Programación"
+            } else {
+                binding.btnTakeMedicament.text = "Programar Medicamento"
+            }
+
+
             binding.btnTakeMedicament.setOnClickListener {
-                showScheduleDialog(medicamento)
+
+                if (binding.btnTakeMedicament.text == "Cancelar Programación") {
+                    WorkManager.getInstance(this).cancelAllWorkByTag(medicamento.nombre)
+                    saveProgrammingState(medicamento, false)
+                    binding.btnTakeMedicament.text = "Programar Medicamento"
+                    Toast.makeText(this, "Programación cancelada", Toast.LENGTH_SHORT).show()
+                } else {
+                    // Crear el Dialog
+                    val dialog = Dialog(this)
+                    dialog.setContentView(R.layout.dialog_schedule_medicament)
+
+                    val timePicker = dialog.findViewById<TimePicker>(R.id.timePicker)
+                    val etHours = dialog.findViewById<EditText>(R.id.etHours)
+                    val etDays = dialog.findViewById<EditText>(R.id.etDays)
+                    val btnSelectDate = dialog.findViewById<Button>(R.id.btnSelectDate)
+                    val btnSchedule = dialog.findViewById<Button>(R.id.btnSchedule)
+
+                    var selectedYear = 0
+                    var selectedMonth = 0
+                    var selectedDay = 0
+
+                    // Mostrar el DatePickerDialog cuando se selecciona la fecha
+                    btnSelectDate.setOnClickListener {
+                        val calendar = Calendar.getInstance()
+                        val year = calendar.get(Calendar.YEAR)
+                        val month = calendar.get(Calendar.MONTH)
+                        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+                        val datePickerDialog = DatePickerDialog(this, { _, pickedYear, pickedMonth, pickedDay ->
+                            selectedYear = pickedYear
+                            selectedMonth = pickedMonth
+                            selectedDay = pickedDay
+                            btnSelectDate.text = "$pickedDay/${pickedMonth + 1}/$pickedYear"
+                        }, year, month, day)
+                        datePickerDialog.show()
+                    }
+
+                    btnSchedule.setOnClickListener {
+                        // Obtener la hora seleccionada
+                        val hour = timePicker.hour
+                        val minute = timePicker.minute
+
+                        // Obtener la cantidad de horas y días
+                        val hoursInterval = etHours.text.toString().toIntOrNull() ?: 0
+                        val days = etDays.text.toString().toIntOrNull() ?: 0
+
+                        // Asegurarse de que el usuario seleccionó una fecha válida
+                        if (selectedYear == 0 || selectedMonth == 0 || selectedDay == 0) {
+                            Toast.makeText(this, "Por favor, selecciona una fecha", Toast.LENGTH_SHORT).show()
+                            return@setOnClickListener
+                        }
+
+                        // Crear un Calendar con la fecha y hora seleccionadas
+                        val calendar = Calendar.getInstance()
+                        calendar.set(selectedYear, selectedMonth, selectedDay, hour, minute, 0)
+
+                        // Programar la notificación usando WorkManager
+                        scheduleNotification(medicamento.nombre, calendar.timeInMillis, hoursInterval, days)
+
+                        // Programar medicamento
+                        saveProgrammingState(medicamento, true)
+                        // Cambiar el texto del botón a "Cancelar Programación"
+                        binding.btnTakeMedicament.text = "Cancelar Programación"
+
+                        // Cerrar el dialog
+                        dialog.dismiss()
+                    }
+
+                    // Mostrar el Dialog
+                    dialog.show()
+                }
             }
         }
     }
@@ -123,76 +206,56 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         }
     }
 
-    // Función para mostrar el diálogo de programación de la toma de medicamentos
-    private fun showScheduleDialog(medicamento: Medicamento?) {
-        val dialog = Dialog(this)
-        dialog.setContentView(R.layout.dialog_schedule_medicament)
+    private fun scheduleNotification(medicamentoNombre: String, startTimeInMillis: Long, intervalHours: Int, days: Int) {
+        val currentTime = System.currentTimeMillis()
+        val initialDelay = startTimeInMillis - currentTime
 
-        val timePicker = dialog.findViewById<TimePicker>(R.id.timePicker)
-        val etDays = dialog.findViewById<EditText>(R.id.etDays)
-        val etWeeks = dialog.findViewById<EditText>(R.id.etWeeks)
-        val etMonths = dialog.findViewById<EditText>(R.id.etMonths)
-        val btnSchedule = dialog.findViewById<Button>(R.id.btnSchedule)
-
-        timePicker.setIs24HourView(true)
-
-        btnSchedule.setOnClickListener {
-            val hour = timePicker.hour
-            val minute = timePicker.minute
-            val days = etDays.text.toString().toIntOrNull() ?: 0
-            val weeks = etWeeks.text.toString().toIntOrNull() ?: 0
-            val months = etMonths.text.toString().toIntOrNull() ?: 0
-
-            // Calcular el tiempo total en milisegundos
-            val durationInMillis = calculateDurationInMillis(days, weeks, months)
-
-            // Programar la notificación
-            scheduleNotification(medicamento, hour, minute, durationInMillis)
-
-            Toast.makeText(this, "Programación guardada", Toast.LENGTH_SHORT).show()
-            dialog.dismiss()
+        if (initialDelay < 0) {
+            Toast.makeText(this, "La fecha y hora seleccionada ya pasó", Toast.LENGTH_SHORT).show()
+            return
         }
 
-        dialog.show()
-    }
-
-    // Función para calcular el tiempo en milisegundos de los días, semanas y meses
-    private fun calculateDurationInMillis(days: Int, weeks: Int, months: Int): Long {
-        val daysInMillis = TimeUnit.DAYS.toMillis(days.toLong())
-        val weeksInMillis = TimeUnit.DAYS.toMillis((weeks * 7).toLong())
-        val monthsInMillis = TimeUnit.DAYS.toMillis((months * 30).toLong())
-        return daysInMillis + weeksInMillis + monthsInMillis
-    }
-
-    // Función para programar la notificación
-    private fun scheduleNotification(medicamento: Medicamento?, hour: Int, minute: Int, durationInMillis: Long) {
-        val currentTime = Calendar.getInstance()
-        val targetTime = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, hour)
-            set(Calendar.MINUTE, minute)
-            set(Calendar.SECOND, 0)
-        }
-
-        if (currentTime.after(targetTime)) {
-            targetTime.add(Calendar.DAY_OF_YEAR, 1) // Si la hora ya pasó, prográmalo para el día siguiente
-        }
-
-        val initialDelay = targetTime.timeInMillis - currentTime.timeInMillis
-
-        // Configurar la notificación usando WorkManager
+        // Programar la primera notificación
         val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
-            .setInitialDelay(initialDelay + durationInMillis, TimeUnit.MILLISECONDS)
+            .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
             .setInputData(workDataOf(
-                "medicamentoNombre" to medicamento?.nombre
+                "medicamentoNombre" to medicamentoNombre,
+                "intervalHours" to intervalHours,
+                "days" to days
             ))
             .build()
 
         WorkManager.getInstance(this).enqueue(workRequest)
     }
 
-    // Función para eliminar la programación de un medicamento
-    private fun cancelScheduledNotification() {
-        WorkManager.getInstance(this).cancelAllWork()
-        Toast.makeText(this, "Programación eliminada", Toast.LENGTH_SHORT).show()
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "Canal de Medicamentos"
+            val descriptionText = "Recordatorio de medicamentos"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel("medicamento_channel", name, importance).apply {
+                description = descriptionText
+            }
+
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
+
+    // Función para guardar el estado de programación en SharedPreferences
+    private fun saveProgrammingState(medicamento: Medicamento, isProgrammed: Boolean) {
+        val sharedPref = getSharedPreferences("medicamento_prefs", Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putBoolean(medicamento.nombre, isProgrammed)
+            apply()
+        }
+    }
+
+    // Función para recuperar el estado de programación desde SharedPreferences
+    private fun isMedicamentoProgrammed(medicamento: Medicamento): Boolean {
+        val sharedPref = getSharedPreferences("medicamento_prefs", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean(medicamento.nombre, false)
+    }
+
 }
