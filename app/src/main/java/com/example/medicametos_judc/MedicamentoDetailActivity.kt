@@ -24,6 +24,10 @@ import androidx.work.workDataOf
 import com.example.medicametos_judc.databinding.ActivityMedicamentoDetailBinding
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Intent
+
 
 @Suppress("DEPRECATION", "LABEL_NAME_CLASH")
 class MedicamentoDetailActivity : AppCompatActivity() {
@@ -206,27 +210,39 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("ScheduleExactAlarm")
     private fun scheduleNotification(medicamentoNombre: String, startTimeInMillis: Long, intervalHours: Int, days: Int) {
-        val currentTime = System.currentTimeMillis()
-        val initialDelay = startTimeInMillis - currentTime
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
-        if (initialDelay < 0) {
-            Toast.makeText(this, "La fecha y hora seleccionada ya pasó", Toast.LENGTH_SHORT).show()
-            return
+        // Calcular el total de horas: días * 24
+        val totalHours = days * 24
+
+        // Crear un intent para enviar el nombre del medicamento al BroadcastReceiver
+        val intent = Intent(this, NotificationReceiver::class.java).apply {
+            putExtra("medicamentoNombre", medicamentoNombre)
+            putExtra("remainingHours", totalHours) // Enviar las horas totales en lugar de los días
+            putExtra("intervalHours", intervalHours)
         }
 
-        // Programar la primera notificación
-        val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
-            .setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
-            .setInputData(workDataOf(
-                "medicamentoNombre" to medicamentoNombre,
-                "intervalHours" to intervalHours,
-                "days" to days
-            ))
-            .build()
+        val pendingIntent = PendingIntent.getBroadcast(
+            this,
+            medicamentoNombre.hashCode(), // ID único para cada medicamento
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE // Para actualizar si ya está programado
+        )
 
-        WorkManager.getInstance(this).enqueue(workRequest)
+        // Programar la alarma con AlarmManager
+        alarmManager.setExactAndAllowWhileIdle(
+            AlarmManager.RTC_WAKEUP, // Usar RTC_WAKEUP para despertarse si el dispositivo está en reposo
+            startTimeInMillis, // Tiempo de inicio de la alarma
+            pendingIntent
+        )
+
+        Toast.makeText(this, "Notificación programada para $medicamentoNombre", Toast.LENGTH_SHORT).show()
     }
+
+
+
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
