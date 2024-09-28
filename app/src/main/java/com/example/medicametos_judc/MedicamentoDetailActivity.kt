@@ -1,16 +1,21 @@
 package com.example.medicametos_judc
 
 import android.annotation.SuppressLint
+import android.app.AlarmManager
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -18,15 +23,9 @@ import android.widget.TimePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import androidx.work.workDataOf
 import com.example.medicametos_judc.databinding.ActivityMedicamentoDetailBinding
 import java.util.Calendar
-import java.util.concurrent.TimeUnit
-import android.app.AlarmManager
-import android.app.PendingIntent
-import android.content.Intent
 
 
 @Suppress("DEPRECATION", "LABEL_NAME_CLASH")
@@ -63,8 +62,8 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                     val imageView = ImageView(this).apply {
                         setImageResource(imageResId)
                         layoutParams = LinearLayout.LayoutParams(
-                            250,
-                            250
+                            150,
+                            150
                         ).apply {
                             setMargins(16, 16, 16, 16) // Añadir márgenes si es necesario
                         }
@@ -75,25 +74,34 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                     imageView.setOnClickListener {
                         // Crear y mostrar un Dialog con la imagen en pantalla completa
                         val dialog = Dialog(this@MedicamentoDetailActivity)
+                        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE) // Quitar título
                         dialog.setContentView(R.layout.dialog_image_fullscreen)
 
                         // Configurar la imagen en el Dialog
                         val imageFullScreen = dialog.findViewById<ImageView>(R.id.image_fullscreen)
                         imageFullScreen.setImageResource(imageResId)
 
-                        // Ajustar el tamaño de la imagen
-                        val desiredWidth = 1200  // Definir el ancho deseado
-                        val desiredHeight = 1000 // Definir la altura deseada
+                        // Obtener el tamaño de la pantalla
+                        val displayMetrics = resources.displayMetrics
+                        val screenWidth = displayMetrics.widthPixels
+                        val screenHeight = displayMetrics.heightPixels
 
+                        // Calcular el 70% del tamaño de la pantalla
+                        val desiredWidth = (screenWidth * 0.7).toInt()
+                        val desiredHeight = (screenHeight * 0.7).toInt()
+
+                        // Ajustar el tamaño de la imagen
                         val layoutParams = imageFullScreen.layoutParams
                         layoutParams.width = desiredWidth
                         layoutParams.height = desiredHeight
                         imageFullScreen.layoutParams = layoutParams
+
+                        // Ajustar el tamaño del Dialog para que se ajuste al contenido
+                        dialog.window?.setLayout(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+
                         // Mostrar el Dialog
                         dialog.show()
                     }
-
-
                     // Añadir el ImageView al LinearLayout
                     binding.medicamentImages.addView(imageView)
                 }
@@ -101,6 +109,8 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
             // Ahora generar los TextViews dinámicamente para las indicaciones
             generarIndicaciones(medicamento.indicaciones)
+
+            binding.medicamentContraindications.text = medicamento.contraindicaciones.toString()
 
             createNotificationChannel()
 

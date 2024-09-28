@@ -7,40 +7,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <LinearLayout
-        android:id="@+id/linear1"
+        android:id="@+id/linear_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal"
-        tools:ignore="ExtraText">
+        android:background="@color/black"
+        android:paddingHorizontal="16dp"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_notification"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/app_title"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:paddingHorizontal="4dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_title">
+
+        <!-- EditText - Campo de búsqueda -->
         <EditText
             android:id="@+id/et_search_medicament"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:autofillHints=""
-            android:importantForAutofill="no"
-            android:inputType="text"
             android:minHeight="48dp"
-            android:imeOptions="actionSearch"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/search_edittext_background"
+            android:padding="12dp"
             android:hint="Buscar medicamento"
-            tools:ignore="Autofill,HardcodedText,LabelFor,
-            SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+            android:textColor="#000000"
+            android:textColorHint="#808080"
+            android:inputType="text"
+            android:elevation="4dp"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no" />
 
-
+        <!-- Botón de búsqueda -->
         <Button
             android:id="@+id/btn_search_medicament"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:minHeight="48dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/search_button_background"
             android:text="Buscar"
-            tools:ignore="HardcodedText,VisualLintBounds,VisualLintButtonSize" />
-
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:elevation="4dp"/>
     </LinearLayout>
+
+    
+    <TextView
+        android:id="@+id/label_chapters"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"
+        android:text="Capítulos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        android:elevation="4dp"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/searchResults"
@@ -61,8 +117,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear1"
+        app:layout_constraintTop_toBottomOf="@+id/label_chapters"
         android:orientation="vertical"
+        android:layout_marginTop="12dp"
         tools:ignore="UselessLeaf">
 
 

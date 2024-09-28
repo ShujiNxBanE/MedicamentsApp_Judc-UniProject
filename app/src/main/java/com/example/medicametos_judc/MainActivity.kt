@@ -1,12 +1,15 @@
 package com.example.medicametos_judc
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.medicametos_judc.databinding.ActivityMainBinding
 
@@ -30,6 +33,10 @@ class MainActivity : AppCompatActivity() {
             val query = binding.etSearchMedicament.text.toString().trim()
             if (query.isNotEmpty()) {
                 searchMedicaments(query, medicamentos)
+
+                // Ocultar el teclado
+                val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(binding.etSearchMedicament.windowToken, 0)
             }
         }
 
@@ -55,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         // Ocultar los resultados de búsqueda y mostrar capítulos
         binding.searchResults.visibility = LinearLayout.GONE
         binding.chapters.visibility = LinearLayout.VISIBLE
+        binding.labelChapters.visibility = TextView.VISIBLE
 
         // Limpiar el LinearLayout antes de agregar nuevos botones
         binding.chapters.removeAllViews()
@@ -85,6 +93,7 @@ class MainActivity : AppCompatActivity() {
         // Ocultar capítulos y mostrar resultados de búsqueda
         binding.chapters.visibility = LinearLayout.GONE
         binding.searchResults.visibility = LinearLayout.VISIBLE
+        binding.labelChapters.visibility = TextView.GONE
 
         // Limpiar el LinearLayout antes de agregar nuevos botones
         binding.searchResults.removeAllViews()
