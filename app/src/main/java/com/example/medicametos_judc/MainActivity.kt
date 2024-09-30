@@ -5,12 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Gravity
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.medicametos_judc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -74,8 +76,26 @@ class MainActivity : AppCompatActivity() {
                 layoutParams = LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
-                )
+                ).apply {
+                    setMargins(16, 16, 16, 16) // Añadir márgenes entre botones
+                }
+
+                // Aplicar estilos manualmente en lugar de usar styles
+                backgroundTintList = ContextCompat.getColorStateList(context, R.color.btn_color)
+                setTextColor(ContextCompat.getColor(context, android.R.color.white))
+                setPadding(16, 16, 16, 16)
+                textSize = 18f
+                gravity = Gravity.CENTER
+                elevation = 8f
+                setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.baseline_arrow_forward_24, 0)
+                compoundDrawablePadding = 8
+
+                // Añadir animación para que el botón resalte al hacer clic
                 setOnClickListener {
+                    // Cambiar el fondo del botón temporalmente para dar feedback visual
+                    this@apply.alpha = 0.7f
+                    postDelayed({ this@apply.alpha = 1f }, 200)
+
                     // Inicia la nueva actividad y pasa el objeto Capitulo completo
                     val intent = Intent(this@MainActivity, CapituloDetailActivity::class.java).apply {
                         putExtra("capitulo", capitulo)
@@ -83,7 +103,6 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
             // Añadir el botón al LinearLayout
             binding.chapters.addView(button)
         }
@@ -110,7 +129,20 @@ class MainActivity : AppCompatActivity() {
                 layoutParams = LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
-                )
+                ).apply {
+                    setMargins(16, 16, 16, 16) // Añadir márgenes entre botones
+                }
+
+                // Aplicar estilos manualmente
+                backgroundTintList = ContextCompat.getColorStateList(context, R.color.btn_color) // Color de fondo
+                setTextColor(ContextCompat.getColor(context, android.R.color.white)) // Color del texto
+                setPadding(16, 16, 16, 16) // Padding
+                textSize = 18f // Tamaño del texto
+                gravity = Gravity.CENTER // Alinear texto al centro
+                elevation = 8f // Elevación
+                setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.baseline_arrow_forward_24, 0) // Ícono a la derecha
+                compoundDrawablePadding = 8 // Espaciado entre texto e ícono
+
                 setOnClickListener {
                     // Inicia la actividad de detalles del medicamento y pasa el objeto Medicamento completo
                     val intent =
@@ -120,7 +152,6 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
             // Añadir el botón al LinearLayout
             binding.searchResults.addView(button)
         }

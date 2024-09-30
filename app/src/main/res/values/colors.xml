@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="app_tittle">#0A2F51</color>
+    <color name="btn_color">#0E4D92</color>
+    <color name="color_icon_bg">#4682B4</color>
+    <color name="app_bg">#87CEEB</color>
+    <color name="app_bg2">#F0F8FF</color>
+    <color name="separator_color">#ADD8E6</color>
 </resources>
