@@ -5,27 +5,58 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CapituloDetailActivity">
+    tools:context=".CapituloDetailActivity"
+    android:background="@color/app_bg">
 
-    <TextView
-        android:id="@+id/capituloNombreTextView"
+    <LinearLayout
+        android:id="@+id/linear_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Texto para visualizar 1"
-        android:textAlignment="center" />
+        android:background="@color/app_tittle"
+        android:paddingHorizontal="16dp"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_notification"
+            android:background="@drawable/rounded_background"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tv_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/app_title"/>
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/capituloDescripcionTextView"
+        android:id="@+id/label_subgroups"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/capituloNombreTextView"
-        android:text="Texto para visualizar 2"
-        android:textAlignment="center" />
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/app_tittle"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Subgrupos"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/linear_title"
+        tools:ignore="HardcodedText,TextSizeCheck" />
 
     <LinearLayout
         android:id="@+id/subgroups"
@@ -33,7 +64,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/capituloDescripcionTextView"
+        app:layout_constraintTop_toBottomOf="@id/label_subgroups"
         android:orientation="vertical">
 
 

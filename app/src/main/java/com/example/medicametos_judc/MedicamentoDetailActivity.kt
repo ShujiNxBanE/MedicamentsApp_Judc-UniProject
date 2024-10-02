@@ -43,6 +43,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
         if (medicamento != null) {
             // Mostrar detalles del medicamento
+            binding.tvApp.text = medicamento.nombre
             binding.medicamentName.text = medicamento.nombre
             binding.medicamentDescription.text = medicamento.descripcion
 
