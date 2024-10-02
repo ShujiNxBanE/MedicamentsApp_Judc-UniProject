@@ -10,18 +10,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccionar fecha de inicio:" />
+        android:text="Seleccionar fecha de inicio:"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnSelectDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Seleccionar Fecha" />
+        android:backgroundTint="@color/btn_color"
+        android:textColor="@color/white"
+        android:text="Seleccionar Fecha"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccionar hora de inicio:" />
+        android:layout_marginTop="15dp"
+        android:text="Seleccionar hora de inicio:"
+        tools:ignore="HardcodedText" />
 
     <TimePicker
         android:id="@+id/timePicker"
@@ -32,7 +38,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cada cuántas horas:" />
+        android:text="Cada cuántas horas:"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/etHours"
@@ -41,12 +48,13 @@
         android:inputType="number"
         android:maxLength="2"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Por cuántos días:" />
+        android:text="Por cuántos días:"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/etDays"
@@ -55,11 +63,14 @@
         android:inputType="number"
         android:maxLength="2"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <Button
         android:id="@+id/btnSchedule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Programar" />
+        android:backgroundTint="@color/btn_color"
+        android:textColor="@color/white"
+        android:text="Programar"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 </LinearLayout>

@@ -44,7 +44,6 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         if (medicamento != null) {
             // Mostrar detalles del medicamento
             binding.tvApp.text = medicamento.nombre
-            binding.medicamentName.text = medicamento.nombre
             binding.medicamentDescription.text = medicamento.descripcion
 
             // Limpiar el LinearLayout antes de agregar nuevas imágenes (por si se reutiliza la vista)
@@ -110,8 +109,10 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
             // Ahora generar los TextViews dinámicamente para las indicaciones
             generarIndicaciones(medicamento.indicaciones)
-
-            binding.medicamentContraindications.text = medicamento.contraindicaciones.toString()
+            generarContraIndicaciones(medicamento.contraindicaciones)
+            generarPrecauciones(medicamento.precauciones)
+            generarDosificaciones(medicamento.dosificacion)
+            generarEfectosAdversos(medicamento.efectosAdversos)
 
             createNotificationChannel()
 
@@ -198,6 +199,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun generarIndicaciones(indicaciones: List<String>) {
         // Limpiar el LinearLayout por si ya tiene elementos previos
         binding.medicamentIndications.removeAllViews()
@@ -205,7 +207,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
         for (indicacion in indicaciones) {
             val textView = TextView(this).apply {
-                text = indicacion
+                text = "• $indicacion"
                 layoutParams = LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
@@ -213,11 +215,107 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                     setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
                 }
                 textSize = 16f // Ajustar el tamaño de texto
-                setTextColor(ContextCompat.getColor(context, R.color.black)) // Color del texto
+                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
             }
 
             // Añadir el TextView al LinearLayout
             binding.medicamentIndications.addView(textView)
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun generarContraIndicaciones(contraindicaciones: List<String>) {
+        // Limpiar el LinearLayout por si ya tiene elementos previos
+        binding.medicamentContraindications.removeAllViews()
+
+        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
+        for (contraindicacion in contraindicaciones) {
+            val textView = TextView(this).apply {
+                text = "• $contraindicacion"
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                }
+                textSize = 16f // Ajustar el tamaño de texto
+                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+            }
+
+            // Añadir el TextView al LinearLayout
+            binding.medicamentContraindications.addView(textView)
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun generarPrecauciones(precauciones: List<String>) {
+        // Limpiar el LinearLayout por si ya tiene elementos previos
+        binding.medicamentPrecautions.removeAllViews()
+
+        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
+        for (precaucion in precauciones) {
+            val textView = TextView(this).apply {
+                text = "• $precaucion"
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                }
+                textSize = 16f // Ajustar el tamaño de texto
+                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+            }
+
+            // Añadir el TextView al LinearLayout
+            binding.medicamentPrecautions.addView(textView)
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun generarDosificaciones(dosificaciones: List<String>) {
+        // Limpiar el LinearLayout por si ya tiene elementos previos
+        binding.medicamentDosage.removeAllViews()
+
+        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
+        for (dosificacion in dosificaciones) {
+            val textView = TextView(this).apply {
+                text = "• $dosificacion"
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                }
+                textSize = 16f // Ajustar el tamaño de texto
+                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+            }
+
+            // Añadir el TextView al LinearLayout
+            binding.medicamentDosage.addView(textView)
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun generarEfectosAdversos(efectosAdversos: List<String>) {
+        // Limpiar el LinearLayout por si ya tiene elementos previos
+        binding.medicamentAdverseEffects.removeAllViews()
+
+        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
+        for (efectoAdverso in efectosAdversos) {
+            val textView = TextView(this).apply {
+                text = "• $efectoAdverso"
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                }
+                textSize = 16f // Ajustar el tamaño de texto
+                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+            }
+
+            // Añadir el TextView al LinearLayout
+            binding.medicamentAdverseEffects.addView(textView)
         }
     }
 
@@ -252,9 +350,6 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         Toast.makeText(this, "Notificación programada para $medicamentoNombre", Toast.LENGTH_SHORT).show()
     }
 
-
-
-
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Canal de Medicamentos"
@@ -284,5 +379,4 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("medicamento_prefs", Context.MODE_PRIVATE)
         return sharedPref.getBoolean(medicamento.nombre, false)
     }
-
 }
