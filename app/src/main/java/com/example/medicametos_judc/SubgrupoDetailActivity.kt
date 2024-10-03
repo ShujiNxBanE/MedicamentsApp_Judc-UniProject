@@ -6,14 +6,11 @@ import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.medicametos_judc.databinding.ActivitySubgrupoDetailBinding
 
+@Suppress("DEPRECATION")
 class SubgrupoDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySubgrupoDetailBinding
@@ -24,6 +21,8 @@ class SubgrupoDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val subgrupo = intent.getParcelableExtra<Subgrupo>("subgrupo")
+
+        binding.back.setOnClickListener { finish() }
 
         if (subgrupo != null) {
             // Mostrar detalles del subgrupo

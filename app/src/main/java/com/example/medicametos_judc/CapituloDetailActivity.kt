@@ -6,14 +6,11 @@ import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.medicametos_judc.databinding.ActivityCapituloDetailBinding
 
+@Suppress("DEPRECATION")
 class CapituloDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCapituloDetailBinding
@@ -24,6 +21,8 @@ class CapituloDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val capitulo = intent.getParcelableExtra<Capitulo>("capitulo")
+
+        binding.back.setOnClickListener { finish() }
 
         if (capitulo != null) {
             // Mostrar nombre y descripción del capítulo

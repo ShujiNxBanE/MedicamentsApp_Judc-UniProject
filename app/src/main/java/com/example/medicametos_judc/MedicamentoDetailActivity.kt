@@ -41,6 +41,8 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
         val medicamento = intent.getParcelableExtra<Medicamento>("medicamento")
 
+        binding.back.setOnClickListener { finish() }
+
         if (medicamento != null) {
             // Mostrar detalles del medicamento
             binding.tvApp.text = medicamento.nombre
