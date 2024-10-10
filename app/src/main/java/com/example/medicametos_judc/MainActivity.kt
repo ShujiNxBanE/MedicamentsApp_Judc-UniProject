@@ -1,16 +1,16 @@
 package com.example.medicametos_judc
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputType
 import android.text.TextWatcher
 import android.view.Gravity
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.medicametos_judc.databinding.ActivityMainBinding
@@ -18,6 +18,7 @@ import com.example.medicametos_judc.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val contraseñaCorrecta = "12345" // Aquí puedes definir la contraseña correcta
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +26,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val capitulos = DataProvider.obtenerCapitulos()
+        val capitulosEspeciales = DataProvider.obtenerCapitulosEspeciales()
         val medicamentos = capitulos.flatMap { it -> it.subgrupos.flatMap { it.medicamentos } }
 
         // Crear botones dinámicamente y añadirlos al LinearLayout
         mostrarCapitulos(capitulos)
+
+        // Configurar el botón para medicamentos especiales
+        binding.btnSpecialMedicaments.setOnClickListener {
+            mostrarDialogoContraseña(capitulosEspeciales)
+        }
 
         // Configurar el buscador de medicamentos
         binding.btnSearchMedicament.setOnClickListener {
@@ -58,6 +65,41 @@ class MainActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {}
         })
+    }
+
+    private fun mostrarDialogoContraseña(capitulosEspeciales: List<Capitulo>) {
+        // Crear un AlertDialog para solicitar la contraseña
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Ingresa la contraseña")
+
+        // Crear un campo de texto para la contraseña
+        val input = EditText(this)
+        input.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        builder.setView(input)
+
+        // Configurar los botones del dialogo
+        builder.setPositiveButton("Aceptar") { dialog, _ ->
+            val contraseñaIngresada = input.text.toString().trim()
+
+            // Validar la contraseña
+            if (contraseñaIngresada == contraseñaCorrecta) {
+                // Contraseña correcta, iniciar nueva actividad
+                val intent = Intent(this@MainActivity, MedicamentosEspecialesActivity::class.java).apply {
+                    putExtra("capitulosEspeciales", ArrayList(capitulosEspeciales)) // Pasar la lista de capítulos especiales
+                }
+                startActivity(intent)
+            } else {
+                // Contraseña incorrecta, mostrar Toast
+                Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
+            }
+            dialog.dismiss() // Cerrar el diálogo
+        }
+
+        builder.setNegativeButton("Cancelar") { dialog, _ ->
+            dialog.cancel() // Cerrar el diálogo sin hacer nada
+        }
+
+        builder.show()
     }
 
     private fun mostrarCapitulos(capitulos: List<Capitulo>) {

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Medicametos_Judc"
         tools:targetApi="31">
         <activity
+            android:name=".MedicamentosEspecialesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MedicamentoDetailActivity"
             android:exported="false" />
         <activity
