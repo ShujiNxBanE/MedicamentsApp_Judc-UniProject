@@ -113,7 +113,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
             generarIndicaciones(medicamento.indicaciones)
             generarContraIndicaciones(medicamento.contraindicaciones)
             generarPrecauciones(medicamento.precauciones)
-            generarDosificaciones(medicamento.dosificacion)
+            generarDosificaciones(medicamento.dosificacion, medicamento.dosificacionImagenes)
             generarEfectosAdversos(medicamento.efectosAdversos)
 
             createNotificationChannel()
@@ -274,28 +274,86 @@ class MedicamentoDetailActivity : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun generarDosificaciones(dosificaciones: List<String>) {
+    private fun generarDosificaciones(dosificaciones: List<String>, dosificacionImagenes: List<Int>) {
         // Limpiar el LinearLayout por si ya tiene elementos previos
         binding.medicamentDosage.removeAllViews()
 
-        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
-        for (dosificacion in dosificaciones) {
-            val textView = TextView(this).apply {
-                text = "• $dosificacion"
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+        // Iterar sobre cada indicación (texto) y agregarla como un TextView al LinearLayout
+        if (dosificaciones.isNotEmpty()) {
+            for (dosificacion in dosificaciones) {
+                val textView = TextView(this).apply {
+                    text = "• $dosificacion"
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                    }
+                    textSize = 16f // Ajustar el tamaño de texto
+                    setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
                 }
-                textSize = 16f // Ajustar el tamaño de texto
-                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+
+                // Añadir el TextView al LinearLayout
+                binding.medicamentDosage.addView(textView)
+            }
+        }
+
+        // Ahora, añadir las imágenes de dosificación
+        // Iterar sobre las imágenes proporcionadas
+        for (imageResId in dosificacionImagenes) {
+            // Crear un ImageView dinámicamente
+            val imageView = ImageView(this).apply {
+                setImageResource(imageResId)
+                layoutParams = LinearLayout.LayoutParams(
+                    150,
+                    150
+                ).apply {
+                    setMargins(16, 16, 16, 16) // Añadir márgenes si es necesario
+                }
+                scaleType = ImageView.ScaleType.CENTER_CROP // Ajustar escala si es necesario
             }
 
-            // Añadir el TextView al LinearLayout
-            binding.medicamentDosage.addView(textView)
+            // Añadir comportamiento al hacer clic en la imagen (para mostrarla en fullscreen)
+            imageView.setOnClickListener {
+                val dialog = Dialog(this@MedicamentoDetailActivity)
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE) // Quitar el título del dialog
+                dialog.setContentView(R.layout.dialog_image_fullscreen)
+
+                // Configurar la imagen en el dialog
+                val imageFullScreen = dialog.findViewById<ImageView>(R.id.image_fullscreen)
+                imageFullScreen.setImageResource(imageResId)
+
+                // Obtener el tamaño de la pantalla
+                val displayMetrics = resources.displayMetrics
+                val screenWidth = displayMetrics.widthPixels
+                val screenHeight = displayMetrics.heightPixels
+
+                // Ajustar el tamaño al 70% de la pantalla
+                val desiredWidth = (screenWidth * 0.7).toInt()
+                val desiredHeight = (screenHeight * 0.7).toInt()
+
+                // Ajustar tamaño de la imagen en el dialog
+                val layoutParams = imageFullScreen.layoutParams
+                layoutParams.width = desiredWidth
+                layoutParams.height = desiredHeight
+                imageFullScreen.layoutParams = layoutParams
+
+                // Ajustar el tamaño del Dialog para que se ajuste al contenido
+                dialog.window?.setLayout(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT
+                )
+
+                // Mostrar el Dialog
+                dialog.show()
+            }
+
+            // Añadir el ImageView al layout donde deben cargarse las imágenes
+            binding.medicamentDosage.addView(imageView)
         }
     }
+
+
 
     @SuppressLint("SetTextI18n")
     private fun generarEfectosAdversos(efectosAdversos: List<String>) {

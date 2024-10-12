@@ -11,6 +11,7 @@ data class Medicamento(
     val contraindicaciones: List<String>,
     val precauciones: List<String>,
     val dosificacion: List<String>,
+    val dosificacionImagenes: List<Int>,
     val efectosAdversos: List<String>,
     val imagenesResIds: List<Int>
 ) : Parcelable
@@ -33,43 +34,81 @@ object DataProvider {
     fun obtenerCapitulos(): List<Capitulo> {
         return listOf(
             Capitulo(
-                nombre = "Capítulo 1: Antiinfecciosos",
+                nombre = "ANTIINFECCIOSOS",
                 descripcion = "",
-                subgrupos = listOf(
+                subgrupos =
+                listOf(
                     Subgrupo(
-                        nombre = "Subgrupo 1: Betalactamicos",
+                        nombre = "PENICILINA",
                         descripcion = "",
-                        medicamentos = listOf(
+                        medicamentos =
+                        listOf(
                             Medicamento(
-                                nombre = "Amoxicilina",
-                                descripcion = " Aminopenicilina, penicilina de amplio espectro\n" +
-                                        "Cápsulas de 500 mg, Suspensión oral de 250 mg/5 mL\n",
-                                indicaciones = listOf("Infecciones de vías urinarias en niños "
-                                    , "Neumonía adquirida en la comunidad leve a moderada"
-                                    , "Otitis media aguda * y sinusitis"
-                                    , "Abscesos dentales y otras infecciones orales"
-                                    , "Leptospirosis leve a moderada en menores de 2 años"
-                                    , "Ruptura prematura de membranas como complemento de otros antibióticos."
-                                    , "Prevención de endocarditis bacteriana"
-                                    , "Profilaxis post-esplenectomía en niños"
-                                    , "Erradicación de Helicobacter pylori"
+                                nombre =
+                                    "Amoxicilina",
+                                descripcion =
+                                    "Aminopenicilina asociada a un inhibidor de betalactamasas Suspensión de 250 mg + 62.5 mg/5mL Tabletas de 875 mg+125 mg ",
+                                indicaciones = listOf(
+                                    "ADULTOS:"
+                                    , "Primera elección en el manejo ambulatorio de neumonía adquirida en la comunidad del paciente con factores de riesgo"
+                                    , "Alternativa en infecciones que no han respondido a al tratam. de primera línea: neumonía adquirida en la comunidad, exacerbaciones agudas de EPOC, otitis media aguda infecciones óseas y articulares, infecciones genitourinarias, infecciones abdominales, coledocolitiasis con colangitis no tóxica, celulitis, infección dental grave con propagación de la celulitis o infección dental que no responde a antibióticos de primera línea"
+                                    , "NIÑOS"
+                                    , "De primera elección en celulitis por mordedura de animales (perros, gatos) y humanos  erisipela"
+                                    , "Cómo alternativa en sinusitis bacteriana, otitis media aguda, neumonía grave adquirida en la comunidad en niños >3 meses hasta 5 años, en hospitalizados con neumonía atípica  y neumonía grave en >5 años y adolescentes si no hubo mejoría con amoxicilina o penicilina procaínica. Infecciones de vías urinarias como alternativa a la nitrofurantoína  incluyendo profilaxis de infecciones urinarias en la infancia ; infecciones de piel: impétigo , ectima foliculitis y forunculosis Mastitis puerperal como alternativa a la dicloxacilina o eritromicina"
                                 ),
-                                contraindicaciones = listOf("hipersensibilidad"
-                                    , "alergia a penicilinas "),
-                                precauciones = listOf("Aumento  del riesgo de erupciones cutáneas eritematosas " +
-                                        "en infecciones por citomegalovirus y leucemia linfocítica aguda o " +
-                                        "crónica  y en pacientes tratados con alopurinol. Riesgo de cristaluria " +
-                                        "con dosis altas ."
-                                    , "Embarazo y lactancia"),
-                                dosificacion = listOf("ADULTOS y NIÑOS >40 kg"
-                                    , "Infecciones bacterianas del tracto respiratorio superior leves a moderadas, " +
-                                            "incluyendo otitis media aguda, 500–1g tid 6"
-                                    , "Neumonía adquirida en la comunidad 1 g cada 8 h"
-                                    , "Absceso dental (esquema corto): 3 g a repetir 8 h después 2"
-                                    , "Erradicación del H. pylori ver. p. 135"
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad o alergia a penicilinas"
                                 ),
-                                efectosAdversos = listOf("nausea y vómito."),
-                                imagenesResIds = listOf(R.drawable.amoxicilina_1, R.drawable.amoxicilina_2)
+                                precauciones = listOf(
+                                    "Monitorear la función hepática en pacientes con enfermedades del hígado. Riesgo de ictericia colestásica durante o poco después del tratamiento; sobre todo en mayores de 65 años y en varones. La duración del tratamiento no debe ser mayor de 14 días 1"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: dosis habituales de 500 mg a 1 g cada 12-8 h (según la infección)"
+                                    ,"Neumonía adquirida en la comunidad: 1-2 g cada 12 horas 13 u 875 mg cada 8 horas"
+                                    ,"Mastitis puerperal (alternativa dicloxacilina o eritromicina): 500 mg PO cada 8 h, 7-10 d)"
+                                    ,"NIÑOS: 40-50 mg/kg, en dos o tres dosis/d"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas y vómitos, hepatitis, ictericia colestásica, síndrome de Stevens Johnson, necrólisis epidérmica tóxica, dermatitis exfoliativa, casos de vasculitis, rara vez prolongación del tiempo de sangrado, mareos, dolor de cabeza, convulsiones (especialmente con dosis altas o en pacientes con insuficiencia renal); tinción superficial de los dientes con la suspensión. La diarrea es común debido tanto al componente clavulánico como a la amoxicilina 6"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.amoxicilina_1
+                                    ,R.drawable.amoxicilina_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Ampicilina",
+                                descripcion =
+                                "Aminopenicilina Polvo para solución inyectable de 1 g",
+                                indicaciones = listOf(
+                                    "Asociado a otros antibacterianos en Infecciones obstétricas y ginecológicas incluyendo  aborto séptico, episiotomía infectada, profilaxis intraparto en casos de amenaza de parto prematuro y en otros riesgos como alternativa a la penicilina, profilaxis a la madre ante complicaciones fetales y neonatales, complicaciones de la histerectomía postparto (Absceso de cúpula, hematoma de cúpula, lesión vesical e infección de herida quirúrgica), pielonefritis (como complicación obstétrica)"
+                                    ,"Infecciones perinatales sistémicas incluyendo sepsis neonatal temprana"
+                                    ,"Septicemia adquirida en la comunidad de origen intraabdominal o respiratorio en niños (primera línea)"
+                                    ,"Meningitis bacteriana en niños de 1 a 3 meses (primera alternativa)"
+                                    ,"IVU en niños (alternativa) en caso de alergia a cefalosporinas"
+                                    ,"Neumonía agregada en influenza A H1N1 como primera línea en niños de 1 mes a 4 años"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad o alergia a penicilinas"
+                                ),
+                                precauciones = listOf(
+                                    "Monitorear la función hepática en pacientes con enfermedades del hígado. Riesgo de ictericia colestásica durante o poco después del tratamiento; sobre todo en mayores de 65 años y en varones. La duración del tratamiento no debe ser mayor de 14 días 1"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS, usualmente 1-2 g IV c/4-6 h"
+                                    ,"NIÑOS, 1 mes-12 años: 50 mg/kg cada 4-6 h (máx. 2 g c/4 h) Infec. graves (como meningitis): 150-200 mg/kg/d c/4-6 h NEONATOS"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ampicilina_1
+                                    ,R.drawable.ampicilina_2
+                                )
                             ),
                         )
                     )
@@ -80,105 +119,7 @@ object DataProvider {
 
     fun obtenerCapitulosEspeciales(): List<Capitulo> {
         return listOf(
-            Capitulo(
-                nombre = "Gastroenterologia",
-                descripcion = "1",
-                subgrupos = listOf(
-                    Subgrupo(
-                            nombre = "DISPERSIA Y REFLUJO GASTROESOFAGICO ",
-                        descripcion = "1",
-                        medicamentos = listOf(
-                            Medicamento(
-                                nombre = "Omeprazol",
-                                descripcion = "Inhibidor de bomba de protones (IBP) de las células parietales del estómago inhibe " +
-                                        "la secreción ácida en el estómago. Frasco ampolla con polvo liofilizado 40 mg y tableta o capsula de 20 mg ",
-                                indicaciones = listOf("Dispepsia asociada con acidez"
-                                    ,"Enfermedad por reflujo gastro–esofágico"
-                                    ,"Enfermedad ulcerosa péptica (incluyendo la erradicación de H. pylori y el seguimiento postendoscópico de la hemorragia grave por ulceración)"
-                                    ,"Profilaxis en pacientes con antecedentes de úlcera, lesiones gastrointestinales o dispepsia asociada a AINE y requieren tratamiento continuo con AINE"
-                                    ,"Profilaxis de úlcera de estrés en pacientes hospitalizados con condición de riesgo Ventilación mecánica, coagulopatía, trauma cerebral, quemaduras graves politraumatismo, sepsis, insuficiencia renal aguda (B) Pacientes en UCI con índice de gravedad de trauma >15 o requerimientos de dosis altas de corticoide >250 mg de hidrocortisona o equivalente"
-                                    ,"Síndrome de Zollinger–Ellison"
-                                    ,"Profilaxis de aspiración ácida durante anestesia general (C)"),
-                                contraindicaciones = listOf("No"),
-                                precauciones = listOf("Descartar cáncer gástrico antes de iniciar tratamiento en pacientes con dispepsia y signos de alarma Los pacientes con osteoporosis deberán mantener una adecuada ingesta de calcio y vitamina D. La medición de la concentración sérica de magnesio debe considerarse antes o durante un tratamiento prolongado sobre todo cuando se administran en combinación con otros medicamentos que causen hipomagnesemia o con digoxina. El omeprazol debe ser prescrito para las indicaciones adecuadas en la dosis eficaz más baja durante el menor tiempo posible, la necesidad de tratamiento a largo plazo debe ser revisado periódicamente."
-                                    ,"Insuficiencia hepática: reducir la dosis (no más de 20 mg diario)."
-                                    ,"Insuficiencia renal: no es necesario corregir la dosis."),
-                                dosificacion = listOf("VÍA ORAL"
-                                    ,"En la mayoría de las indicaciones se recomienda habitualmente una dosis única por la mañana antes de comer, sin embargo, la absorción no está afectada significativamente con la comida"
-                                    ,"Dispepsia asociada con acidez: 1020 mg PO id por 2 a 4 semanas"
-                                    ,"Enfermedad por reflujo gastroesofágico: 20 mg PO id por 4 sem., si curación incompleta continuar por otras 48 sem."),
-                                efectosAdversos = listOf("Náuseas y vómitos, hepatitis, ictericia colestásica, síndrome de Stevens Johnson, necrólisis epidérmica tóxica, dermatitis exfoliativa, casos de vasculitis, rara vez prolongación del tiempo de sangrado, mareos, dolor de cabeza, convulsiones (especialmente con dosis altas o en pacientes con insuficiencia renal); tinción superficial de los dientes con la suspensión. La diarrea es común debido tanto al componente clavulánico como a la amoxicilina 6"),
-                                imagenesResIds = listOf(R.drawable.omeprazol_1)
-                            )
-                        )
-                    )
-                )
-            ),
-            Capitulo(
-                nombre = "Capítulo 1: Antiinfecciosos",
-                descripcion = "",
-                subgrupos = listOf(
-                    Subgrupo(
-                        nombre = "Subgrupo 1: Betalactamicos",
-                        descripcion = "",
-                        medicamentos = listOf(
-                            Medicamento(
-                                nombre = "Amoxicilina",
-                                descripcion = " Aminopenicilina, penicilina de amplio espectro\n" +
-                                        "Cápsulas de 500 mg, Suspensión oral de 250 mg/5 mL\n",
-                                indicaciones = listOf("Infecciones de vías urinarias en niños "
-                                    , "Neumonía adquirida en la comunidad leve a moderada"
-                                    , "Otitis media aguda * y sinusitis"
-                                    , "Abscesos dentales y otras infecciones orales"
-                                    , "Leptospirosis leve a moderada en menores de 2 años"
-                                    , "Ruptura prematura de membranas como complemento de otros antibióticos."
-                                    , "Prevención de endocarditis bacteriana"
-                                    , "Profilaxis post-esplenectomía en niños"
-                                    , "Erradicación de Helicobacter pylori"
-                                ),
-                                contraindicaciones = listOf("hipersensibilidad"
-                                    , "alergia a penicilinas "),
-                                precauciones = listOf("Aumento  del riesgo de erupciones cutáneas eritematosas " +
-                                        "en infecciones por citomegalovirus y leucemia linfocítica aguda o " +
-                                        "crónica  y en pacientes tratados con alopurinol. Riesgo de cristaluria " +
-                                        "con dosis altas ."
-                                    , "Embarazo y lactancia"),
-                                dosificacion = listOf("ADULTOS y NIÑOS >40 kg"
-                                    , "Infecciones bacterianas del tracto respiratorio superior leves a moderadas, " +
-                                            "incluyendo otitis media aguda, 500–1g tid 6"
-                                    , "Neumonía adquirida en la comunidad 1 g cada 8 h"
-                                    , "Absceso dental (esquema corto): 3 g a repetir 8 h después 2"
-                                    , "Erradicación del H. pylori ver. p. 135"
-                                ),
-                                efectosAdversos = listOf("nausea y vómito."),
-                                imagenesResIds = listOf(R.drawable.amoxicilina_1, R.drawable.amoxicilina_2)
-                            ),
-                            Medicamento(
-                                nombre = "Omeprazol",
-                                descripcion = "Inhibidor de bomba de protones (IBP) de las células parietales del estómago inhibe " +
-                                        "la secreción ácida en el estómago. Frasco ampolla con polvo liofilizado 40 mg y tableta o capsula de 20 mg ",
-                                indicaciones = listOf("Dispepsia asociada con acidez"
-                                    ,"Enfermedad por reflujo gastro–esofágico"
-                                    ,"Enfermedad ulcerosa péptica (incluyendo la erradicación de H. pylori y el seguimiento postendoscópico de la hemorragia grave por ulceración)"
-                                    ,"Profilaxis en pacientes con antecedentes de úlcera, lesiones gastrointestinales o dispepsia asociada a AINE y requieren tratamiento continuo con AINE"
-                                    ,"Profilaxis de úlcera de estrés en pacientes hospitalizados con condición de riesgo Ventilación mecánica, coagulopatía, trauma cerebral, quemaduras graves politraumatismo, sepsis, insuficiencia renal aguda (B) Pacientes en UCI con índice de gravedad de trauma >15 o requerimientos de dosis altas de corticoide >250 mg de hidrocortisona o equivalente"
-                                    ,"Síndrome de Zollinger–Ellison"
-                                    ,"Profilaxis de aspiración ácida durante anestesia general (C)"),
-                                contraindicaciones = listOf("No"),
-                                precauciones = listOf("Descartar cáncer gástrico antes de iniciar tratamiento en pacientes con dispepsia y signos de alarma Los pacientes con osteoporosis deberán mantener una adecuada ingesta de calcio y vitamina D. La medición de la concentración sérica de magnesio debe considerarse antes o durante un tratamiento prolongado sobre todo cuando se administran en combinación con otros medicamentos que causen hipomagnesemia o con digoxina. El omeprazol debe ser prescrito para las indicaciones adecuadas en la dosis eficaz más baja durante el menor tiempo posible, la necesidad de tratamiento a largo plazo debe ser revisado periódicamente."
-                                    ,"Insuficiencia hepática: reducir la dosis (no más de 20 mg diario)."
-                                    ,"Insuficiencia renal: no es necesario corregir la dosis."),
-                                dosificacion = listOf("VÍA ORAL"
-                                    ,"En la mayoría de las indicaciones se recomienda habitualmente una dosis única por la mañana antes de comer, sin embargo, la absorción no está afectada significativamente con la comida"
-                                    ,"Dispepsia asociada con acidez: 1020 mg PO id por 2 a 4 semanas"
-                                    ,"Enfermedad por reflujo gastroesofágico: 20 mg PO id por 4 sem., si curación incompleta continuar por otras 48 sem."),
-                                efectosAdversos = listOf("Náuseas y vómitos, hepatitis, ictericia colestásica, síndrome de Stevens Johnson, necrólisis epidérmica tóxica, dermatitis exfoliativa, casos de vasculitis, rara vez prolongación del tiempo de sangrado, mareos, dolor de cabeza, convulsiones (especialmente con dosis altas o en pacientes con insuficiencia renal); tinción superficial de los dientes con la suspensión. La diarrea es común debido tanto al componente clavulánico como a la amoxicilina 6"),
-                                imagenesResIds = listOf(R.drawable.omeprazol_1)
-                            ),
-                        )
-                    )
-                )
-            ),
+
         )
     }
 }

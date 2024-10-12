@@ -11,7 +11,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.medicametos_judc.databinding.ActivityMedicamentosEspecialesBinding
@@ -116,9 +115,6 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
                 val medicamentoButton = crearMedicamentoButton(medicamento)
                 binding.searchResults.addView(medicamentoButton)
             }
-        } else {
-            // Si no hay resultados, mostrar un mensaje
-            Toast.makeText(this, "No se encontraron medicamentos.", Toast.LENGTH_SHORT).show()
         }
     }
 
