@@ -2,6 +2,7 @@ package com.example.medicametos_judc
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -123,7 +124,8 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
     private fun crearCapituloTextView(capitulo: Capitulo): TextView {
         return TextView(this).apply {
             text = capitulo.nombre
-            textSize = 20f
+            textSize = 18f
+            setTypeface(typeface, Typeface.BOLD)
             setTextColor(ContextCompat.getColor(context, R.color.white))
             setBackgroundColor(ContextCompat.getColor(context, R.color.app_tittle))
             gravity = Gravity.CENTER
@@ -132,7 +134,7 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             ).apply {
-                setMargins(16, 16, 16, 8)
+                setMargins(0, 16, 0, 8)
             }
             setPadding(16, 16, 16, 16)
         }
@@ -142,6 +144,7 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
         return TextView(this).apply {
             text = subgrupo.nombre
             textSize = 18f
+            setTypeface(typeface, Typeface.BOLD)
             setTextColor(ContextCompat.getColor(context, android.R.color.white))
             setBackgroundColor(ContextCompat.getColor(context, R.color.btn_color))
             gravity = Gravity.START
@@ -149,7 +152,7 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             ).apply {
-                setMargins(32, 8, 16, 8)
+                setMargins(0, 8, 0, 8)
             }
             setPadding(16, 8, 16, 8)
         }

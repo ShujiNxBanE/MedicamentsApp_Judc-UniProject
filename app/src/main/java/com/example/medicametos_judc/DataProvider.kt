@@ -482,12 +482,64 @@ object DataProvider {
                     )
                 )
             ),
+
         )
     }
 
     fun obtenerCapitulosEspeciales(): List<Capitulo> {
         return listOf(
-
+            Capitulo(
+                nombre = "NEUROLOGÍA",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "ANTICONVULSIONANTES / ANTIPILEPTICOS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Valproico",
+                                descripcion =
+                                "Ácido valproico/ Valproato sódico | Antiepiléptico de amplio espectro activo sobre todas las formas de epilepsia.\n" +
+                                        "Ácido valproico: Tabletas/capsula de 250 mg\n" +
+                                        "Valproato sódico: Solución de 250 mg/5 mL para vía oral, Fco de 100-120 mL\n",
+                                indicaciones = listOf(
+                                    "Todas las formas de epilepsia: convulsiones tónico-clónicas (sobre todo en epilepsia generalizada primaria), ausencias generalizadas y convulsiones mioclónicas, convulsiones tónicas o atónica"
+                                    ,"Alternativa al litio en la manía asociada con trastorno bipolar"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Antecedentes familiares de disfunción hepática grave  No se recomienda en la prevención de la convulsión febril por su toxicidad hepática  y ventaja clínica no relevante"
+                                ),
+                                precauciones = listOf(
+                                    "Vigilar la función hepática antes del tratamiento y durante los 6 primeros meses, especialmente en pacientes con elevado riesgo. Realizar conteo sanguíneo completo y asegurarse que no exista potencial para sangrado excesivo antes de realizar una cirugía. Usar con cuidado en el Lupus Eritematoso Sistémico. Puede producir falsos positivos en las pruebas de orina para cetonas. Evitar la retirada brusca"
+                                    ,"Toxicidad hepática: riesgo de disfunción hepática (incluyendo insuficiencia hepática fatal) con el uso de valproato (especialmente en niños <3 años y en personas con trastornos metabólicos o degenerativos, enfermedad orgánica cerebral o trastornos convulsivos graves asociados con retraso mental) por lo general en los primeros 6 meses y por lo general con tratamiento antiepiléptico múltiple. El aumento de las enzimas hepáticas durante el tratamiento suele ser transitorio, pero los pacientes deben ser reevaluados clínicamente y monitoreada su función hepática (incluyendo el tiempo de protrombina)"
+                                    ,"Interacciones"
+                                    ,"Reducen concentración de valproato: carbamacepina, carbapenems (evitar uso concomitante), etinilestradiol, fenobarbital. Aumentan la concentración de valproato: cimetidina, y eritromicina. El valproato aumenta la concentración de: carbamacepina, diazepam, lorazepam, fenobarbital, zidovudina y etoxusimida. La aspirina aumenta los efectos del valproato. Puede ocurrir aumento de reacciones adversas cuando se usa conjuntamente con clonazepam y olanzapina (incluyendo neutropenia)"
+                                ),
+                                dosificacion = listOf(
+                                    "Epilepsia: ADULTOS, PO: iniciar con 600 mg/d divididos en1–2 dosis, incrementar gradualmente (en etapas de 150 –300 mg) cada 3 días"
+                                    ,"Dosis de mantenimiento: 1–2 g/d(20-30 mg/kg), máximo 2.5 g/d"
+                                    ,". NIÑOS 1-12 años: dosis inicial, 10-15 mg/kg/d (máx. 600 mg) divididos en 1-2 dosis"
+                                    ,"Manía: ADULTOS, PO: 750 mg/d en 1–2 dosis"
+                                    ,"Dosis de mantenimiento: 1–2 g/d"
+                                    ,"Dosis mayores a 45 mg/kg requieren monitoreo cuidadoso"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Nauseas, irritación gástrica, diarrea, aumento de peso, hiperamonemia, trombocitopenia, pérdida transitoria del cabello. Menos frecuente: mayor estado de alerta, agresividad, hiperactividad, alteraciones del comportamiento, ataxia, temblor y vasculitis. Raramente: disfunción hepática, letargia, somnolencia, confusión, estupor, alucinaciones, desordenes sanguíneos (incluyendo anemia, leucopenia y pancitopenia), pérdida auditiva y erupción"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.valproico_1
+                                    ,R.drawable.valproico_2
+                                )   
+                            ),
+                        )
+                    ),
+                )
+            ),
         )
     }
 }

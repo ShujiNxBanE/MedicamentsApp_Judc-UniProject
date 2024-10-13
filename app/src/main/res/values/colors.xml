@@ -10,4 +10,8 @@
     <color name="app_bg">#87CEEB</color>
     <color name="app_bg2">#F0F8FF</color>
     <color name="separator_color">#ADD8E6</color>
+    
+    <color name="white_skyblue">#A4E8FC</color>
+    <color name="white_skyblue_black">#008BFC</color>
+
 </resources>
