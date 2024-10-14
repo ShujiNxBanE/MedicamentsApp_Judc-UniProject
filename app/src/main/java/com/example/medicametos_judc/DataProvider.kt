@@ -478,6 +478,247 @@ object DataProvider {
                                     R.drawable.ceftazidima_1
                                 )
                             ),
+                            Medicamento(
+                                nombre =
+                                "Ceftriaxona",
+                                descripcion =
+                                "Cefalosporina de 3ra generación Polvo para solución inyectable de 1 g (como sal sódica) y 250 mg",
+                                indicaciones = listOf(
+                                    "Meningitis bacteriana aguda y septicemia  adultos y niños >3 meses"
+                                    ,"Profilaxis de meningitis por N. meningitidis adquirida en la comunidad en embarazadas"
+                                    ,"Neumonías de manejo hospitalaria"
+                                    ,"IVU complicadas o con síntomas graves"
+                                    ,"Enfermedad inflamatoria pélvica"
+                                    ,"Choque séptico extrahospitalario (excepto en caso de foco respiratorio) en niños y adolescentes"
+                                    ,"Shigelosis en embarazadas"
+                                    ,"Tifoidea"
+                                    ,"Trauma penetrante de abdomen (asociada a metronidazol)"
+                                    ,"Apendicitis con peritonitis grave (asociada a metronidazol o clindamicina)"
+                                    ,"Colecistitis aguda y coledocolitiasis con colangitis no tóxica"
+                                    ,"Úlcera por presión infectada (asociada a un aminoglucósido y metronidazol o clindamicina)"
+                                    ,"Gonorrea y chancro blando Como alternativa a otros antibióticos en particular en caso de:"
+                                    ,"Diarrea inflamatoria y disentería por Salmonella sp (no typhi) y Shigella sp"
+                                    ,"Aborto séptico"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Uso en neonatos de menos de 41 semanas de edad gestacional corregida; neonatos de más de 41 semanas de edad gestacional corregida con ictericia, hipoalbuminemia o acidosis; recién nacidos de más de 41 semanas de edad gestacional que reciben tratamiento concomitante con calcio intravenoso (incluyendo nutrición parenteral total que contiene calcio), ya que aumenta el riesgo de precipitación urinaria y pulmonar"
+                                ),
+                                precauciones = listOf(
+                                    "Insuficiencia hepática: reducir la dosis. En la insuficiencia hepática grave, monitorear la concentración plasmática de ceftriaxona"
+                                    ,"Insuficiencia renal: reducir la dosis si TFG <10 mL/min./1.73 m2 (máximo 2 g al día)"
+                                    ,"Monitorear la concentración plasmática de ceftriaxona en insuficiencia renal grave"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS 1–2 g/d o 500 mg cada 12 h"
+                                    ,"Infecciones graves 2-4 g/d"
+                                    ,"Gonorrea no complicada y EIP: 250 mg IM profundo, id"
+                                    ,"NIÑOS"
+                                    ,"Meningitis, 100 mg/kg (hasta 4 g) en infusión IV el primer día, luego 100 mg/kg cada 24 h ó 50 mg/kg cada 12 h, hasta 4 g/d por 7–14 d; para el resto de indicaciones, 25 – 37.5 mg/kg en infusión IV cada 12 h, hasta 2 g/d"
+                                    ,"NEONATOS: 20 – 50 mg/kg/d, máximo de 50 mg/kg/d"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "la ceftriaxona puede desplazar a la bilirrubina de la albúmina sérica, en los recién nacidos se debe administrar la dosis en más de 60 minutos. Cuando se usa más de 14 días puede llevar a insuficiencia renal, deshidratación y riesgo de precipitación de ceftriaxona en la vesícula biliar. Raras: prolongación del tiempo de protrombina, pancreatitis"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ceftriaxona_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Cefuroxima",
+                                descripcion =
+                                "Cefuroxima (axetil) | Cefalosporina de 2da generación Suspensión oral de 250 mg/5 mL",
+                                indicaciones = listOf(
+                                    "Alternativa en:"
+                                    ,"Infecciones del tracto urinario superior en niños"
+                                    ,"Sinusitis e impétigo en niños"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "En insuficiencia renal: dosis parenteral de 750 mg 2 veces al día si TFG de 10-20 mL/min./1.73 m2. Dosis de 750 mg 1 vez al día si TFG<10 mL/min./1.73 m2"
+                                ),
+                                dosificacion = listOf(
+                                    "Administrar con la comida"
+                                    ,"NIÑOS, 3 meses-2 años: 10 mg/kg (máx. 125 mg) bid, 2-12 años: 15 mg/kg (máx. 250 mg) bid"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "El principal efecto adverso de las cefalosporinas es la reacción de hipersensibilidad. Otros efectos comunes: heces oscuras, dolor torácico, escalofríos, tos, fiebre, dolor o dificultad al orinar, disnea, odinofagia, aftas o lesiones labiales o bucales, adenopatías, lesiones purpúricas (principalmente con cefuroxima), fatiga o debilidad. Menos comunes o raros: cólicos y dolor abdominal (grave), diarrea (a veces disentería), urticaria, eritema, prurito o erupción cutánea, dolor, enrojecimiento e hinchazón en el sitio de inyección, descamación cutánea y convulsiones. Puede ocurrir colitis asociada a antibióticos con el uso de cefalosporinas de amplio espectro, particularmente las de segunda y de tercera generación. Después de suspender el tratamiento pueden aparecer algunos efectos secundarios raros que pueden requerir atención como: formación de ampollas, dermatosis, oliguria, pérdida o disminución de la capacidad auditiva (con cefuroxima), artralgias, pérdida del apetito, náuseas y/o vómitos (más frecuentes con ceftriaxona), eritema conjuntival, dificultad para respirar e ictericia. Algunos efectos secundarios que usualmente no requieren atención y pueden desaparecer durante el tratamiento son: diarrea (leve), cefalea, dolor en la boca o en la lengua, cólicos (leves), prurito y/o flujo vaginal"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.cefuroxima_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "CARBAPENEMS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Imipenem",
+                                descripcion =
+                                "Imipenem/cilastatina | Frasco ampolla (IV) con 500 mg de imipenem y 500 mg de cilastatina sódica. El imipinem es parcialmente inactivado en el riñón. Por lo tanto, se asocia con cilastatina que bloquea el metabolismo renal del imipenem (cilastatina no tiene actividad antibacteriana ni afecta la actividad del imipenemp",
+                                indicaciones = listOf(
+                                    "Infecciones intrahospitalarias graves por bacterias Gram (+) y Gram (+) aeróbicas y anaeróbicas (no indicado en infecciones del SNC), incluyendo infecciones causadas por Pseudomonas resistentes y Acinetobacter sp, ver introducción a carbapenem. Las normas del MINSA la recomiendan en particular en las indicaciones siguientes:"
+                                    ,"Septicemia x pseudomonas u otro agente nosocomial agresivo"
+                                    ,"Alternativa en manejo de la neumonia intrahospitalaria grave"
+                                    ,"Alternativa en sepsis intrahospitalaria en niños con foco respiratorio"
+                                    ,"Alternativa en la pielonefritis de manejo hospitalario en embarazadas en caso de resistencia a ceftriaxona y falla de piperacilina/tazobactam"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Meningitis bacteriana en niños hipersensibilidad conocida a imipenem, otros derivados del carbapenem, o cualquier otro ingrediente en la formulación"
+                                ),
+                                precauciones = listOf(
+                                    "Hipersensibilidad a otros betalactámicos (evitar si hay antecedente de hipersensibilidad inmediata); trastornos del sistema nervioso central como epilepsia; Insuficiencia renal reducir dosis si TFG <70mL/min./1.73 m²"
+                                    ,"Interacciones: reduce la concentración plasmática del valproato (evitar uso concomitante)"
+                                    ,"Embarazo: evitar en lo posible (categoria C de la FDA)"
+                                    ,"Lactancia: se puede usar con precaución. Presente en la leche materna pero es improbable que sea absorbido a"
+                                ),
+                                dosificacion = listOf(
+                                    "Por infusión IV (dosis en función del imipenem):"
+                                    ,"ADULTOS: 500 mg cada 6 holg cada 8 h. Infección causada por Pseudomonas u otros microorganismos menos sensibles, infección que amenaza la vida o tratamiento empírico de las infecciones en pacientes con neutropenia febril: 1 g cada 6 h"
+                                    ,"NIÑOS 1-2 meses: 20 mg/kg cada 6 h, ≥3 meses: 15 mg/kg (máx. 500 mg) cada 6 h"
+                                    ,"Infección causada por Pseudomonas u otros microorganismos menos sensibles, infección que amenaza la vida o tratamiento empírico de la infección en pacientes febriles con neutropenia: 25 mg/kg (máx. 1 g) cada 6 h"
+                                    ,"NEONATOS <7 días: 20 mg/kg cada 12 h, 7-20 dias: 20 mg/kg cada 8 h, 21-27 dias: 20 mg/kg cada 6 h"
+                                    ,"Precaución para la administración:"
+                                    ,"Reconstituir con 10 mL de SSN para formar una suspensión turbia. No administrar esta suspensión sin dilución adicional. Diluir aún más a 5 mg/mL con solución compatible para dar una solución clara. Para 500 mg o menos: administrar en más de 20-30 minutos. Más de 500 mg: administrar en más de 40-60 minutos "
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas (disminuyen al reducir la velocidad de infusión), vómitos, diarrea (raramente colitis asociada a antibióticos), eosinofilia, erupción cutánea (raramente necrõlisis epidérmica tóxica y sindrome de Stevens-Johnson). Menos comunes: hipotensión, convulsiones, actividad mioclónica, mareos, somnolencia, alucinaciones, confusión, leucopenia, trombocitopenia, trombocitosis, test de Coombs positivo. Raras: alteraciones del gusto, hepatitis, encefalopatia, reacciones anafilácticas, parestesias, temblores, insuficiencia renal aguda, poliuria, decoloración de los dientes, de la lengua o de la orina, pérdida de audición. Muy raras: dolor abdominal, acidez, glositis, taquicardia, palpitaciones, rubor, cianosis, disnea, hiperventilación, cefalea, astenia, anemia hemolitica, agravamiento de la miastenia gravis, poliartralgia, tinnitus, salivación excesiva e hiperhidrosis"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.imipenem_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Meropenem",
+                                descripcion =
+                                "Frasco ampolla de 500 mg, 1 g y 250 mg \n" +
+                                        "El meropenem tiene un espectro antibacteriano similar a imipenem, ligeramente más activo frente a enterobacterias y un poco menos activo contra microorganismos Gram (+). No requiere ser asociado a cilastatina para conservar su actividad\n",
+                                indicaciones = listOf(
+                                    "Infecciones del tracto urinario superior en niños"
+                                    ,"Sinusitis e impétigo en niños"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Insuficiencia renal"
+                                    ,"TFG: 26-50 mL/min./1.73 m2: dosis normal cada 12 h"
+                                    ,"TFG: 10-25 mL/min./1.73 m2: mitad de la dosis cada 12 h"
+                                    ,"TFG <10 mL/min./1.73 m2: mitad de la dosis cada 24 h"
+                                ),
+                                dosificacion = listOf(
+                                    "Mediante inyección IV durante 5 minutos o por infusión IV"
+                                    ,"ADULTOS y NIÑOS >50 kg: 0.5-1 g cada 8 h"
+                                    ,"NIÑOS de 3 meses-12 años: 60-120 mg/kg/d cada 8 h"
+                                    ,"Exacerbaciones de enf. crónicas del tracto respiratorio inferior en la fibrosis quística o meningitis: 2 g cada 8 h"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas, vómitos, diarrea (colitis asociada a antibióticos), dolor abdominal, alteraciones de las pruebas hepáticas, cefalea, trombocitopenia, exantema, prurito; menos comunes: parestesia, eosinofilia, trombocitopenia, leucopenia y raramente convulsiones, anemia hemolítica, prueba de Coombs positiva, síndrome de Stevens-Johnson y necrólisis epidérmica tóxica"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.meropenem_1
+                                    ,R.drawable.meropenem_2
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "MACROLIDOS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Azitromicina",
+                                descripcion =
+                                "Tabletas recubiertas 250 y 500 mg; Polvo para suspensión oral 200 mg/5 mL",
+                                indicaciones = listOf(
+                                    "ADULTOS y NIÑOS"
+                                    ,"Infecciones por mycobacterias (no tuberculosis) del complejo M. avium (asociado a otro antibacteriano)"
+                                    ,"Infecciones de piel y tejidos blandos"
+                                    ,"Amigdalitis en caso de alergia a la penicilina"
+                                    ,"Diarrea con deshidratación grave causada por V. cholerae"
+                                    ,"Profilaxis para contactos directos de V. cholerae"
+                                    ,"NIÑOS"
+                                    ,"Alternativa en el impétigo"
+                                    ,"ADULTOS"
+                                    ,"Neumonía adquirida en la comunidad y alternativa en neumonía bacteriana agregada en infección por el virus de la influenza humana A H1N1  otitis media"
+                                    ,"Clamidiasis y chancroide Manejo sindrómico de ITS dolor abdominal bajo (EIP), secreción uretral, ulcera genital, inflamación escrota, infección cervical"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad a macrólidos Enfermedad hepática grave"
+                                ),
+                                precauciones = listOf(
+                                    "Pacientes con predisposición a la prolongación del intervalo QT (incluyendo alteraciones electrolíticas y uso concomitante de fármacos que prolongan el intervalo QT). Además, pacientes con miastenia gravis"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS, PO: 500 mg /d por 3 días 1"
+                                    ,"En casos de cólera  clamidiasis y chancroide: 1 g oral id"
+                                    ,"EIP: 1 g c/sem. por 2 sem además de ceftriaxona id"
+                                    ,"Infección por complejo Mycobacterium avium, 600 mg PO c/sem"
+                                    ,"NIÑOS, PO: 10 mg/kg id por 3 días (por 5 días para la prevención de la fiebre reumática en caso de amigdalitis)"
+                                    ,"En caso de cólera, 20 mg/kg en dosis única"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Anorexia, dispepsia, flatulencia, mareos, cefalea, malestar general, parestesias, artralgias, trastornos del gusto y de la visión y estreñimiento. Menos frecuentes: gastritis, dolor de pecho, edema, ansiedad, trastornos del sueño, hipoestesia, leucopenia y fotosensibilidad. Raros: agitación, síncope, convulsiones, alteraciones olfatorias, nefritis intersticial, insuficiencia renal aguda, trombocitopenia, anemia hemolítica y decoloración de la lengua.Pérdida de audición reversible (a veces con tinnitus) después de grandes dosis y terapia a largo plazo"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.azitromicina_1
+                                    ,R.drawable.azitromicina_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Claritromicina",
+                                descripcion =
+                                "Tabletas de 500 mg; suspensión 250 mg/5 mL ",
+                                indicaciones = listOf(
+                                    "ADULTOS"
+                                    ,"Alternativa a la azitromicina en neumonía adquirida en la comunidad ambulatoria y alternativa en la neumonía bacteriana agregada a infección por el virus de la influenza humana A H1N1 (en combinación con una penicilina)"
+                                    ,"Erradicación de Helicobacter pylori"
+                                    ,"Niños"
+                                    ,"Profilaxis primaria para infecciones por mycobacterias no tuberculosis (dar asociado a otro antibacteriano) Tratamiento de infección diseminada causada por mycobacterias no tuberculosis"
+                                    ,"Alternativa en infecciones de piel y tejidos blandos"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad a macrólidos "
+                                ),
+                                precauciones = listOf(
+                                    "Insuficiencia hepática: riesgo de disfunción hepática incluyendo ictericia 1. \n" +
+                                            "Insuficiencia renal: utilizar ½ de la dosis normal si TFG <30 mL/min./1.73 m2. \n" +
+                                            "Interacciones incrementa la concentración plasmática de carbamacepina, atorvastatina; aumenta el riesgo de miopatía de la simvastatina, el efecto anticoagulante de los cumarínicos, el riesgo de arritmias ventriculares con saquanavir (evitar uso concomitante), inhibe el metabolismo de midazolam y probablemente el de los bloqueadores de los canales del calcio aumentando el riesgo de efectos adversos. La claritromicina oral reduce la absorción de zidovudina (tomar 2 horas aparte). El ritonavir aumenta la concentración plasmática de claritromicina\n"
+                                    ,"Embarazo: evitar en lo posible"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: 500 mg oral bid por 7 días"
+                                    ,"NIÑOS: 15 mg/kg/d por 7 días"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Dispepsia, decoloración de dientes y lengua, alteraciones de la olfacción y el gusto, estomatitis, glositis y cefalea. Menos frecuentes: artralgias y mialgias. Raros: tinnitus. Muy raros: mareos, insomnio, pesadillas, ansiedad, confusión, psicosis, parestesias, convulsiones, hipoglucemia, insuficiencia renal, nefritis intersticial, leucopenia y trombocitopenia"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.claritromicina_1
+                                    ,R.drawable.claritromicina_2
+                                )
+                            ),
                         )
                     )
                 )

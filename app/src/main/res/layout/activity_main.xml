@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginHorizontal="16dp"
-            android:text="Medicamentos Especiales"
+            android:text="Medicamentos Controlados"
             android:backgroundTint="@color/btn_color"
             android:textColor="#FFFFFF"
             android:textStyle="bold"

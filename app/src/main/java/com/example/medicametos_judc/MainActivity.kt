@@ -18,7 +18,7 @@ import com.example.medicametos_judc.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val contraseñaCorrecta = "12345" // Aquí puedes definir la contraseña correcta
+    private val contraseñaCorrecta = "2024-MTKS*" // Aquí puedes definir la contraseña correcta
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
