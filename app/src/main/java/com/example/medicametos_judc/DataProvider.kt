@@ -1122,6 +1122,845 @@ object DataProvider {
                 )
             ),
 
+            // Demas capitulos
+
+            //Capitulo 15
+            Capitulo(
+                nombre = "Analgésicos, antipiréticos antiinflamatorios",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "ANALGÉSICOS NO OPIÁCEOS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Paracetamol",
+                                descripcion =
+                                "Analgésico antipirético sin efecto antiinflamatorio Tableta 500 mg, jarabe 120 mg/5 mL gotas 100 mg/1 mL. Supositorio 300 mg ",
+                                indicaciones = listOf(
+                                    "Dolor leve a moderado * incluyendo ataque agudo demigraña y cefalea tensional (A) • Fiebre (A)* "
+                                ),
+                                contraindicaciones = listOf(
+
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de alcoholismo, insuficiencia hepática (dosis máxima diaria de 3 g), desnutrición crónica o deshidratación."
+                                    ,"Interacciones: la absorción del paracetamol es aumentada por la metoclopramida; el uso prolongado de paracetamol puede aumentar el efecto anticoagulante de la warfarina, el metabolismo del paracetamol puede ser aumentado por carbamacepina, fenitoína y fenobarbital (raros casos de hepatotoxicidad reportados)."
+                                    ,"Embarazo: se puede usar 2. (Categoría B de la FDA) Lactancia: se puede usar 2."
+                                ),
+                                dosificacion = listOf(
+                                    "POR VIA ORAL O RECTAL"
+                                    ,"Fiebre post vacunación: NIÑOS 2-3 meses: 60 mg seguidos de una segunda dosis, si es necesario 4-6 h más tarde."
+                                    ,"Dolor leve a moderado, fiebre: ADULTOS 0.5-1 g cada 4-6 h (máx. 4 g/d)1 NIÑOS: 15 mg/kg/dosis cada 4-6 h según necesidad 1 o según la edad: 3 meses-1 año: 60-125 mg, 1-5 años: 120-250 mg, 6-12 años: 250-500 mg (estas dosis se pueden repetir cada 4-6 h si necesario. Máx. 4 dosis o 4 g/día)."
+                                    ,"NEONATOS: 10 mg/kg tid o qid según necesidad. 4 dosis máximo por día. En caso de ictericia se puede usar 5 mg/kg/dosis 2"
+                                ),
+                                dosificacionImagenes = listOf(
+
+                                ),
+                                efectosAdversos = listOf(
+                                    "Raros: erupciones cutáneas, trastornos hematológicos (trom- bocitopenia, leucopenia, neutropenia)."
+                                    ,"SOBREDOSIS E INTOXICACIÓN: la administración de 10 a 15 g o 150 mg/kg en 24 h puede provocar necrosis hepática grave. Los únicos síntomas de intoxicación pueden ser náuseas y vómitos, los cuales pueden tardar hasta 24 h para producirse. En caso de sobredosificación o intoxicación ocurrida en las últimas 24 horas referir urgente al hospital sin esperar estos síntomas. El antídoto (acetilcisteína)."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.paracetamol_1
+                                    ,R.drawable.paracetamol_2
+                                    ,R.drawable.paracetamol_3
+                                )
+                            )
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Antiinflamatorios no esteroideos (AINE)",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Diclofenaco",
+                                descripcion =
+                                    "Diclofenaco sódico | Antiinflamatorio no esteroideo Tableta de 50 mg, solución 25 mg/1 mL.(ampolla de 3 mL) para inyección IM.",
+                                indicaciones = listOf(
+                                    "Dolor e inflamación en artritis reumatoidea (incluida reumatoidea idiopática juvenil) y otros trastornos musculo esqueléticos."
+                                    ,"Gota aguda."
+                                    ,"Dolor post operatorio."
+                                    ,"Cólico renal."
+                                ),
+                                contraindicaciones = listOf(
+                                    "No se debe dar AINE en pacientes con historia de hipersensi- bilidad a la aspirina o cualquier otro AINE, lo cual incluye aquellos en quienes un ataque de asma, angioedema, urticaria o rinitis han sido precipitados por aspirina u otro AINE."
+                                ),
+                                precauciones = listOf(
+                                    "Los AINE deben ser usados con precaución en ancianos (riesgo de efectos adversos graves y muerte), desórdenes alérgicos, defectos de la coagulación, pacientes con desórdenes del tejido conectivo, insuficiencia cardíaca o renal, hipertensión no controlada, insuficiencia cardíaca, enfermedad arterial periférica, enfermedad cerebrovascula."
+                                ),
+                                dosificacion = listOf(
+                                    "Inflamación y dolor leve a moderado"
+                                    ,"ADULTOS: PO: 75–150 mg/d divididos en 2-3 dosis."
+                                    ,"NIÑOS 6 meses - 18 años: 0.3-1 mg/kg (máx. 50 mg) en 3 dosis."
+                                    ,"Dolor e inflamación en artritis reumatoidea (incluida reumatoidea idiopática juvenil):"
+                                    ,"NIÑOS (6 meses-18 años): IM: 1.5-2.5 mg/kg, máx. 75 mg, 1 o 2 veces al día por un máximo de 2 días."
+                                    ,"Dolor postoperatorio y exacerbaciones severas del dolor: ADULTOS: 75 mg IM una vez al día (dos veces al día en casos graves), máximo hasta dos días."
+                                    ,"NIÑOS 2-18 años: IM: 0.3-1 mg/kg id o bid por un máx. de 2 días (máx.150 mg/día)"
+                                    ,"Cólico renal: 75 mg IM profundo, aplicar segunda dosis después de 30 min si es necesario."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Todos los AINE son asociados con seria toxicidad gastro-intestinal, el riesgo es mayor en ancianos. Riesgo intermedio."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.diclofenaco_1
+                                    ,R.drawable.diclofenaco_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Dipirona",
+                                descripcion =
+                                    "AINE, derivado de pirazolona usado principalmente por su actividad analgésica y antipirética. Solución inyectable de 500 mg/1 mL.",
+                                indicaciones = listOf(
+                                        "Debido al riesgo de efectos adversos graves, en muchos países se considera que su uso sólo se justifica en el dolor intenso o fiebre cuando no exista otra alternativa disponible o adecuada."
+                                        ,"Dolor posquirúrgico (alternativa a otros analgésicos)."
+                                        ,"Cólico renal como alternativa a otros analgésicos."
+                                ),
+                                contraindicaciones = listOf(
+                                    "Úlcera péptica; insuficiencia renal o hepática grave, sensibilidad a las pirazolonas, hemopatías, disfunción cardíaca, hipertensión, déficit congénito de G6PD."
+                                ),
+                                precauciones = listOf(
+                                    "La administración intravenosa debe realizarse lentamente."
+                                    ,"Usar con cuidado en pacientes que sufren de asma bronquial o infecc. crónicas de las vías respiratorias. Cuando existe fiebre anormalmente elevada y/o se administra demasiado rápido la inyección, puede producirse un descenso crítico de la tensión arterial sin otros síntomas de reacción de hipersensibilidad."
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: 0.5 a 4 g IM/IV diarios en dosis divididas"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Raras: reacciones de hipersensibilidad incluyendo shock anafiláctico (estas reacciones pueden ocurrir inmediatamente y hasta una hora después de la administración), agranulocitosis. Puede presentarse dolor en el sitio de la inyección, especialmente luego del uso IM."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.dipirona_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Ibuprofeno",
+                                descripcion =
+                                    "Antiinflamatorio no esteroideo Tableta 400 mg.",
+                                indicaciones = listOf(
+                                    "Dolor e inflamación en enfermedad reumática y otros trastornos musculo esqueléticos incluyendo artritis reumatoide juvenil."
+                                    ,"Dolor leve a moderado, incluyendo dismenorrea."
+                                    ,"Dolor dental"
+                                    ,"Analgesia post operatoria"
+                                    ,"Fiebre asociada a malestar y dolor en niños"
+                                    ,"Crisis aguda de migraña"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "Dolor moderado a grave, fiebre, enfermedad inflamatoria musculo esquelética: PO, ADULTOS: 400 mg cada 6-8 h Aumentar si es necesario hasta un máximo de 2.4 g (3.2 g en enfermedad inflamatoria). Mantenimiento: 0.6-1.2 g/día."
+                                    ,"Artritis juvenil:"
+                                    ,"PO: NIÑOS>3 meses: 30 – 40 mg/kg/dia en 3 - 4 dosis."
+                                    ,"Dolor en niños > 3meses: 20-40 mg/kg día ; 1-2 años: 50 mg; 3-7 años: 100 mg; 8-12 años: 200 mg 3 veces al día. No se recomienda para niños menores de 5 kg."
+                                    ,"ORIENTACIÓN AL PACIENTE: Tomar con o después de la comida."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Raras: reacciones de hipersensibilidad incluyendo shock anafiláctico (estas reacciones pueden ocurrir inmediatamente y hasta una hora después de la administración), agranulocitosis. Puede presentarse dolor en el sitio de la inyección, especialmente luego del uso IM."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ibuprofeno_1
+                                )
+                            )
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Analgésicos Opiáceos",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Codeina",
+                                descripcion =
+                                    "Analgésico opiáceo débil Tableta de 30 mg; solución oral 10 mg/5 mL.",
+                                indicaciones = listOf(
+                                    "Manejo del dolor leve a moderado, en cuidados paliativo (Se asocia a menudo con acetaminofén o AINE)."
+                                    ,"Antidiarréico 21 para diarreas secretoras de causa inespecífica en cuidados paliativos"
+                                    ,"Supresor de la tos 21, en caso de tos incesante con peligro de paro respiratorio en la tosferina."
+                                ),
+                                contraindicaciones = listOf(
+                                    "Depresión respiratoria aguda, riesgo de íleo paralitico, situaciones asociadas con presión intracraneal elevada y en el trauma cráneo encefálico (afecta las respuestas pupilares para la evaluación neurológica), estado comatoso, abdomen agudo y retraso en el vaciamiento gástrico, falla cardíaca secundaria a enfermedad pulmonar crónica."
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de insuficiencia renal y hepática, arritmias cardíacas, abdomen agudo y cálculos biliares."
+                                ),
+                                dosificacion = listOf(
+
+                                ),
+                                dosificacionImagenes = listOf(
+
+                                ),
+                                efectosAdversos = listOf(
+
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.codeina_1
+                                    ,R.drawable.codeina_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Morfina",
+                                descripcion =
+                                    "Analgésico opiáceo fuerte Solución de 20 mg/1mL ampolla de 1 a 2 mL para inyección IM/IV tableta de 10 mg, tab de liberación prolongada de 60 mg; Solución oral de 10 mg/5 mL Fco 100 mL.",
+                                indicaciones = listOf(
+                                    "Dolor agudo grave."
+                                    ,"Dolor crónico en particular en cuidados paliativos."
+                                    ,"Premedicación anestésica."
+                                    ,"Infarto agudo al miocardio."
+                                    ,"Dolor post operatorio."
+                                    ,"Tos en pacientes terminales."
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "Dolor agudo:"
+                                    ,"Via SC (excepto en caso de edema) o IM, ADULTOS: 10 mg (ancianos o muy delgados: 5 mg) cada 4 h (o más frecuentemente inicialmente si es necesario), ajustar dosis según respuesta. NIÑOS 1-6 meses iniciar 100-200 mcg/kg cada 6 h; 6 meses-2 años: iniciar 100-200 mcg/kg cada 4 h; 2-12 años: iniciar 200 mcg/kg cada 4 h; 12-18 años: iniciar 2.5-10 mg cada 4 h, todas las dosis ajustadas según respuesta. NEONATOS : iniciar 100 mcg/kg cada 6 h."
+                                    ,"Inyección IV lenta, ADULTOS: iniciar con 5 mg (reducir la dosis en personas de edad avanzada o débiles) cada 4 h (o con mayor frecuencia durante la titulación), ajustada según respuesta; NIÑO 1-6 meses: iniciar con 100 mcg/kg cada 6 horas, ajustados según respuesta; 6 meses-12 años: inicialmente 100 mcg/kg cada 4 h, ajustados según respuesta."
+                                    ,"Infarto agudo de miocardio: IV lento (1-2 mg/min.) iniciar con 5-10 mg, seguido de 5-10 mg más si es necesario. ANCIANOS y personas muy delgadas: reducir la dosis a la mitad."
+                                    ,"Edema agudo de pulmón: IV lento (2 mg/min.): 5-10 mg. ANCIANOS y personas muy delgadas: reducir la dosis a la mitad."
+                                    ,"Dolor crónico: PO, por vía SC (excepto en caso de edema) o IM: 5-10 mg cada 4 h, ajustar dosis según respuesta."
+                                    ,"Premedicación, vía SC o IM, hasta 10 mg 60–90 min antes de la operación. NIÑOS por via IM, 150 mcg/kg"
+                                    ,"Tos en pacientes terminales: inicialmente 5 mg cada 4 h."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Íleo  paralítico, dolor abdominal, anorexia, dispepsia, exacerbación de la pancreatitis, alteración del gusto, síncope; broncoespasmo, inhibición del reflejo de la tos; inquietud, convulsiones, parestesia, astenia, malestar, desorientación, excitación, agitación, delirio, aumento presión intracraneal,"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.morfina_1
+                                    ,R.drawable.morfina_2
+                                    ,R.drawable.morfina_3
+                                    ,R.drawable.morfina_4
+                                )
+                            )
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Medicamentos para tratar la gota",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Alopurinol",
+                                descripcion =
+                                    "Uricosúrico Tableta de 300 y de 100 mg.",
+                                indicaciones = listOf(
+                                    "Profilaxis secundaria de la gota (recurrente) y de cálculos renales de oxalato de calcio."
+                                    ,"Profilaxis de la hiperuricemia asociada a quimioterapia del Cáncer."
+                                    ,"Nota: El alopurinol no está indicado en la hiperuricemia asintomática."
+                                ),
+                                contraindicaciones = listOf(
+                                    "Gota aguda: no es un tratamiento para la crisis aguda pero continuarlo si ya lo estaba tomando cuando ocurre la crisis."
+                                ),
+                                precauciones = listOf(
+                                    "El inicio del tratamiento puede precipitar una crisis aguda, por lo que se recomienda administrar un AINE a dosis adecuada como profiláctico y continuar por al menos un mes después de la corrección de la hiperuricemia (considerar la necesidad de protección gástrica con omeprazol), asegurar ingesta adecuada de líquidos (2-3 litros/día)."
+                                ),
+                                dosificacion = listOf(
+                                    "Iniciar 1-2 semanas mínimo después de un ataque agudo haya desaparecido. ADULTOS: Inicialmente 100 mg PO id., preferiblemente después de la comida. Ajustar luego en función de la concentración plasmática (≤6 mg/100mL) o urinaria. Dosis habitual de mantenimiento en condición leve 100-200 mg/d, moderada 300-600 mg/d, severa 700- 900 mg/d; dosis de más de 300 mg/d en dosis divididas."
+                                    ,"Profilaxis de la hiperuricemia asociada a quimioterapia: ADULTOS: igual que para la profilaxis de la gota, ajustados según la respuesta, a iniciar 24 h antes del tratamiento del cáncer y continuar hasta 7-10 días después. NIÑOS <15 años: 10-20 mg/kg/d (máx. 400 mg/d)."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Más frecuente: rash, (suspender inmediatamente si ocurre) . A veces trastornos gastrointestinales, malestar general, dolor de cabeza, vértigo, somnolencia, alteraciones visuales y del gusto, hipertensión, alopecia."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.alopurinol_1
+                                    ,R.drawable.alopurinol_2
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+
+            //Capitulo 16
+            Capitulo(
+                nombre = "ENDOCRINOLOGÍA",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "corticoides",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Betametasona",
+                                descripcion =
+                                    "Betametasona (dipropionato + fosfato sódico) Paracetamol (acetaminofén) | Glucocorticoide de acción rápida y prolongada. Solución 5 mg+2 mg/1 mL, para inyección IM, intralesional, ampolla de 1 a 2 mL.",
+                                indicaciones = listOf(
+                                    "Enfermedad inflamatoria intestinal crónica"
+                                    ,"Síndrome nefrótico en niños."
+                                    ,"Tratamiento del Síndrome Inflamatorio de Reconstitución Inmunológica (SIRI) en pacientes con VIH"
+                                    ,"Meningitis tuberculosa."
+                                    ,"Neonatos con toxoplasmosis sintomática o trombocitopenia "
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "No inyectar en el tendón de Aquiles."
+                                    ,"Esta presentación no es para uso IV, ni intradérmico."
+                                ),
+                                dosificacion = listOf(
+                                    "IM profunda en el glúteo: 1 a 2 mL."
+                                    ,"Inyección intralesional: 0.5 a 2 mL, dependiendo del tipo de lesión o tamaño articula."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.betametasona_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Dexametasona",
+                                descripcion =
+                                    "Dexametasona (fosfato sódico) | Glucocorticoide con actividad mineralocorticoide insignificante Solución para inyección 4 mg/mL tableta de 0.5 mg.",
+                                indicaciones = listOf(
+                                    "Hiperplasia adrenal congénita."
+                                    ,"Desordenes alérgicos o inflamatorios."
+                                    ,"Enfermedad reumática."
+                                    ,"Maduración pulmonar fetal en la APP y preeclampsia (útil solamente entre las 24 y 346/7 semanas de gestación)."
+                                    ,"Crup."
+                                    ,"Meningitis bacteriana."
+                                    ,"Intoxicación por Paraquat."
+                                    ,"Nausea y vómito asociado a quimioterapia."
+                                    ,"Edema cerebral asociado a cáncer."
+                                    ,"Varias afecciones en cuidados paliativos (ver sección dosificación)."
+                                ),
+                                contraindicaciones = listOf(
+                                    "Cobertura de corticoide en caso de estrés:"
+                                    ,"Para compensar una respuesta adrenocortical reducida cau- sada por el tratamiento prolongado con corticoide, cualquier enfermedad significativa intercurrente, trauma o procedi- miento quirúrgico requiere un aumento temporal de la dosis de corticoide"
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "PO: dosis habitual: ADULTOS: 0.5-10 mg/día NIÑOS 10-100 mcg/kg/d."
+                                    ,"Vía IM o IV lenta o infusión. ADULTOS 0.4-20 mg; NIÑOS 200-400 mcg/kg/d 3."
+                                    ,"Maduración pulmonar del feto en la APP y preeclampsia:"
+                                    ,"6 mg cada 12 h por 2 días (4 dosis)*"
+                                    ,"Crup leve o moderado: 150 mcg/kg PO dosis única y repetir la dosis al ingreso en hospital y 12 horas después si se considera necesario"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Dosis demasiado altas o el uso prolongado pueden exagerar la acción fisiológica de los corticoides."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.dexametasona_1
+                                    ,R.drawable.dexametasona_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Hidrocortisona",
+                                descripcion =
+                                    "Hidrocortisona (succinato sódico) | Glucocorticoide con actividad mineralocorticoide relativamente alta Polvo liofilizado estéril de 500 mg para inyección IM o IV",
+                                indicaciones = listOf(
+                                    "Insuficiencia adrenal."
+                                    ,"Choque."
+                                    ,"Reacciones de hipersensibilidad (incluyendo anafilaxis)."
+                                    ,"Adjunto en asma grave si no se puede usar la vía oral."
+                                    ,"Tratamientos de complicaciones neonatales (ver dosificación)"
+                                    ,"Pericarditis por intoxicación por fosfina."
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Cobertura de corticoide en caso de estrés:"
+                                    ,"Para compensar una respuesta adrenocortical reducida cau- sada por el tratamiento prolongado con corticoide, cualquier enfermedad significativa intercurrente, trauma o procedi- miento quirúrgico requiere un aumento temporal de la dosis de corticoide, o reintroducción temporal del tratamiento si ya fue interrumpido."
+                                ),
+                                dosificacion = listOf(
+                                    "Por vía IM o IV lento o en infusión:"
+                                    ,"ADULTOS: 100 a 500 mg, 3-4 veces en 24 horas o como sea necesario. NIÑOS por inyección IV lenta, <1 año: 25 mg, 1-5 años: 50 mg, 6 -12 años: 100 mg 3."
+                                    ,"Insuficiencia adrenal: 2 mg/kg IV lento seguida de infusión 0.18 mg/kg/hora"
+                                    ,"Choque: 2 a 8 mg/kg/dosis IV lento qid o infusión 0.18 mg/kg/h."
+                                    ,"Reacciones de hipersensibilidad : 10 mg/kg/dosis."
+                                    ,"Shock anafiláctico:1-15 mg/kg/día dividida entre 4 dosis IV lento."
+                                    ,"Como adjunto en asma severa si no se puede usar la vía oral: 100-200 mg, IV lento."
+                                    ,"Tratamientos de complicaciones neonatales :"
+                                    ,"Hipoglucemia grave y persistente: 5 mg/kg/d durante 3-5d"
+                                    ,"Hipercalcemia: 10 mg/kg/d."
+                                    ,"Hemorragia moderada o grave en hijos de madres con púrpura: 5-10 mg/kg/d en 3 dosis."
+                                    ,"Pericarditis por intoxicación por fosfina: 500 mg c/6 h IV lento."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Dosis demasiado altas o el uso prolongado pueden exagerar la acción fisiológica de los corticoides."
+                                    ,"Efectos mineralocorticoides: hipertensión, retención de sodio y agua y pérdida de potasio y calcio, son más significativos con la hidrocortisona."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.hidrocortisona_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Metilprednisolona",
+                                descripcion =
+                                    "Glucocorticoide Suspensión acuosa 40 mg/mL (acetato) para inyecciones IM, IV, IA Polvo estéril 500 mg (succinato) para inyección IM, IV.",
+                                indicaciones = listOf(
+                                    "Condiciones alérgicas severas."
+                                    ,"Choque (incluyendo choque alérgico)."
+                                    ,"Asma bronquial grave cuando no se puede usar vía oral."
+                                    ,"Edema cerebral asociado a malignidad."
+                                    ,"Enfermedad reumática"
+                                    ,"Tratamientos de complicaciones neonatales (ver dosificación)."
+                                    ,"Intoxicación por plaguicidas."
+                                    ,"Síndrome nefrítico en niños "
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Cobertura de corticoide en caso de estrés:"
+                                    ,"Para compensar una respuesta adrenocortical reducida cau- sada por el tratamiento prolongado con corticoide, cualquier enfermedad significativa intercurrente, trauma o procedi- miento quirúrgico requiere un aumento temporal de la dosis de corticoide, o reintroducción temporal del tratamiento si ya fue interrumpido."
+                                ),
+                                dosificacion = listOf(
+                                    "Vía IM o IV lenta; inicialmente 10–500 mg"
+                                    ,"Choque: 1-2 mg/kg/día dividida en 3-4 dosis."
+                                    ,"Asma bronquial grave: 2 mg/kg/dosis (máx: 80 mg) continuando con 1 mg/kg/dosis c/6 h."
+                                    ,"Complicaciones neonatales:"
+                                    ,"Hipercalcemia: 2 mg/kg/día."
+                                    ,"Hemorragia moderada o grave en hijos de madres con púrpura 10-15 mg/kg/día."
+                                    ,"Infecciones en neonato 1.5 mg/kg día en 2 dosis."
+                                    ,"Intoxicación por Paraquat® 15 mg/kg/día diluido en 200 mL de DW5% a pasar en 2 h."
+                                    ,"Intoxicación por fosfina. 1-2 mg/kg *"
+                                    ,"Síndrome nefrítico en niños. bolo de 15 mg/kg"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Efectos mineralocorticoides: hipertensión, retención de sodio y agua y pérdida de potasio y calcio (ocurre levemente)."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.metilprednisolona_1
+                                    ,R.drawable.metilprednisolona_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Prednisolona",
+                                descripcion =
+                                    "Prednisolona y prednisona | Corticosteroides con acción predominante glucocorticoide. Prednisolona: solución oral 15 mg/5 mL. Prednisona: tableta de 5 mg, tableta ranurada de 50 mg.",
+                                indicaciones = listOf(
+                                    "Desordenes inflamatorios y alérgicos."
+                                    ,"Asma bronquial y crisis de sibilancias en niños >2 meses."
+                                    ,"Enfermedad reumática."
+                                    ,"Crup."
+                                    ,"Enfermedad inflamatoria intestinal crónica."
+                                    ,"Tratamiento del Síndrome Inflamatorio de Reconstitución Inmunológica (SIRI) en pacientes con VIH."
+                                    ,"Meningitis tuberculosa."
+                                    ,"Neonatos con toxoplasmosis sintomática o trombocitopenia."
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Cobertura de corticoide en caso de estrés:"
+                                    ,"Para compensar una respuesta adrenocortical reducida cau- sada por el tratamiento prolongado con corticoide, cualquier enfermedad significativa intercurrente, trauma o procedi- miento quirúrgico requiere un aumento temporal de la dosis de corticoide, o reintroducción temporal del tratamiento si ya fue interrumpido."
+                                ),
+                                dosificacion = listOf(
+                                    "En general, inicialmente 10-20 mg PO diario (en casos de enfermedad grave hasta 60 mg) con dosis de mantenimiento de 2.5 a 15 mg diario PO por días a sem. según respuesta."
+                                    ,"Artritis reumática moderada o severa: 7.5 mg id por al menos 2 años 3."
+                                    ,"Crup moderado: dosis única de 1-2 mg/kg PO 3."
+                                    ,"Crisis aguda de asma bronquial: 1 mg/kg id, por 5 días."
+                                    ,"En crisis graves y embarazo 20-40 mg cada 12 h *"
+                                    ,"Urticaria severa: 40 mg diario por 3 a 5 días 11."
+                                    ,"Lupus Eritematoso Sistémico y sus crisis. 1-2 mg/kg/día *"
+                                    ,"Síndrome nefrótico en niños. 60 mg/m2/día por 4-8 semanas según respuesta."
+                                    ,"Neumonía grave por neumocistis. 1 mg/kg/d (40 mg c/12 h) por 5 d, seguida de 40 mg id por 5 días y 20 mg id por 11 d *"
+                                    ,"Meningitis tuberculosa. 1 mg/kg/día por 1 a 2 semanas y reducirlos gradualmente *"
+                                    ,"Tratamiento de Síndrome Inflamatorio de Reconstitución Inmunológica. 0.6 a 1 mg/kg/día por 5 a 10 días"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Efectos mineralocorticoides: hipertensión, retención de sodio y agua y pérdida de potasio y calcio (ocurren levemente)."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.prednisolona_1
+                                    ,R.drawable.prednisolona_2
+                                    ,R.drawable.prednisolona_3
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Triamcinolona",
+                                descripcion =
+                                    "Triamcinolona (acetonida) | Glucocorticoide de depósito. Solución 6 mg/mL (sin preservante) para inyección IM, o intralesional, amp 20 mL.",
+                                indicaciones = listOf(
+                                    "Desordenes inflamatorios e inflamatorios."
+                                    ,"Enfermedad reumática."
+                                    ,"Inflamación local de articulación o tejidos blandos."
+                                ),
+                                contraindicaciones = listOf(
+                                    "No inyectar en el tendón de Aquiles."
+                                ),
+                                precauciones = listOf(
+                                    "Altas dosis pueden provocar miopatía, evitar en terapia crónica. Las inyecciones intraarticulares de corticosteroides pueden causar enrojecimiento y puede afectar al cartílago hialino. No se debe inyectar una articulación más de 4 veces en un año. Las medidas de asepsia completa son esenciales, se debe evitar las áreas infectadas."
+                                ),
+                                dosificacion = listOf(
+                                    "IM profunda en el glúteo: 40 mg."
+                                    ,"Repetir en intervalos de acuerdo a la respuesta del paciente."
+                                    ,"No administrar más de 100 mg en una sola dosis."
+                                    ,"Inyección intraarticular: ver indicaciones del fabricante:"
+                                    ,"Dosis de acuerdo al tamaño de la articulación."
+                                    ,"Inyección intradérmica: 2-3 mg; máx. 5 mg por sitio. Dosis total máx. 30 mg. Cuando es apropiado, puede ser repetido después de 1-2 semanas. No usar en menores de 6 años."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.triamcinolona_1
+                                )
+                            )
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Diabetes",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Insulina",
+                                descripcion =
+                                    "Insulina cristalina (soluble) | Insulina de acción corta Frasco con 10 mL con 100 UI/mL.",
+                                indicaciones = listOf(
+                                    "Diabetes mellitus."
+                                    ,"Emergencias en diabéticos y cirugía."
+                                    ,"Coma o cetoacidosis diabética."
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Las necesidades de insulina pueden incrementarse por infección, estrés, trauma o cirugía durante la pubertad y durante el embarazo (2do y 3er trimestre)"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS Y NIÑOS de cualquier edad, por vías: SC, IM, IV o por infusión continua, según requerimientos del paciente o la circunstancia 8 (0.3-1 UI/kg/día)."
+                                ),
+                                dosificacionImagenes = listOf(
+
+                                ),
+                                efectosAdversos = listOf(
+
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.insulina_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Intermedia",
+                                descripcion =
+                                    "Insulina de acción intermedia | Frasco con 10 mL con 100 UI/mL.",
+                                indicaciones = listOf(
+                                    "Diabetes mellitus."
+                                ),
+                                contraindicaciones = listOf(
+                                    "No administrar por vía IV."
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "Por vía subcutánea, según los requerimientos de cada paciente 8 (0.3-1 UI/kg/día) 10,11"
+                                    ,"Consultar normas del MINSA para el cálculo progresivo de la dosis"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: hipoglucemia por sobredosis, aumento de peso"
+                                    ,"Raros: reacciones de hipersensibilidad, incluyendo urticaria rash, reacciones locales y lipodistrofia si no se alternan los sitios de aplicación."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.intermedia_1
+                                )
+                            )
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Hipoglucemiantes orales (sub)",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Glibenclamida",
+                                descripcion =
+                                    "Hipoglicemiante oral del grupo sulfonilureas (duración de acción hasta 24 horas) Tabletas de 5 mg.",
+                                indicaciones = listOf(
+                                    "De segunda elección en la diabetes tipo 2."
+                                ),
+                                contraindicaciones = listOf(
+                                    "cetoacidosis."
+                                ),
+                                precauciones = listOf(
+                                    "Puede favorecer el aumento de peso. Evitar su uso en pacientes con deficiencia de G6PD y personas de edad avanzada."
+                                    ,"Insuficiencia hepática o renal: evitar en lo posible (riesgo aumentado de hipoglicemia)."
+                                    ,"Interacciones: pueden reducir su efecto hipoglucémico: la clorpromazina, corticoides, anticonceptivos orales, hidroclorotiazida, hormonas tiroides. Pueden aumentar el efecto: los IECA, el alcohol, el fluconazol y la claritromicina."
+                                    ,"Embarazo: no usar. (Categoría C de la FDA)."
+                                    ,"Lactancia: no usar."
+                                ),
+                                dosificacion = listOf(
+                                    "Inicialmente 2.5-5 mg diario con o inmediatamente después del desayuno. Se ajusta la dosis según las necesidades, hasta un máximo de 15 mg diario (Utilizar un aplicador estéril)."
+                                ),
+                                dosificacionImagenes = listOf(
+
+                                ),
+                                efectosAdversos = listOf(
+                                    "Leves y poco comunes: nausea, vómito, diarrea y constipación."
+                                    ,"Ocasionalmente: hipoglucemia, alteraciones en la función hepática, lo cual raramente puede llevar a ictericia colestática, hepatitis o falla hepática. Reacciones alérgicas de la piel, (usualmente en las primeras 6 a 8 semanas de tratamiento)."
+                                    ,"Raros: leucopenia, trombocitopenia, anemia aplásica."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.glibenclamida_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Metformina",
+                                descripcion =
+                                    "Hipoglicemiante oral del grupo biguanidas Tabletas de 500 mg.",
+                                indicaciones = listOf(
+                                    "De primera elección en la diabetes tipo 2."
+                                    ,"El uso en caso de Síndrome Ovario Poliquístico es controversial.  Una revisión Cochrane (2012) reveló que la metformina usada sola o en asociación con clomifeno, no mejoró la tasa de nacimiento en estas mujeres 19."
+                                ),
+                                contraindicaciones = listOf(
+                                    "cetoacidosis, antecedentes de acidosis láctica, antes de cirugías o procedimientos diagnósticos con medios de contraste yodado."
+                                ),
+                                precauciones = listOf(
+                                    "Antes de iniciar el tratamiento deberá evaluarse la función renal y luego al menos anualmente, debido al riesgo incrementado de acidosis láctica en pacientes con insuficiencia renal. Retirar o interrumpir en los casos de riesgo de hipoxia de los tejidos, como: deshidratación, infección grave, shock, falla cardiaca aguda o falla respiratoria, deficiencia hepática."
+                                    ,"Insuficiencia renal: evitar en lo posible (riesgo aumentado de acidosis láctica). Interacciones: el alcohol puede aumentar el riesgo de acidosis láctica y de hipoglucemia.."
+                                    ,"Embarazo: se puede usar tanto en diabetes preexistente, como en diabetes gestacional. (Categoría C de la FDA)."
+                                    ,"Lactancia: se puede usar."
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS Y NIÑOS >10 años: inicialmente 500 mg con el desayuno por al menos 1 semana, luego 500 mg con cada comida, hasta un máximo de 3 g diario."
+                                ),
+                                dosificacionImagenes = listOf(
+
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: anorexia, nausea, vómitos, diarrea (usualmente pasajera), dolor abdominal, trastornos del gusto."
+                                    ,"Raros: acidosisx láctica, disminución en la absorción de vitamina B12, eritema, prurito, urticaria y hepatitis."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.metformina_1
+                                )
+                            )
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Hormonas tiroideas y medicamentos antitiroideos",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Metimazol",
+                                descripcion =
+                                    "Metimazol (Tiamazol carbamizol) | Inhibidor de la función tiroidea Tableta 5 mg.",
+                                indicaciones = listOf(
+                                    "Hipertiroidismo."
+                                    ,"Tratamiento paliativo, terapia de mantenimiento en estado eutiroideo preparación para el tratamiento quirúrgico (por ejemplo, la tiroidectomía subtotal) o para tratamiento con yodo radioactivo"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Desórdenes sanguíneos graves."
+                                ),
+                                precauciones = listOf(
+                                    "Riesgo de agranulocitosis y de hepatotoxicidad (aunque es mayor con propiltiouracilo sobre todo en niños). Realizar conteo de leucocitos en presencia de cualquier infección. Suspender de inmediato el tratamiento en caso de neutropenia o evidencia clínicamente significativa de anomalía hepática incluyendo valores de transaminasas hepáticas superior a 3 veces el límite superior normal."
+                                    ,"Interacciones: Puede  aumentar la actividad de la warfarina, por lo que hay que monitorear el TP e INR especialmente antes de procedimientos quirúrgicos. Puede aumentar los niveles séricos de betabloqueadores, digoxina y teofilina (puede ser necesaria reducir dosis de estos medicamentos cuando el paciente está eutiroideo)."
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: 15-40 mg/d PO; dosis más altas deben ser prescritas sólo bajo supervisión de un especialista."
+                                    ,"Continuar hasta que el paciente está eutiroideo, por lo general después de 4 a 8 semanas, entonces reducir gradualmente hasta una dosis de mantenimiento de 5 a 15 mg. La terapia suele administrarse durante 12 a 18 meses 2."
+                                    ,"NIÑOS de 1 mes a 12 años: inicialmente 750 mcg/kg/d en una o varias dosis por día, hasta que este eutiroideo (máx. 30 mg en niños de 1-12 meses)."
+                                    ,"12-18 años: inicialmente 30 mg/d , id o dividida 3."
+                                    ,"ORIENTACIÓN AL PACIENTE"
+                                    ,"Acudir inmediatamente a la unidad de salud si presenta dolor de garganta, úlceras en la boca, moretones, fiebre, malestar o enfermedad no específica."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: náuseas, trastornos gastrointestinales leves, alteración del gusto, dolor de cabeza, fiebre, malestar general, erupción cutánea, prurito, artralgias."
+                                    ,"Raras: miopatía, alopecia, depresión de la médula ósea (incluyendo pancitopenia y agranulocitosis)."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.metimazol_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Solucion",
+                                descripcion =
+                                    "Solución  de Lugol | Solución Iodo acuso al 5% + ioduro de potasio 10% (Iodo total 130 mg/1 mL).",
+                                indicaciones = listOf(
+                                    "Tirotoxicosis (preoperatorio)."
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en niños, no usar para el tratamiento a largo plazo."
+                                    ,"Embarazo: evitar en lo posible. Riesgo de bocio neonatal e hipotiroidismo."
+                                    ,"Lactancia: no usar, riesgo de bocio neonatal e hipotiroidismo."
+                                ),
+                                dosificacion = listOf(
+                                    "0.1–0.3 mL tid bien diluido en leche o agua."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Reacciones de hipersensibilidad, incluyendo síntomas similares a la coriza, dolor de cabeza, lagrimeo, conjuntivitis, dolor en las glándulas salivares, laringitis, bronquitis, erupciones cutáneas, en caso de tratamiento prolongado depresión, el insomnio, la impotencia. Bocio en niños de madres que toman yoduros."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.solucion_1
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            //Capitulo 17
+            Capitulo(
+                nombre = "Antídotos",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "Antídotos",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Carbon",
+                                descripcion =
+                                    "Carbón activado | Polvo en sobre de 30 g.",
+                                indicaciones = listOf(
+                                    "Reducción de la absorción de los venenos en el sistema gastrointestinal."
+                                    ,"Eliminación activa de algunos fármacos después de su absorción (ej. carbamacepina, dapsona, fenobarbital, quinina, teofilina) y de plaguicidas muy tóxicos como Paraquat© u organosfosforados."
+                                ),
+                                contraindicaciones = listOf(
+                                    "No usar en envenenamiento por productos derivados del petróleo (gasolina, keroseno), sustancias corrosivas alcoholes, malatión, cianuros y sales de metales como el hierro y sales de litio."
+                                ),
+                                precauciones = listOf(
+                                    "Riesgo de aspiración en persona somnolienta o comatosas (garantizar protección de las vías aéreas, uso de sonda nasogástrica). Usar con cuidado en caso de reducción de la motilidad gastrointestinal (riesgo de obstrucción)."
+                                    ,"Interacciones: Puede disminuir la absorción y la respuesta terapéutica de otros medicamentos por vía oral. Los fármacos que no sean los utilizadas para la descontaminación gastrointestinal o antídotos contra las toxinas ingeridas no se debe administrarse dentro de las 2 horas de haberse administrado el carbón activado."
+                                ),
+                                dosificacion = listOf(
+                                    "Por vía oral o por sonda nasogástrica."
+                                    ,"Reducción de la absorción: ADULTOS y NIÑOS>12 años: 50g."
+                                    ,"NIÑOS <12 años: 1 g/kg (máx. 50 g), lo más pronto posible (dentro de 1 h) después de la ingestión del tóxico 4."
+                                    ,"Eliminación activa: dosis repetidas"
+                                    ,"ADULTOS y NIÑOS>12 años: 50 g a repetir cada 4 h, en caso de vómito administrar antiemético, porque se puede reducir la eficacia del tratamiento. En casos de intolerancia, la dosis puede ser reducida y se aumenta la frecuencia (por ejemplo, 25 g cada 2 h o 12.5 g cada hora), pero esto puede comprometer la eficacia."
+                                    ,"NIÑOS<12 años 1g/kg (max. 50 g) a repetir cada 4 h. En caso de intolerancia disminuir la dosis y aumentar la frecuencia."
+                                    ,"Después de un lavado gástrico: ADULTOS, 1 g/kg diluidos en 300 mL de agua. NIÑOS 0.5 g/kg. en 100 mL de agua 5. Si el paciente no tiene diarrea administrar un catártico como sorbitol (Adultos y mayores de 12 años: 1 g/kg, niños: 0.5 g/kg) o Manitol (3-4 mL/kg) 5."
+                                    ,"Nota: la suspensión o polvo reconstituida pueden mezclar con bebidas sin alcohol (por ejemplo, cafeína cola de la dieta) o zumos de frutas para enmascarar el sabor."
+                                    ,"ORIENTACIÓN AL PACIENTE: Aconsejar no usarlo como antídoto en casa. Explicar que las heces serán de color negro durante varios días y que la diarrea puede continuar durante 24 a 48 h 3."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Vómitos, estreñimiento, diarrea, heces negras."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.carbon_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Flumazenil",
+                                descripcion =
+                                    "Flumazenil | Antagonista de las benzodiazepinas Solución de 0.1 mg/1 mL para inyección IV.",
+                                indicaciones = listOf(
+                                    "Reversión de los efectos sedantes de las benzodiazepinas en anestesia, cuidados intensivos, y los procedimientos clínicos."
+                                    ,"Sobredosis con benzodiazepinas sobre todo en caso de coma o depresión respiratoria."
+                                ),
+                                contraindicaciones = listOf(
+                                    "Afecciones potencialmente mortales controladas por benzodiazepinas (por ej. aumento de la presión intracraneal, estado epiléptico)  Intoxicación con uso concomitante de antidepresivos tricíclicos (riesgo de convulsiones, aritmias y paro cardiáco)."
+                                ),
+                                precauciones = listOf(
+                                    "El flumazenil es de acción corta por lo que puede ser necesario repetir la dosis (los efectos de varias benzodiacepinas pueden persistir durante al menos 24 horas), cuidado en caso de dependencia a benzodiazepinas (puede precipitar los síntomas de abstinencia),; evitar la inyección rápida en pacientes de alto riesgo o ansiosos y después de una cirugía mayor, traumatismo craneoencefálico (la rápida reversión de la sedación por benzodiacepinas pueden causar convulsiones)."
+                                ),
+                                dosificacion = listOf(
+                                    "Uso en anestesia y procedimientos clínicos, por vía IV lenta:"
+                                    ,"0.2 mg en 15 s., luego 0.1 mg a intervalos de 60 s. si es necesario; rango habitual de dosis: 0.3-0.6 mg, dosis máx. total 1 mg; NIÑOS 1 mes-18 años: 0.01 mg/kg (máx. 0.2 mg), a repetir a intervalos de 1 min, si es necesario."
+                                    ,"Dosis máx. total: 0.05 mg/kg (1 mg) (2 mg en cuidados intensivos). Por infusión IV si la somnolencia recurre después de la inyección: 2–10 mcg/kg/h, a ajustar en función de la respuesta. (máx. 400 mcg/h)."
+                                    ,"Uso en cuidados intensivos, por vía IV: 0.3 mg en 15 s., luego 0.1 mg a intervalos de 60 s. si es necesario; dosis máx. total de 2 mg, y luego si se repite la somnolencia ya sea, por inyección IV, 0.3 mg, o por infusión IV, 0.1-0.4 mg/h, ajustados según la respuesta."
+                                    ,"NIÑOS 1 mes-18 años: ver párrafo superior."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas y vómitos, con menos frecuencia palpitaciones, ansiedad, miedo."
+                                    ,"Raras veces: hipertensión transitoria, taquicardia, enrojecimiento facial, agitación, convulsiones (sobre todo en pacientes con epilepsia), mareos, trastornos sensitivos, escalofríos, sudoración."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.flumazenil_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Naloxona",
+                                descripcion =
+                                    "Naloxona | Antagonista de los opioides Solución de 0.4 mg/1 mL para inyección IV.",
+                                indicaciones = listOf(
+                                    "Sobredosis de opioides."
+                                    ,"Reversión de depresión respiratoria postoperatoria y reversión de la depresión central y respiratoria del neonato producidos por la administración de opioide durante el parto."
+                                ),
+                                contraindicaciones = listOf(
+                                    "No usar en envenenamiento por productos derivados del petróleo (gasolina, keroseno), sustancias corrosivas alcoholes, malatión, cianuros y sales de metales como el hierro y sales de litio."
+                                ),
+                                precauciones = listOf(
+                                    "Dependencia física a los opioides, irritabilidad cardíaca. El paciente tiene que ser vigilado estrictamente porque la naloxona tiene una duración de acción corta y dosis repetidas pueden ser necesarias, sobretodo en la intoxicación por opiáceos con efectos prolongados. El uso en el postoperatorio puede incrementar el dolor postquirúrgico."
+                                    ,"Embarazo: se puede usar con cuidado. En esta situación el beneficio supera el riesgo (Categoría C de la FDA)."
+                                    ,"Lactancia: usar con cuidado (no se sabe si se excreta en la leche)."
+                                ),
+                                dosificacion = listOf(
+                                    "Vía IV (Usar las mismas dosis SC o IM únicamente si la vía IV no es factible)"
+                                    ,"ADULTOS: 0.4–2 mg. Si no hay respuesta, repetir a intervalos de 2-3 min. hasta un máximo de 10 mg (luego revisar el diagnóstico). Otras dosis pueden ser necesarias si la función respiratoria se deteriora. NIÑOS: 10 mcg/kg. Si no hay res- puesta dar nueva dosis de 100 mcg/kg (luego revisar el diagnóstico). Otras dosis pueden ser necesarias si la función respiratoria se deteriora."
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas, vómitos, hipotensión, hipertensión, taquicardia, dolor de cabeza, mareos."
+                                    ,"Menos comúnmente: diarrea, boca seca, bradicardia, arritmia, hiperventilación, temblor, sudoración."
+                                    ,"Rara vez: convulsiones."
+                                    ,"Muy rara vez: fibrilación ventricular, paro cardíaco, edema pulmonar, eritema multiforme, y reacciones de hipersensibilidad (incluyen anafilaxia), agitación."
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.naloxona_1
+                                )
+                            )
+                        )
+                    )
+                )
+            )
         )
     }
 
