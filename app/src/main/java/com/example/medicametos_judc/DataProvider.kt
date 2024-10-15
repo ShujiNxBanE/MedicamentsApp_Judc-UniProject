@@ -33,13 +33,14 @@ data class Capitulo(
 object DataProvider {
     fun obtenerCapitulos(): List<Capitulo> {
         return listOf(
+            // Capitulo 1
             Capitulo(
                 nombre = "ANTIINFECCIOSOS",
                 descripcion = "",
                 subgrupos =
                 listOf(
                     Subgrupo(
-                        nombre = "PENICILINA",
+                        nombre = "PENICILINAS",
                         descripcion = "",
                         medicamentos =
                         listOf(
@@ -717,6 +718,403 @@ object DataProvider {
                                 imagenesResIds = listOf(
                                     R.drawable.claritromicina_1
                                     ,R.drawable.claritromicina_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Eritromicina",
+                                descripcion =
+                                "Estearato de eritromicina tab. de 500 mg",
+                                indicaciones = listOf(
+                                    "Ruptura prematura de membranas en parto pretérmino, asociada a ampicilina o amoxicilina"
+                                    ,"Alternativa a azitromicina en profilaxis a embarazadas que tuvieron contacto directo con casos de cólera"
+                                    ,"Sífilis en gestantes alérgicas a penicilinas"
+                                    ,"Acné grave"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad a eritromicina o cualquier macrólido"
+                                    ,"Interacciones"
+                                    ,"Aumenta la concentración plasmática de la teofilina, carbamacepina, midazolam. Puede inhibir el metabolismo de los bloqueadores de los canales de calcio (aumentando el riesgo de efectos secundarios). Evitar el uso concomitante con fluconazol"
+                                    ,"Embarazo: se puede usar (Categoría B de la FDA)"
+                                    ,"Lactancia: se puede usar; pequeñas cantidades en la leche"
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "500 mg cada 8 h por 7 días 7; en sífilis temprana, por 14 días  La dosis habitual de 1-2/d, puede dividirse en 2-3 tomas al día 7"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Comunes: náuseas, vómitos, malestar abdominal y diarrea; son leves y menos frecuentes con azitromicina y claritromicina que con eritromicina. Menos frecuentes: hepatotoxicidad (incluyendo ictericia colestásica) y erupción cutánea. Raros o muy raros: pancreatitis, colitis asociada a antibióticos, prolongación del intervalo QT, arritmias, sínd. de Stevens-Johnson y necrólisis epidérmica tóxica"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.eritromicina_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "LINCOSAMINAS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Clindamicina",
+                                descripcion =
+                                "Cápsula de 300 mg; solución inyectable (FAM) de 150 mg/mL",
+                                indicaciones = listOf(
+                                    "ADULTOS Y NIÑOS"
+                                    ,"Alternativa en neumonía aguda complicada Neumonía asociada a ventilación mecánica cuando se sospecha anaerobios"
+                                    ,"Alternativa en infecciones con foco intraabdominal,incluyendo apendicitis aguda complicada (en asociación con otro antibacteriano)"
+                                    ,"ADULTOS"
+                                    ,"Alternativa en casos de politraumatizados, colecistitis aguda grave y la coledocolitiasis con colangitis no tóxica"
+                                    ,"Alternativa en ruptura prematura de membranas en mujeres alérgicas a penicilinas y sospecha de anaerobio, y alternativa en la hemorragia postparto y retención placentaria"
+                                    ,"Aborto séptico, cuando se sospecha anaerobios involucrados, endometritis, anexitis, tromboflebitis pélvica grave, shock séptico (sepsis grave), absceso pélvico, peritonitis pélvica, peritonitis generalizada, absceso intraabdominal, septicemia"
+                                    ,"Alternativa en el absceso dentoalveolar que no ha respondido a la penicilina o metronidazol"
+                                    ,"Alternativa en mastitis puerperal (3ra)"
+                                    ,"Alternativa a cefazolina en antibioterapia profiláctica en la mayoría de los procedimientos quirúrgicos en caso de alergia a betalactámico"
+                                    ,"NIÑOS"
+                                    ,"Alternativa en osteomielitis y artritis séptica"
+                                    ,"Alternativa en infecciones graves de piel y tejidos blandos como ectima y foliculitis extensa"
+                                    ,"Alternativa en infecciones por Toxoplasma gondii (asociada a otros antimicrobianos)"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Episodios de diarrea; evitar inyecciones que contienen alcohol bencílico en neonatos (provoca jadeos “gasping” en neonatos prematuros)"
+                                ),
+                                precauciones = listOf(
+                                    "Interrumpir inmediatamente si se desarrolla diarrea o colitis; monitorear las funciones hepática y renal en recién nacidos y lactantes y si el tratamiento es por más de 10 días, evitar la administración intravenosa rápida"
+                                    ,"Interacciones"
+                                    ,"Incrementa el efecto de los miorrelajantes no despolarizantes (pancuronio, vecuronio)"
+                                    ,"Antagoniza el efecto de laneostigmina y de la piridostigmina"
+                                    ,"Embarazo: se puede usar (Categoría B de la FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS IV, 900 mg c/8 h; endometritis y anexitis, 900 mg IV c/6 h. PO, 150-300 mg c/6 h, hasta 450 mg c/6 h en"
+                                    ,"Infecciones graves"
+                                    ,"NIÑOS IV; osteomielitis, artritis séptica, neumonía 40 mg/kg/d, IV en 4 dosis; septicemia y neumonía grave hasta 60 mg/kg/d, IV en 4 dosis; encefalitis por toxoplasmosis, 20-30 mg/kg/día en 4 dosis. PO: 3-6 mg/kg c/6 h 1"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Diarrea (suspender el tratamiento), molestias abdominales, esofagitis, úlceras esofágicas, alteraciones del gusto, náuseas, vómitos, colitis asociada a antibióticos, ictericia, leucopenia, eosinofilia, trombocitopenia, poliartritis. Además, exantema, prurito, urticaria, reacciones anafilácticas, síndrome de Stevens-Johnson, necrólisis epidérmica tóxica, dermatitis exfoliativa y versículo ampollosa. También dolor, induración y absceso en el sitio de inyección intramuscular; tromboflebitis después de inyección IV"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.clindamicina_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Clindamicina",
+                                descripcion =
+                                "Cápsula de 300 mg; solución inyectable (FAM) de 150 mg/mL",
+                                indicaciones = listOf(
+                                    "ADULTOS Y NIÑOS"
+                                    ,"Alternativa en neumonía aguda complicada Neumonía asociada a ventilación mecánica cuando se sospecha anaerobios"
+                                    ,"Alternativa en infecciones con foco intraabdominal,incluyendo apendicitis aguda complicada (en asociación con otro antibacteriano)"
+                                    ,"ADULTOS"
+                                    ,"Alternativa en casos de politraumatizados, colecistitis aguda grave y la coledocolitiasis con colangitis no tóxica"
+                                    ,"Alternativa en ruptura prematura de membranas en mujeres alérgicas a penicilinas y sospecha de anaerobio, y alternativa en la hemorragia postparto y retención placentaria"
+                                    ,"Aborto séptico, cuando se sospecha anaerobios involucrados, endometritis, anexitis, tromboflebitis pélvica grave, shock séptico (sepsis grave), absceso pélvico, peritonitis pélvica, peritonitis generalizada, absceso intraabdominal, septicemia"
+                                    ,"Alternativa en el absceso dentoalveolar que no ha respondido a la penicilina o metronidazol"
+                                    ,"Alternativa en mastitis puerperal (3ra)"
+                                    ,"Alternativa a cefazolina en antibioterapia profiláctica en la mayoría de los procedimientos quirúrgicos en caso de alergia a betalactámico"
+                                    ,"NIÑOS"
+                                    ,"Alternativa en osteomielitis y artritis séptica"
+                                    ,"Alternativa en infecciones graves de piel y tejidos blandos como ectima y foliculitis extensa"
+                                    ,"Alternativa en infecciones por Toxoplasma gondii (asociada a otros antimicrobianos)"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Episodios de diarrea; evitar inyecciones que contienen alcohol bencílico en neonatos (provoca jadeos “gasping” en neonatos prematuros)"
+                                ),
+                                precauciones = listOf(
+                                    "Interrumpir inmediatamente si se desarrolla diarrea o colitis; monitorear las funciones hepática y renal en recién nacidos y lactantes y si el tratamiento es por más de 10 días, evitar la administración intravenosa rápida"
+                                    ,"Interacciones"
+                                    ,"Incrementa el efecto de los miorrelajantes no despolarizantes (pancuronio, vecuronio)"
+                                    ,"Antagoniza el efecto de laneostigmina y de la piridostigmina"
+                                    ,"Embarazo: se puede usar (Categoría B de la FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS IV, 900 mg c/8 h; endometritis y anexitis, 900 mg IV c/6 h. PO, 150-300 mg c/6 h, hasta 450 mg c/6 h en"
+                                    ,"Infecciones graves"
+                                    ,"NIÑOS IV; osteomielitis, artritis séptica, neumonía 40 mg/kg/d, IV en 4 dosis; septicemia y neumonía grave hasta 60 mg/kg/d, IV en 4 dosis; encefalitis por toxoplasmosis, 20-30 mg/kg/día en 4 dosis. PO: 3-6 mg/kg c/6 h 1"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Diarrea (suspender el tratamiento), molestias abdominales, esofagitis, úlceras esofágicas, alteraciones del gusto, náuseas, vómitos, colitis asociada a antibióticos, ictericia, leucopenia, eosinofilia, trombocitopenia, poliartritis. Además, exantema, prurito, urticaria, reacciones anafilácticas, síndrome de Stevens-Johnson, necrólisis epidérmica tóxica, dermatitis exfoliativa y versículo ampollosa. También dolor, induración y absceso en el sitio de inyección intramuscular; tromboflebitis después de inyección IV"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.clindamicina_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "TETRACICLINAS Y CLORANFENICOL",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Doxiciclina",
+                                descripcion =
+                                "Tabletas y cápsulas de 100 mg",
+                                indicaciones = listOf(
+                                    "Como alternativa a un macrólido en la neumonía del adulto adquirida en la comunidad de manejo ambulatorio, asociado a un betalactámico"
+                                    ,"Como alternativa a azitromicina en el manejo sindrómico de ITS del dolor abdominal bajo (EPI), cervicitis, secreción uretral , úlcera genital, bubón inguinal proctitis  (en la inflamación escrotal, es de 1ra elección)"
+                                    ,"Sífilis en personas alérgicos a penicilina"
+                                    ,"Prostatitis crónica, como alternativa a las fluoroquinolinas"
+                                    ,"Brucelosis, asociado a rifampicina o aminoglucósido"
+                                    ,"Acné moderado o grave que no responde a tratamiento oral"
+                                ),
+                                contraindicaciones = listOf(
+                                    "No dar a niños <12 años, mujeres embarazadas o lactando debido a que el depósito del fármaco al calcio en huesos y dientes en desarrollo causa coloración y ocasionalmente hipoplasia del esmalte dental"
+                                ),
+                                precauciones = listOf(
+                                    "Las tetraciclinas pueden aumentar la debilidad muscular en personas con miastenia gravis y exacerbar el lupus eritematoso sistémico. Evitar exposición a la luz solar durante el tratamiento (se ha reportado fotosensibilidad)"
+                                    ,"Insuficiencia renal: usar con precaución"
+                                    ,"Insuficiencia hepática: usar con precaución"
+                                    ,"Usar con precaución en pacientes alcohólicos o que recibieron fármacos potencialmente hepatotóxicos"
+                                    ,"Interacciones"
+                                    ," Los antiácidos, el calcio, hierro, magnesio y zinc, disminuyen la absorción de las tetraciclinas. Ladoxiciclina incrementa el riesgo de toxicidad del metotrexate"
+                                    ,"La rifampicina reduce la concentración plasmática de la doxiciclina. Las tetraciclinas pueden antagonizar el efecto de las penicilinas y aumentar el efecto anticoagulante de los cumarínicos"
+                                    ,"Embarazo: no usar (Categoría D de la FDA)"
+                                    ,"Lactancia: no usar"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: 100 mg bid por 7 d (14 d para EIP, bubón inguinal, y úlcera genital por sífilis, 6-12 sem. para acné)"
+                                    ,"NIÑOS >12 años: 2 mg/kg (máx. 100 mg) 2 veces al día el primer día, luego 2 mg/kg/d"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas, vómitos, diarrea (ocasionalmente colitis asociada a antibióticos), disfagia e irritación esofágica Raros: hepatotoxicidad, pancreatitis, alteraciones de la sangre, fotosensibilidad y reacciones de hipersensibilidad incluyendo erupción cutánea, dermatitis exfoliativa, síndrome de Stevens-Johnson, urticaria, angioedema, anafilaxia y pericarditis), cefalea, anorexia, sequedad de boca,enrojecimiento, ansiedad y tinnitus"
+                                ),
+                                imagenesResIds = listOf(
+                                      R.drawable.doxiciclina_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Cloranfenicol",
+                                descripcion =
+                                "Polvo liofilizado para inyección de 1 g",
+                                indicaciones = listOf(
+                                    "En adultos y niños, reservado como alternativa para infecc. graves en la cuales antibióticos potencialmente menos tóxicos son inefectivos o contraindicados, especialmente las causadas por H. influenzae y la fiebre tifoidea"
+                                    ,"Tosferina (con fiebre)"
+                                    ,"Neumonía grave y muy grave o cuando presentan complicaciones (cardiopatía, retraso psicomotor, síndrome de Down, radiografía con focos)"
+                                    ,"Apendicitis supurada + colección intraabdominal o complicada"
+                                    ,"Neumonía aguda complicada, asociada a dicloxacilina"
+                                    ,"Profilaxis antibiótica en fístula de LCR"
+                                    ,"Septicemia y meningitis bacterianas"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad conocida a cloranfenicol. Historia previa de reacción tóxica al cloranfenicol"
+                                ),
+                                precauciones = listOf(
+                                    "Realizar recuentos hematológicos antes y durante el tratamiento; controlar las concentraciones plasmáticas en neonatos"
+                                    ,"Insuficiencia hepática y renal: reducir dosis"
+                                    ,"Interacciones: aumenta el efecto anticoagulante de los cumarínicos y el efecto de las sulfonilureas. La rifampicina acelera el metabolismo del cloranfenicol, el fenobarbital puede acelerarlo"
+                                    ,"Embarazo: evitar en lo posible  (Categoría C de la FDA)"
+                                    ,"Lactancia: evitar en lo posible riesgo de toxicidad a la médula ósea"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: IV, 1 g c/6 h  6"
+                                    ,"NIÑOS: IV, 50 mg/kg/d en 4 dosis 7. En infecciones graves (meningitis septicemia): 100 mg/kg/d en 4 dosis 7"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: náuseas, vómitos, sequedad de la boca, supresión reversible de la médula ósea, cefalea. Poco frecuentes: diarrea, glositis, estomatitis, enterocolitis depresión leve, colitis por antibióticos, confusión, delirio. Raros: neuropatía periférica, neuritis periférica, dermatitis de contacto, urticaria, angioedema, anafilaxia, destrucción ungueal (onicolisis), supresión irreversible de la médula ósea (anemia aplásica: leucopenia, trombocitopenia, anemia hemolítica y leucemia), hepatotoxicidad, atrofia y neuritis óptica, ototoxicidad, broncoespasmo, reacción de Jarisch-Herxheimer (a), acidosis metabólica y síndrome del niño gris (b)(a) Reacción aguda febril con frecuencia acompañada de escalofríos, fiebre, malestar general, náuseas, cefalea, mialgias y artralgias) (b) Vómitos, diarrea verdosa, distensión abdominal, hipotermia, cianosis pálida, respiración irregular, colapso circulatorio"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.cloranfenicol_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "AMINOGLUCOSIDOS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Amikacina",
+                                descripcion =
+                                "Solución para inyección de 250 mg/1 mL (FAM de 2 mL) \n" +
+                                        "Solución para inyección de 50 mg/1mL (FAM de 2 mL) \n",
+                                indicaciones = listOf(
+                                    "Infecciones graves por Gram (–) resistentes a gentamicina"
+                                    ,"Alternativa en casos de neumonía grave y muy grave en niños y adolescentes y adultos, y neumonía intrahospitalaria no grave de inicio tardío"
+                                    ,"Septicemia con foco intrahospitalario respiratorio en niños y adolescentes, septicemia neonatal (junto con otro antibacteriano)"
+                                    ,"Artritis séptica y osteomielitis neonatal por Gram (–)"
+                                    ,"Onfalitis diseminada (tratar como sepsis neonatal tardía)"
+                                    ,"Manejo inicial de abdomen agudo con sospecha de contaminación peritoneal (peritonitis)"
+                                    ,"Úlceras por presión, úlceras por insuficiencia venosa"
+                                    ,"Alternativa de segunda línea en septicemia secundaria a complicaciones obstétricas  (shock séptico)"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Miasterina graves"
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "En adultos o niños obesos, para evitar dosis excesivas, usar el peso ideal de acuerdo a la talla para el cálculo de la dosis"
+                                    ,"ADULTOS:"
+                                    ,"Régimen de dosis múltiples: IM, IV lento o por infusión (en 30-60 min): 15 mg/kg/d en 2 dosis, y hasta 22.5 mg/kg/d en 3 dosis en infecciones graves (máx. 1.5 y hasta 10 días, dosis cumulativa máx. 15 g)"
+                                    ,"Régimen de dosis única cuando posible por infusión IV, inicialmente 15 mg/kg (máx. 1.5 g), luego ajustar según concentración sérica de amikacina, dosis cumulativa máx. 15 g"
+                                    ,"Úlceras de presión: IV 1 g diario"
+                                    ,"NIÑOS: IV lento: 1 mes a 12 años: 7.5 mg/kg c/12 h 12 a 18 años"
+                                    ,"7.5 mg /kg. c/12 h y hasta c/8 h en infecciones graves. Máx. 500 mg c/8 h por máx.10 d (dosis cumulativa máx. 15 g)"
+                                    ,"Régimen de dosis única, como en adultos"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Los más importantes son la nefrotoxicidad y la ototoxicidad irreversible (daño vestibular y auditivo). Un rash es común con estreptomicina, pero menos con los otros aminoglucósidos"
+                                    ,"Efectos poco comunes: náuseas, vómitos, colitis asociada a antibióticos, neuropatía periférica, alteraciones electrolíticas (especialmente hipomagnesemia en tratamientos prolongados, hipocalcemia e hipopotasemia) y estomatitis"
+                                    ,"Muy raros: trastornos de la sangre y efectos sobre el sistema nervioso central (cefalea, encefalopatía y convulsiones). Los amino-glucósidos pueden reducir la transmisión neuromuscular,  grandes dosis administradas durante la cirugía han sido responsables de síndrome miasténico transitorio en personas con función neuromuscular previamente normal"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.amikacina_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Gentamicina",
+                                descripcion =
+                                    "Solución para inyección 10 mg/1mL (FAM de 2 mL) y de 40 mg/1 mL (FAM de 2 mL)",
+                                indicaciones = listOf(
+                                    "Primera elección en neumonía grave y muy grave en niños de 1-3 meses (asociado a otro antibacteriano)"
+                                    ,"Primera elección en sepsis de origen extrahospitalario con foco intra-abdominal en niños)"
+                                    ,"Onfalitis localizada en niños pretérmino o con bajo peso al nacer y en infecciones por cateterización"
+                                    ,"Sepsis neonatal (manejo empírico en caso de transmisión vertical o adquirida en la comunidad)"
+                                    ,"Síndrome de dificultad respiratoria (SDR) del neonato"
+                                    ,"Infecciones del tracto urinario en niños y neonatos(especialmente en alérgicos a cefalosporinas)"
+                                    ,"Heridas por mordeduras de serpientes con antecedentes de manipulación (colocación de emplastos) en niños y adolescentes"
+                                    ,"Primera elección en adultos con colecistitis aguda, coledocolitiasis, úlceras de presión infectadas"
+                                    ,"Adultos con politraumatismo, apendicitis aguda"
+                                    ,"Aborto séptico, endometritis, endomiometritis, anexitis y tromboflebitis pélvica grave"
+                                    ,"Profilaxis en procedimientos quirúrgicos ginecológico en caso de alergia a cefalosporinas"
+                                    ,"En la ruptura prematura de membrana si se sospecha infección ovular"
+                                    ,"Septicemia en adultos, sepsis puerperal"
+                                    ,"Infección de episiotomías o desgarros reparados, extracción manual de placenta retenida y corrección de inversión uterina"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Miastenia gravis"
+                                    ,"Interacciones: además la gentamicina puede aumentar la concentración plasmática de digoxina"
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: vía IM, inyección IV lenta (en por lo menos 3 minutos) o infusión IV (en 30 a 60 min): 5-7 mg/kg id, o 3-5 mg/kg/día en 3 dosis 1"
+                                    ,"NIÑOS: por vía IV. 7 mg en dosis única 3,4 o <12 años: 2.5 mg/kg c/8 h, >12 años, 2 mg c/8 h 4"
+                                    ,"NEONATO a término: vía IV: 4-5 mg/kg id, o 2.5 mg/kg bid"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Los más importantes son la nefrotoxicidad y la ototoxicidad irreversible (daño vestibular y auditivo). Un rash es común con estreptomicina, pero menos con los otros aminoglucósidos"
+                                    ,"Efectos poco comunes: náuseas, vómitos, colitis asociada a antibióticos, neuropatía periférica, alteraciones electrolíticas (especialmente hipomagnesemia en tratamientos prolongados, hipocalcemia e hipopotasemia) y estomatitis"
+                                    ,"Muy raros: trastornos de la sangre y efectos sobre el sistema nervioso central (cefalea, encefalopatía y convulsiones). Los amino-glucósidos pueden reducir la transmisión neuromuscular,  grandes dosis administradas durante la cirugía han sido responsables de síndrome miasténico transitorio en personas con función neuromuscular previamente normal"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.gentamicina_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "SULFONAMIDAS Y TRIMETOPRIM",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Sulfadiazina",
+                                descripcion =
+                                    "Tableta de 500 mg",
+                                indicaciones = listOf(
+                                    "Profilaxis y tratamiento de infección oportunista por Toxoplasma gondii en personas afectadas por el VIH"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Sensibilidad a las sulfonamidas"
+                                ),
+                                precauciones = listOf(
+                                    "Insuficiencia hepática: usar con cuidado en insuficiencia leve a moderada evitar en casos de deterioro grave"
+                                    ,"Insuficiencia renal: usar con cuidado en insuficiencia leve a moderada evitar en casos de deterioro grave; alto riesgo de cristaluria"
+                                    ,"Interacciones"
+                                    ,"La sulfadiazina puede reducir la concentración de ciclosporina. Como otras sulfamidas: aumenta el riesgo de nefrotoxicidad con ciclosporina, de cristaluria con metenamina, aumenta el efecto anticoagulante de los cumarínicos, la toxicidad del metotrexate; aumenta el efecto del tiopental (barbitúrico) y raramente, el de las sulfonilureas. Con pirimetamina aumenta el efecto antifolatos de las sulfamidas"
+                                    ,"Embarazo: evitar en lo posible. (Categoría C de la FDA)"
+                                    ,"Riesgo de hemólisis neonatal y metahemoglobinemia en el tercer trimestre, no existe evidencia sólida de un aumento de kernicterus"
+                                    ,"Lactancia: Evitar en lo posible. Pequeño riesgo de kernicterus en recién nacidos con ictericia y de hemólisis en niños con deficiencia de G6PD"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: 500 mg PO c/6 h (asociada a pirimetamina en toxoplasmosis)"
+                                    ,"NIÑOS: Toxoplasmosis congénita, 50 mg/kg bid (asociada a pirimetamina) durante 12 meses"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Ver trimetoprim sulfametoxazol, además: con el uso de sulfadiazina se ha reportado hipotiroidismo, hipertensión intracraneal benigna y neuropatía óptica"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.sulfadiazina_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Cotrimoxazol",
+                                descripcion =
+                                    "Trimetroprim sulfametoxazol (Cotrimoxazol) | " +
+                                        "Tableta de 80 mg de TMP + 400 mg de SMX; \n" +
+                                        "Tableta forte 160 mg de TMP + 800 mg de SMX; \n" +
+                                        "Suspensión oral de 40 mg de TMP + 200 mg SMX/5 mL; \n" +
+                                        "Solución inyectable de 16 mg de TMP + 80 mg de SMX/1 mL (FAM 5-10 mL) \n",
+                                indicaciones = listOf(
+                                    "Tratamiento y profilaxis de la neumonía por Pneumocystis jirovecii (Carinii), en adultos y niños con VIH/Sida * 1,3"
+                                    ,"Profilaxis para T. gondii en personas con VIH/sida * 3"
+                                    ,"Nocardiosis"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Sensibilidad a las sulfonamidas"
+                                ),
+                                precauciones = listOf(
+                                    "Mantener ingesta adecuada de líquidos durante su administración; evitar en trastornos hematológicos (a menos que se administre bajo supervisión de un especialista); monitorear recuentos celulares sanguíneos en tratamientos prolongados; retirar de inmediato si aparecen alteraciones de la sangre o exantemas cutáneos; evitar en predisposición a la deficiencia de folatos, hiperpotasemia en ancianos, asma, deficiencia de G6PD; además, evitar en lactantes <6 semanas (excepto para el tratamiento o profilaxis de la neumonía por Pneumocystis)"
+                                    ,"Insuficiencia hepática: evitar en la enfermedad hepática grave"
+                                    ,"Insuficiencia renal: utilizar la mitad de la dosis normal si TFG entre 15-30 mL/min./1.73 m2; evitar si TFG <15 mL/min./1.73 m2 y si la concentración plasmática de sulfametoxazol no se puede monitorear"
+                                    ,"Interacciones del sulfametoxazol: aumenta el riesgo de toxicidad hemática con azatioprina, mercaptopurina y metotrexato"
+                                    ,"Interacciones de las sulfonamidas del trimetoprim: aumenta la concentración plasmática de lamivudina (evitar uso concomitante con altas dosis de cotrimoxazol) y de difenilhidantoína. La difenilhidantoína aumenta el efecto antifolatos del trimetoprim"
+                                    ,"Embarazo: evitar  (Categoría C de la FDA) Riesgo teratógeno en el primer trimestre. Puede producir hemólisis y metahemo- globinemia neonatal cuando se administra en el 3er trimestre. El temor a un riesgo  aumentado de kernicterus en el neonato no parece justificarse"
+                                    ,"Lactancia: se puede usar excepto si el lactante tiene ictericia (bajo riesgo de hemolisis) o deficiencia en G6PD (bajo riesgo de hemolisis por el sulfametoxazol"
+                                ),
+                                dosificacion = listOf(
+                                    "PO o IV"
+                                    ,"ADULTOS y NIÑOS >40 kg: 160 mg TMP+800 mg SMX bid"
+                                    ,"Tratamiento de neumonía por Pneumocystis jirovecii (antes carinii): 20/100 mg/kg/d en 2-4 dosis por 14 a 21 d"
+                                    ,"Profilaxis de infecciones por Pneumocystis jirovecii: 160/800 mg id. Para mejorar tolerancia usar: 160 mg/800 mg, 3 veces a la sem. (días alternos) o reducir dosis a 80/400 mg/d 1"
+                                    ,"NIÑOS <40 kg: 8/40 mg/kg/d en 2 dosis"
+                                    ,"Tratamiento de neumonía por Pneumocystis jirovecii:"
+                                    ,"NIÑOS >1 mes: 20/100 mg/kg/d en 2-4 dosis por 14-21 d"
+                                    ,"Profilaxis de infecciones por Pneumocystis jirovecii (antes carinii): 6 sem-5 meses: 20/100 mg bid por 3 d a la semana (consecutivos o alternos)"
+                                    ,"6 meses-5 años: 40/200 mg; 6-12 años: 80/400 mg"
+                                    ,"Iniciar a la 6ta semana de nacido. Se debe continuar profilaxis con T. sulfametoxazol hasta el 1er año de vida excepto cuando la infección por VIH haya sido descartada. La profilaxis se mantiene después del 1er año solamente en niños infectados"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas, diarrea, cefalea e hiperpotasemia, exantema cutáneo (incluyendo muy raramente sínd. de Stevens-Johnson), necrólisis epidérmica tóxica y fotosensibilidad (interrumpir la administración inmediatamente). Menos frecuentes: vómitos. Muy raramente glositis, estomatitis, anorexia, daño hepático (incluyendo ictericia y necrosis hepática), pancreatitis, colitis asociada a antibióticos, miocarditis, tos y problemas respiratorios, infiltrados pulmonares, meningitis aséptica, depresión, convulsiones, neuropatía periférica, ataxia, tinnitus, vértigo, alucinaciones, hipoglucemia, alteraciones hematológicas (incluyendo leucopenia, trombocitopenia, anemia megaloblástica y eosinofilia), hiponatremia. Además, trastornos renales incluyendo nefritis intersticial; artralgias, mialgias, vasculitis, lupus eritematoso sistémico y uveítis, rabdomiólisis en personas con VIH"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.cotrimoxazol_1
+                                    ,R.drawable.cotrimoxazol_2
+                                    ,R.drawable.cotrimoxazol_3
+                                    ,R.drawable.cotrimoxazol_4
                                 )
                             ),
                         )
