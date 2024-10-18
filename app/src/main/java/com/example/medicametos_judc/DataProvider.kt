@@ -1122,6 +1122,205 @@ object DataProvider {
                 )
             ),
 
+            Capitulo(
+                nombre = "Gastroenterologia",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "DISPERSIA Y REFLUJO GASTROESOFAGICO",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Omeprazol",
+                                descripcion =
+                                    "Inhibidor de bomba de protones (IBP) de las células parietales del estómago, \n" +
+                                            "inhibe la secreción ácida en el estómago. \n" +
+                                            "Frasco ampolla con polvo liofilizado 40 mg y tableta o capsula de 20 mg \n",
+                                indicaciones = listOf(
+                                    "Dispepsia asociada con acidez"
+                                    ,"Enfermedad por reflujo gastro–esofágico"
+                                    ,"Enfermedad ulcerosa péptica (incluyendo la erradicación de H. pylori y el seguimiento postendoscópico de la hemorragia grave por ulceración)"
+                                    ,"Profilaxis en pacientes con antecedentes de úlcera, lesiones gastrointestinales o dispepsia asociada a AINE y requieren tratamiento continuo con AINE"
+                                    ,"Profilaxis de úlcera de estrés en pacientes hospitalizados con condición de riesgo"
+                                    ,"Ventilación mecánica, coagulopatía, trauma cerebral, quemaduras graves politraumatismo, sepsis, insuficiencia renal aguda (B) Pacientes en UCI con índice de gravedad de trauma >15 o requerimientos de dosis altas de corticoide >250 mg de hidrocortisona o equivalente"
+                                    ,"Síndrome de Zollinger–Ellison"
+                                    ,"Profilaxis de aspiración ácida durante anestesia general (C)"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Descartar cáncer gástrico antes de iniciar tratamiento en pacientes con dispepsia y signos de alarma Los pacientes con osteoporosis deberán mantener una adecuada ingesta de calcio y vitamina D. La medición de la concentración sérica de magnesio debe considerarse antes o durante un tratamiento prolongado sobre todo cuando se administran en combinación con otros medicamentos que causen hipomagnesemia o con digoxina"
+                                    ,"El omeprazol debe ser prescrito para las indicaciones adecuadas en la dosis eficaz más baja durante el menor tiempo posible, la necesidad de tratamiento a largo plazo debe ser revisado periódicamente"
+                                    ,"Insuficiencia hepática: reducir la dosis (no más de 20 mg diario)"
+                                    ,"Insuficiencia renal: no es necesario corregir la dosis"
+                                    ,"Interacciones:"
+                                    ,"El omeprazol reduce el efecto antiplaquetario del clopidogrel, puede aumentar el efecto anticoagulante de los cumarínicos, aumenta la concentración plasmática de saquinavir, reduce la de atazanavir, puede reducir la concentración plasmática de itraconazol y la excreción de metotrexato (aumento del riesgo de toxicidad)"
+                                    ,"Embarazo: se puede usar(Categoría C de FDA)"
+                                    ,"Lactancia: se puede usar. Presente en la leche, pero es poco probable que sea dañino"
+                                ),
+                                dosificacion = listOf(
+                                    "VÍA ORAL"
+                                    ,"En la mayoría de las indicaciones se recomienda habitualmente una dosis única por la mañana antes de comer, sin embargo, la absorción no está afectada significativamente con la comida"
+                                    ,"Dispepsia asociada con acidez: 1020 mg PO id por 2 a 4 semanas"
+                                    ,"Enfermedad por reflujo gastroesofágico: 20 mg PO id por 4 sem., si curación incompleta continuar por otras 48 sem"
+                                    ,"Enfermedad ulcerosa péptica: 20 mg PO id (40 mg para casos graves), por 4 semanas en casos de úlcera duodenal y 8 semanas en la úlcera gástrica. Luego puede necesitarse dosis de mantenimiento de 10 a 40 mg PO id, pero por un tiempo limitado"
+                                    ,"Erradicación de H. pylori se combina con terapia antibiótica (triple terapia) en dosis de 20 mg bid PO por 1 semana, seguida de omeprazol solo por 4 a 8 semanas 6"
+                                    ,"Úlcera asociada a tratamiento con AINE: 20 mg PO id por 4 semanas si curación incompleta seguir por 4 semanas más - Profilaxis en pacientes con antecedentes de úlcera, lesiones gastrointestinales o dispepsia asociada a AINE y requieren tratamiento continuo con AINE: 20 mg id mientras dure el tratamiento con AINE 1"
+                                    ,"Profilaxis de aspiración ácida durante anestesia general: 40 mg PO la noche anterior y 40 mg de 26 horas antes del procedimiento quirúrgico 6"
+                                    ,"Síndrome de ZollingerEllison: inicialmente 60 mg PO id, luego de 20120 mg id (si la dosis es >80 mg, dar bid)"
+                                    ,"IV lenta en 5 min"
+                                    ,"INFUSIÓN en 2030 min. en 100 mL de SSN 0.9% o DW 5%"
+                                    ,"Tratamiento y prevención de ulcera péptica y reflujo gastro esofágico: 40 mg id hasta que la vía PO sea posible"
+                                    ,"Síndrome de ZollingerEllison: inicialmente 60 mg id, ajustar luego según respuesta (si dosis es >80 mg, dar bid)"
+                                    ,"Sangrados graves por úlcera péptica (después de tratamiento endoscópico): se inicia con una infusión IV de 80 mg en 4060 min. y luego una infusión continua de 8 mg/h por 72 h (luego pasar a vía PO)"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Son poco comunes, principalmente dolor de cabeza y molestias gastrointestinales (incluyen náuseas, vómitos, dolor abdominal, flatulencia, diarrea, estreñimiento) Menos frecuentes: boca seca, edema periférico, mareos, trastornos del sueño, fatiga, parestesia, artralgia, mialgia, erupción y prurito. Raros: alteraciones del gusto, estomatitis, hepatitis, ictericia, reacciones de hipersensibilidad (incluyendo anafilaxia, broncoespasmo), fiebre, depresión, alucinaciones, confusión, ginecomastia, nefritis intersticial, hiponatremia, hipomagne semia (generalmente después de 1 año de tratamiento, pero a veces después de 3 meses de tratamiento), trastornos de la sangre (incluyendo la leucocitosis, leucopenia, trombocito penia, pancitopenia), alteraciones visuales, sudoración, fotosensibilidad, alopecia, síndrome StevensJohnson y necrólisis epidérmica tóxica"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.omeprazol_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Ranitidina",
+                                descripcion =
+                                    "Antagonista de los receptores H2 de la histamina\n" +
+                                            "Tableta o cápsula de 300 mg; solución para inyectar, 25 mg/mL, ampolla de 2 mL\n",
+                                indicaciones = listOf(
+                                    "Como alternativa al omeprazol en:"
+                                    ,"Manejo de úlcera gástrica o duodenal benigna (incluida la asociada a H. pylori)8 (B)"
+                                    ,"Profilaxis de úlcera duodenal en tratamientos con AINE 8(B)"
+                                    ,"Enfermedad por reflujo gastro–esofágico 8 (B)9,10"
+                                    ,"Profilaxis de úlceras por stress  8 (A)11"
+                                    ,"Dispepsia crónica episódica 8 (A)9"
+                                    ,"Profilaxis de aspiración ácida (anestesia general, inicio del trabajo de parto) (C)1,8"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Descartar cáncer gástrico antes de iniciar tratamiento enpacientes con dispepsia y síntomas de alarma"
+                                    ,"Insuficiencia renal: usar la mitad de la dosis si TFG <50 mL/min"
+                                ),
+                                dosificacion = listOf(
+                                    "Ulceras benignas gástricas o duodenales, dispepsia episódica crónica:"
+                                    ,"ADULTOS Y NIÑOS >12 años: 300 mg PO al acostarse o 150 mg PO bid inicialmente al menos por 4-8 sem. Mantenimiento (si necesaria): 150 mg PO al acostarse"
+                                    ,"NIÑOS <12 años: 2-4 mg/kg (máx. 150 mg) bid por 4-8 sem"
+                                    ,"Profilaxis de úlcera duodenal en tratamientos con AINE:"
+                                    ,"ADULTOS Y NIÑOS>12 años: PO 300 mg bid durante el tiempo que dure la terapia"
+                                    ,"Reflujo gastro-esofágico: ADULTOS Y NIÑOS >12 años: 300 mg PO al acostarse o 150 mg bid por 8-12 semanas (casos moderado a graves, hasta 600 mg PO en 2 dosis hasta por 12 semanas). Dosis de mantenimiento: 150 mg PO bid. NIÑOS 3-12 años: 2.5 a 5 mg/kg (máx. 300 mg) PO bid"
+                                    ,"Profilaxis de úlceras por stress: ADULTOS Y NIÑOS >12 años: IV lenta en al menos 2 min, 50 mg diluidos en 20 mL cada 8h y con dosis oral de 150 mg PO bid al reiniciar la vía oral"
+                                    ,"Profilaxis de aspiración ácida en obstetricia: 150 mg PO al iniciar el trabajo de parto, seguida de una dosis similar cada 6 horas. En procedimientos quirúrgicos: 150 mg PO, 2 h antes de la inducción de la anestesia PO y si es posible la noche previa. Alternativamente vía IM o IV lento: 50 mg diluidos en 20 mL, 45-60 min. antes de inducir la anestesia 1"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Son muy poco comunes: diarrea, dolor de cabeza y mareos. Menos frecuentes: visión borrosa, rash (incluyendo eritema multiforme y necrólisis epidérmica toxica). Raros o muy raros: hepatitis, ictericia colestásica, bradicardia, reacciones psiquiátricas (incluyendo confusión depresión y alucinaciones) especialmente en los ancianos o pacientes muy enfermos, alteraciones hematológicas (incluyendo leucopenias, trombocitopenia y pancitopenia), artralgia y mialgia, pancreatitis, movimientos involuntarios, nefritis intersticial y alopecia 1"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ranitidina_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Medicamentos usados en la diarrea",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "SRO",
+                                descripcion =
+                                    "Sales de rehidratación oral (SRO) | Sales para preparar solución para rehidratación por vía oral Polvo para solución estándar hipoosmolar (245 mOsm/L) que contiene: cloruro de sodio: 2.6 g/L, glucosa anhidra: 13.5 g/L cloruro de potasio: 1.5 g/L, citrato trisódico: 2.9 g/L. Sobre de 20.5 g",
+                                indicaciones = listOf(
+                                    "Prevención y tratamiento de deshidratación en enfermedad diarreica aguda incluyendo cólera * (A)5"
+                                    ,""
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Insuficiencia renal anuria u oligúrica, obstrucción intestinal o en deshidratación grave donde está recomendada la terapia parenteral. No agregar azúcar u otros aditivos a la solución"
+                                    ,"Embarazo y lactancia: usar con cuidado 2. Categoría C de FDA"
+                                ),
+                                dosificacion = listOf(
+                                    "Según si se desea prevenir o tratar la deshidratación, con base en los planes recomendados por las normas. (planes A, B o bien seguimiento a un plan C que evoluciona satisfactoriamente). Para el plan B, la cantidad aproximada necesaria (en mL) puede calcularse multiplicando el peso (en kilos) por 100 mL para 4 horas"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Vómitos (que pueden indicar una administración demasiado rápida), hipernatremia e hipercalemia los cuales pueden resultar de sobredosis en pacientes con IRC (este efecto es raro en pacientes con función normal) 2,6"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.sro_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Zinc",
+                                descripcion =
+                                    "Sal mineral tableta de 20mg",
+                                indicaciones = listOf(
+                                    "Adyuvante en tratamiento de diarrea aguda en niños *(A)"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Insuficiencia renal aguda (puede acumularse)"
+                                ),
+                                dosificacion = listOf(
+                                    "NIÑOS < 6 meses: 10 mg (no dar en niños emaciados) id por 14 d *, 6 meses-4 años: 20 mg id por 14 d"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Dolor abdominal, dispepsia, náuseas, vómito, diarrea, irritación gástrica, gastritis, en particular al administrarlo con el estómago vacío, irritabilidad, dolor de cabeza, letargia"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.zinc_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Loperamida",
+                                descripcion =
+                                    "Derivado sintético de la petidina (opioide) Tabletas o capsulas de 2 mg",
+                                indicaciones = listOf(
+                                    "Tratamiento sintomático de diarrea aguda en adultos 7(B)8"
+                                    ,"Tratamiento de diarrea crónica en adultos 7(B)9"
+                                ),
+                                contraindicaciones = listOf(
+                                    "No usar en diarrea aguda en niños"
+                                    ,"No usar en condiciones donde la inhibición de la peristalsis debe ser evitada como en casos de íleo o constipación, así como en distensión abdominal, enfermedad intestinal inflamatoria aguda o colitis asociada con antibióticos, ni en pacientes con disentería"
+                                ),
+                                precauciones = listOf(
+                                    "Interacciones: puede incrementar la absorción de desmopresina. Itraconazol, gemfibrozilo, ritonavir y cotrimoxazol aumentan los efectos de loperamida. El uso concomitante con quinidina puede provocar depresión respiratoria"
+                                    ,"Embarazo: se puede usar en caso de diarrea aguda, evitar en caso de diarrea crónica 12. Categoría C de FDA"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "Diarrea aguda: iniciar con 4 mg PO, seguido de 2 mg PO después de cada deposición suelta, hasta por 5 días, sin pasar de 16 mg diarios. Dosis habitual: 6 a 8 mg/d"
+                                    ,"Diarrea crónica: 4-8 mg/d en dosis divididas y posteriormente ajustar según respuesta en 2 dosis diarias sin pasar de 16 mg/d. Si no se observa mejoria después 10 días con la dosis máxima, prolongar el tratamiento no aporta probablemente ningún beneficio"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Nauseas, flatulencia, dolor de cabeza, mareos, menos comunes: dispepsia, vómitos, dolor abdominal, sequedad de boca, somnolencia, erupción cutánea. Raramente: síndrome de Steven-Johnson, necrólisis epidérmica toxica, íleo paralitico, fatiga, hipertonía, retención urinaria"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.loperamida_1
+                                )
+                            ),
+                        )
+                    )
+                )
+            ),
+
             // Demas capitulos
 
             //Capitulo 15

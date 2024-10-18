@@ -23,7 +23,7 @@ class NotificationReceiver : BroadcastReceiver() {
         val builder = NotificationCompat.Builder(context, "medicamento_channel")
             .setContentTitle("¡Es hora de tomar tu medicamento!")
             .setContentText("Debes tomar: $medicamentoNombre")
-            .setSmallIcon(R.drawable.ic_notification)
+            .setSmallIcon(R.drawable.app_icon_3)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
 
         val notificationId = medicamentoNombre?.hashCode() ?: 0

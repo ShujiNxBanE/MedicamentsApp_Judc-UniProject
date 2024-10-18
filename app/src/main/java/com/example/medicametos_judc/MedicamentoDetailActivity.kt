@@ -11,6 +11,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.Button
@@ -203,86 +204,23 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun generarIndicaciones(indicaciones: List<String>) {
-        // Limpiar el LinearLayout por si ya tiene elementos previos
-        binding.medicamentIndications.removeAllViews()
+        // Verificar si la lista de indicaciones está vacía
+        if (indicaciones.isEmpty()) {
+            // Ocultar label_indications y medicament_indications si no hay indicaciones
+            binding.labelIndications.visibility = View.GONE
+            binding.medicamentIndications.visibility = View.GONE
+        } else {
+            // Mostrar los elementos si hay indicaciones
+            binding.labelIndications.visibility = View.VISIBLE
+            binding.medicamentIndications.visibility = View.VISIBLE
 
-        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
-        for (indicacion in indicaciones) {
-            val textView = TextView(this).apply {
-                text = "• $indicacion"
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
-                }
-                textSize = 16f // Ajustar el tamaño de texto
-                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
-            }
+            // Limpiar el LinearLayout por si ya tiene elementos previos
+            binding.medicamentIndications.removeAllViews()
 
-            // Añadir el TextView al LinearLayout
-            binding.medicamentIndications.addView(textView)
-        }
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun generarContraIndicaciones(contraindicaciones: List<String>) {
-        // Limpiar el LinearLayout por si ya tiene elementos previos
-        binding.medicamentContraindications.removeAllViews()
-
-        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
-        for (contraindicacion in contraindicaciones) {
-            val textView = TextView(this).apply {
-                text = "• $contraindicacion"
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
-                }
-                textSize = 16f // Ajustar el tamaño de texto
-                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
-            }
-
-            // Añadir el TextView al LinearLayout
-            binding.medicamentContraindications.addView(textView)
-        }
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun generarPrecauciones(precauciones: List<String>) {
-        // Limpiar el LinearLayout por si ya tiene elementos previos
-        binding.medicamentPrecautions.removeAllViews()
-
-        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
-        for (precaucion in precauciones) {
-            val textView = TextView(this).apply {
-                text = "• $precaucion"
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
-                }
-                textSize = 16f // Ajustar el tamaño de texto
-                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
-            }
-
-            // Añadir el TextView al LinearLayout
-            binding.medicamentPrecautions.addView(textView)
-        }
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun generarDosificaciones(dosificaciones: List<String>, dosificacionImagenes: List<Int>) {
-        // Limpiar el LinearLayout por si ya tiene elementos previos
-        binding.medicamentDosage.removeAllViews()
-
-        // Iterar sobre cada indicación (texto) y agregarla como un TextView al LinearLayout
-        if (dosificaciones.isNotEmpty()) {
-            for (dosificacion in dosificaciones) {
+            // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
+            for (indicacion in indicaciones) {
                 val textView = TextView(this).apply {
-                    text = "• $dosificacion"
+                    text = "• $indicacion"
                     layoutParams = LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT
@@ -294,90 +232,211 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                 }
 
                 // Añadir el TextView al LinearLayout
-                binding.medicamentDosage.addView(textView)
+                binding.medicamentIndications.addView(textView)
             }
-        }
-
-        // Ahora, añadir las imágenes de dosificación
-        // Iterar sobre las imágenes proporcionadas
-        for (imageResId in dosificacionImagenes) {
-            // Crear un ImageView dinámicamente
-            val imageView = ImageView(this).apply {
-                setImageResource(imageResId)
-                layoutParams = LinearLayout.LayoutParams(
-                    150,
-                    150
-                ).apply {
-                    setMargins(16, 16, 16, 16) // Añadir márgenes si es necesario
-                }
-                scaleType = ImageView.ScaleType.CENTER_CROP // Ajustar escala si es necesario
-            }
-
-            // Añadir comportamiento al hacer clic en la imagen (para mostrarla en fullscreen)
-            imageView.setOnClickListener {
-                val dialog = Dialog(this@MedicamentoDetailActivity)
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE) // Quitar el título del dialog
-                dialog.setContentView(R.layout.dialog_image_fullscreen)
-
-                // Configurar la imagen en el dialog
-                val imageFullScreen = dialog.findViewById<ImageView>(R.id.image_fullscreen)
-                imageFullScreen.setImageResource(imageResId)
-
-                // Obtener el tamaño de la pantalla
-                val displayMetrics = resources.displayMetrics
-                val screenWidth = displayMetrics.widthPixels
-                val screenHeight = displayMetrics.heightPixels
-
-                // Ajustar el tamaño al 70% de la pantalla
-                val desiredWidth = (screenWidth * 0.7).toInt()
-                val desiredHeight = (screenHeight * 0.7).toInt()
-
-                // Ajustar tamaño de la imagen en el dialog
-                val layoutParams = imageFullScreen.layoutParams
-                layoutParams.width = desiredWidth
-                layoutParams.height = desiredHeight
-                imageFullScreen.layoutParams = layoutParams
-
-                // Ajustar el tamaño del Dialog para que se ajuste al contenido
-                dialog.window?.setLayout(
-                    FrameLayout.LayoutParams.WRAP_CONTENT,
-                    FrameLayout.LayoutParams.WRAP_CONTENT
-                )
-
-                // Mostrar el Dialog
-                dialog.show()
-            }
-
-            // Añadir el ImageView al layout donde deben cargarse las imágenes
-            binding.medicamentDosage.addView(imageView)
         }
     }
-
 
 
     @SuppressLint("SetTextI18n")
-    private fun generarEfectosAdversos(efectosAdversos: List<String>) {
-        // Limpiar el LinearLayout por si ya tiene elementos previos
-        binding.medicamentAdverseEffects.removeAllViews()
+    private fun generarContraIndicaciones(contraindicaciones: List<String>) {
+        // Verificar si la lista de contraindicaciones está vacía
+        if (contraindicaciones.isEmpty()) {
+            // Ocultar label_contraindications y medicament_contraindications si no hay contraindicaciones
+            binding.labelContraindications.visibility = View.GONE
+            binding.medicamentContraindications.visibility = View.GONE
+        } else {
+            // Mostrar los elementos si hay contraindicaciones
+            binding.labelContraindications.visibility = View.VISIBLE
+            binding.medicamentContraindications.visibility = View.VISIBLE
 
-        // Iterar sobre cada indicación y agregarla como un TextView al LinearLayout
-        for (efectoAdverso in efectosAdversos) {
-            val textView = TextView(this).apply {
-                text = "• $efectoAdverso"
-                layoutParams = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                ).apply {
-                    setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+            // Limpiar el LinearLayout por si ya tiene elementos previos
+            binding.medicamentContraindications.removeAllViews()
+
+            // Iterar sobre cada contraindicación y agregarla como un TextView al LinearLayout
+            for (contraindicacion in contraindicaciones) {
+                val textView = TextView(this).apply {
+                    text = "• $contraindicacion"
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                    }
+                    textSize = 16f // Ajustar el tamaño de texto
+                    setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
                 }
-                textSize = 16f // Ajustar el tamaño de texto
-                setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
-            }
 
-            // Añadir el TextView al LinearLayout
-            binding.medicamentAdverseEffects.addView(textView)
+                // Añadir el TextView al LinearLayout
+                binding.medicamentContraindications.addView(textView)
+            }
         }
     }
+
+
+    @SuppressLint("SetTextI18n")
+    private fun generarPrecauciones(precauciones: List<String>) {
+        // Verificar si la lista de precauciones está vacía
+        if (precauciones.isEmpty()) {
+            // Ocultar label_precautions y medicament_precautions si no hay precauciones
+            binding.labelPrecautions.visibility = View.GONE
+            binding.medicamentPrecautions.visibility = View.GONE
+        } else {
+            // Mostrar los elementos si hay precauciones
+            binding.labelPrecautions.visibility = View.VISIBLE
+            binding.medicamentPrecautions.visibility = View.VISIBLE
+
+            // Limpiar el LinearLayout por si ya tiene elementos previos
+            binding.medicamentPrecautions.removeAllViews()
+
+            // Iterar sobre cada precaución y agregarla como un TextView al LinearLayout
+            for (precaucion in precauciones) {
+                val textView = TextView(this).apply {
+                    text = "• $precaucion"
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                    }
+                    textSize = 16f // Ajustar el tamaño de texto
+                    setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+                }
+
+                // Añadir el TextView al LinearLayout
+                binding.medicamentPrecautions.addView(textView)
+            }
+        }
+    }
+
+
+    @SuppressLint("SetTextI18n")
+    private fun generarDosificaciones(dosificaciones: List<String>, dosificacionImagenes: List<Int>) {
+        // Verificar si ambas listas están vacías
+        if (dosificaciones.isEmpty() && dosificacionImagenes.isEmpty()) {
+            // Ocultar label_dosage y medicament_dosage si no hay dosificaciones ni imágenes
+            binding.labelDosage.visibility = View.GONE
+            binding.medicamentDosage.visibility = View.GONE
+        } else {
+            // Mostrar los elementos si hay dosificaciones o imágenes
+            binding.labelDosage.visibility = View.VISIBLE
+            binding.medicamentDosage.visibility = View.VISIBLE
+
+            // Limpiar el LinearLayout por si ya tiene elementos previos
+            binding.medicamentDosage.removeAllViews()
+
+            // Iterar sobre cada dosificación (texto) y agregarla como un TextView al LinearLayout
+            if (dosificaciones.isNotEmpty()) {
+                for (dosificacion in dosificaciones) {
+                    val textView = TextView(this).apply {
+                        text = "• $dosificacion"
+                        layoutParams = LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        ).apply {
+                            setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                        }
+                        textSize = 16f // Ajustar el tamaño de texto
+                        setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+                    }
+
+                    // Añadir el TextView al LinearLayout
+                    binding.medicamentDosage.addView(textView)
+                }
+            }
+
+            // Añadir las imágenes de dosificación si existen
+            if (dosificacionImagenes.isNotEmpty()) {
+                for (imageResId in dosificacionImagenes) {
+                    // Crear un ImageView dinámicamente
+                    val imageView = ImageView(this).apply {
+                        setImageResource(imageResId)
+                        layoutParams = LinearLayout.LayoutParams(
+                            150,
+                            150
+                        ).apply {
+                            setMargins(16, 16, 16, 16) // Añadir márgenes si es necesario
+                        }
+                        scaleType = ImageView.ScaleType.CENTER_CROP // Ajustar escala si es necesario
+                    }
+
+                    // Añadir comportamiento al hacer clic en la imagen (mostrarla en fullscreen)
+                    imageView.setOnClickListener {
+                        val dialog = Dialog(this@MedicamentoDetailActivity)
+                        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE) // Quitar el título del dialog
+                        dialog.setContentView(R.layout.dialog_image_fullscreen)
+
+                        // Configurar la imagen en el dialog
+                        val imageFullScreen = dialog.findViewById<ImageView>(R.id.image_fullscreen)
+                        imageFullScreen.setImageResource(imageResId)
+
+                        // Obtener el tamaño de la pantalla
+                        val displayMetrics = resources.displayMetrics
+                        val screenWidth = displayMetrics.widthPixels
+                        val screenHeight = displayMetrics.heightPixels
+
+                        // Ajustar el tamaño al 70% de la pantalla
+                        val desiredWidth = (screenWidth * 0.7).toInt()
+                        val desiredHeight = (screenHeight * 0.7).toInt()
+
+                        // Ajustar tamaño de la imagen en el dialog
+                        val layoutParams = imageFullScreen.layoutParams
+                        layoutParams.width = desiredWidth
+                        layoutParams.height = desiredHeight
+                        imageFullScreen.layoutParams = layoutParams
+
+                        // Ajustar el tamaño del Dialog para que se ajuste al contenido
+                        dialog.window?.setLayout(
+                            FrameLayout.LayoutParams.WRAP_CONTENT,
+                            FrameLayout.LayoutParams.WRAP_CONTENT
+                        )
+
+                        // Mostrar el Dialog
+                        dialog.show()
+                    }
+
+                    // Añadir el ImageView al layout donde deben cargarse las imágenes
+                    binding.medicamentDosage.addView(imageView)
+                }
+            }
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun generarEfectosAdversos(efectosAdversos: List<String>) {
+        // Verificar si la lista de efectos adversos está vacía
+        if (efectosAdversos.isEmpty()) {
+            // Ocultar label_adverseEffects y medicament_adverseEffects si no hay efectos adversos
+            binding.labelAdverseEffects.visibility = View.GONE
+            binding.medicamentAdverseEffects.visibility = View.GONE
+        } else {
+            // Mostrar los elementos si hay efectos adversos
+            binding.labelAdverseEffects.visibility = View.VISIBLE
+            binding.medicamentAdverseEffects.visibility = View.VISIBLE
+
+            // Limpiar el LinearLayout por si ya tiene elementos previos
+            binding.medicamentAdverseEffects.removeAllViews()
+
+            // Iterar sobre cada efecto adverso y agregarlo como un TextView al LinearLayout
+            for (efectoAdverso in efectosAdversos) {
+                val textView = TextView(this).apply {
+                    text = "• $efectoAdverso"
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(16, 8, 16, 8) // Añadir márgenes si es necesario
+                    }
+                    textSize = 16f // Ajustar el tamaño de texto
+                    setTextColor(ContextCompat.getColor(context, R.color.white)) // Color del texto
+                }
+
+                // Añadir el TextView al LinearLayout
+                binding.medicamentAdverseEffects.addView(textView)
+            }
+        }
+    }
+
 
     @SuppressLint("ScheduleExactAlarm")
     private fun scheduleNotification(medicamentoNombre: String, startTimeInMillis: Long, intervalHours: Int, days: Int) {
