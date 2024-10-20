@@ -1317,7 +1317,322 @@ object DataProvider {
                                 )
                             ),
                         )
-                    )
+                    ),
+                    Subgrupo(
+                        nombre = "Laxantes",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Lactulosa",
+                                descripcion =
+                                    "Disacárido semi-sintético que no se absorbe en tracto gastro-intestinal. Suspensión oral 3.1-3.7g/5 mL",
+                                indicaciones = listOf(
+                                    "Constipación 2 * (B)3"
+                                    ,"Encefalopatía hepática 2 (A)4"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Galactosemia y obstrucción intestinal"
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de intolerancia a la lactosa y en la diabetes"
+                                    ,"Embarazo: se puede usar"
+                                    ,"Lactancia: se puede usar con precaución"
+                                ),
+                                dosificacion = listOf(
+                                    "Constipación: iniciar con 15 mL bid, ajustando la dosis de acuerdo a la respuesta"
+                                    ,"NIÑOS menores de 1 año: 2.5 mL bid; 1 a 5 años: 2.5 a 10 mL bid; 5 a 18 años: 5 a 20mL bid; en cada caso deberá ajustarse la dosis 2"
+                                    ,"Encefalopatía hepática: 30-50 mL tid, ajustando la dosis para provocar 2 a 3 deposiciones suaves al día"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Náuseas (se puede reducir al administrar con agua, jugo de frutas o alimentos), vómito, flatulencia, calambres y molestias intestinales y abdominales"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.lactulosa_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Aceite",
+                                descripcion =
+                                    "Aceite mineral | Lubricante y suavizante de las heces, Solución oral (oleosa)",
+                                indicaciones = listOf(
+                                    "Tratamiento sintomático de constipación 6 (B)3"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Niños menores de 3 años 7"
+                                ),
+                                precauciones = listOf(
+                                    "Evitar el uso prolongado"
+                                    ,"Embarazo: evitar si es posible. (Categoría C de la FDA)"
+                                ),
+                                dosificacion = listOf(
+                                    "Constipación: 10 a 30 mL diario PO en dosis divididas preferentemente antes del desayuno y en la noche"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Filtración anal de aceite mineral y la consiguiente irritación anal después de uso prolongado, reacciones granulomatosas causadas por absorción de pequeñas cantidades de aceite mineral (especialmente de la emulsión), neumonía lipoidea e interferencia con la absorción de vitaminas liposolubles"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.aceite_1
+                                    ,R.drawable.aceite_2
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Enema",
+                                descripcion =
+                                    "Enema de fosfato y bifosfato sódico | Laxante osmótico por vía rectal Solución rectal: 6-16 g",
+                                indicaciones = listOf(
+                                    "Constipación"
+                                    ,"Evacuación intestinal antes de procedimientos radiológicos, endoscópicos y quirúrgicos"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Enfermedades gastrointestinales agudas (como obstrucción, enfermedad inflamatoria intestinal, condiciones donde está aumentada la absorción en el colon)"
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en personas muy ancianas o debilitadas. En alteraciones electrolíticas, insuficiencia cardiaca congestiva, ascitis, hipertensión no controlada, insuficiencia renal crónica. Debe mantenerse una adecuada hidratación 8"
+                                    ,"Embarazo: se puede usar. (Categoría C de la FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS Y NIÑOS >12 años: consultar recomendaciones del fabricante"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Irritacion local y alteraciones electroliticas"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.enema_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "Medicamentos usados en nauseas y vomitos",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Metoclopramida",
+                                descripcion =
+                                    "Antiemético y procinético de acción central Solución inyectable 10 mg/mL, frasco ampolla de 2 mL. Tab. de 10 mg",
+                                indicaciones = listOf(
+                                    "Nausea y vómitos en desordenes gastrointestinales"
+                                    ,"Náusea y vómitos asociados a migraña (B)"
+                                    ,"Reflujo gastro-esofágico (C)"
+                                    ,"Gastroparesia"
+                                    ,"Premedicación para cirugías y post-operatorio  (B)"
+                                    ,"Adyuvante en intubación gastrointestinal (C)"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "No se recomienda en niños y adolescente hasta 18 años Usar con cuidado en ancianos (iniciar con dosis bajas) 4, en caso de alergia atópica (incluyendo asma), desordenes de la conducción cardíaca, epilepsia. Puede enmascarardesórdenes subyacentes como la irritación cerebral"
+                                    ,"Insuficiencia hepática: reducir la dosis"
+                                    ,"Insuficiencia renal grave: usar dosis baja para disminuir riesgo de efectos"
+                                    ,"Extrapiramidales"
+                                    ,"Embarazo: puede usarse. (Categoría B de la FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "Náusea y vómito en reflujo gastro-esofágico y gastroparesia, PO, IM o IV lento (1-2 min.) ADULTOS: 10 mg tid"
+                                    ,"Premedicación quirúrgica por inyección IV lenta ADULTOS: 10 mg id"
+                                    ,"Tratamiento con citotóxicos (dosis son mayores de las usuales): 1-2 mg/kg en infusión IV en 30 min., según la intensidad de las náuseas y vómitos, previo a la administración del tratamiento citostático, o de 10-40 mg PO, seguido de dosis cada 2-3 h según el caso"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Efectos extrapiramidales (sobre todo en niños y adultos jóvenes, ocurren pronto después del inicio del tratamiento y pueden permanecer hasta 24 h después de suspenderlo), hiperprolactinemia, ocasionalmente discinesia tardía con tratamientos prolongados, disnea, ansiedad, confusión, somnolencia, mareos, temblores, inquietud, cefalea, diarrea, depresión, síndrome neuroléptico maligno"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.metoclopramida_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Dimenhidrinato",
+                                descripcion =
+                                    "Antihistamínico sedativo \n" +
+                                            "Tableta de 50 mg. Solución para inyección de 50 mg/mL\n",
+                                indicaciones = listOf(
+                                    "Prevención y tratamiento de cinetosis"
+                                    ,"Manejo sintomático de náuseas y vómito en la enfermedad\n" +
+                                            "de Ménière y otros desórdenes del laberinto\n"
+                                    ,"Náuseas y vómitos asociados a embarazo"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Embarazo: se puede usar  Categoría B de FDA"
+                                    ,"Lactancia: evitar"
+                                ),
+                                dosificacion = listOf(
+                                    "ORAL:"
+                                    ,"ADULTOS: 50-100 mg PO tid. En cinetosis la primera dosis debe darse 30 minutos antes de iniciar el viaje"
+                                    ,"NIÑOS de 2-6 años, 12.5-25 mg PO tid. Máx.: 75 mg/día"
+                                    ,"6-12 años, 25-50 mg PO tid. Máx.: 150 mg/día"
+                                    ,"PARENTERAL (IM o IV lenta)"
+                                    ,"ADULTOS: 50 mg. NIÑOS: 1.25 mg/kg dosis tid"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: El más común es la somnolencia aunque la estimulación paradójica puede ocurrir en raras ocasiones, especialmente con dosis altas o en niños y ancianos. La somnolencia puede disminuir después de unos días de tratamiento y es mucho menos problemática con los nuevos antihistamínicos (Ej. loratadina)"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.dimenidrato_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Ondansetron",
+                                descripcion =
+                                    "Antiemético del grupo de los antagonistas de los receptores para serotonina 5HT3\n" +
+                                            "Tabletas de 8 mg, solución para inyección 2 mg/mL, suspensión 4 mg/5mL\n",
+                                indicaciones = listOf(
+                                    "Náusea y vómito asociados a quimio o radioterapia"
+                                    ,"Prevención y tratamiento de náusea y vómito postoperatorio"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Síndrome de QT prolongado congénito"
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de susceptibilidad a la prolongación de intervalo QT, obstrucción intestinal subaguda, cirugía adeno-tonsilar"
+                                    ,"En insuficiencia hepática moderada o grave: limitar la dosis a 8 mg/día"
+                                    ,"Interacciones: Con apomorfina, puede aumentar el efecto hipotensivo; carbamazepina, fenitoína y rifampicina aceleranel metabolismo de ondansetrón y pueden reducir su efecto"
+                                    ,"Embarazo: evitar en lo posible (Categoría B de la FDA)"
+                                    ,"Lactancia: evitar"
+                                ),
+                                dosificacion = listOf(
+                                    "Radio o quimioterapia moderadamente emetogénica"
+                                    ,"ADULTOS: PO 8 mg 1-2 h antes del tratamiento. IM o IV lenta, 8 mg inmediatamente antes de iniciar el tratamiento. Luego PO 8 mg bid hasta por 5 días"
+                                    ,"Quimioterapia altamente emetogénica. ADULTOS: IM o IV lenta, 8 mg inmediatamente antes del inicio de la quimioterapia. Cuando fuera necesario continuar con 2 bolos de 8 mg con intervalos de 2-4 h o 1 mg/h en infusión continua IV por hasta 24 h. Luego 8 mg PO bid hasta por 5 días"
+                                    ,"Náusea y vomito inducido por quimioterapia. NIÑOS de 6 meses a 18 años: infusión IV por al menos 15 min., 5 mg/m2 (máx. 8 mg) inmediatamente antes del inicio de la quimioterapia. Luego, en niños con superficie corporal (SC) <0.6 m2, dar 2 mg PO bid por 5 días; niños con SC ≥0.6 m2 4 mg PO bid hasta por 5 días. Máx.: 32 mg/d"
+                                    ,"Alternativamente: infusión IV durante al menos 15 min, 150 mcg/kg (máx. 8 mg) inmediatamente antes de la quimioterapia repetida dos veces cada 4 h, luego si se requiere, dar PO bid por hasta 5 días: si peso ≤10 kg, 2 mg; si peso >10 kg: 4 mg. Máx: 32 mg/d"
+                                    ,"Prevención de náusea y vómito post-operatorio"
+                                    ,"ADULTOS:"
+                                    ,"PO 16 mg 1 h antes de la anestesia u 8 mg antes de la anestesia seguida por hasta 2 dosis de 8 mg cada 8 h"
+                                    ,"Alternativamente, por via IM o IV lenta 4 mg al momento de la inducción de la anestesia"
+                                    ,"NIÑOS de 1 mes a 18 años: IV lenta en al menos 30 seg., 100 mcg/kg (máx. 4 mg) antes durante y después de la inducción de la anestesia"
+                                    ,"Tratamiento de náuseas y vómitos post-quirúrgicos. IM o IV lenta 4 mg. NIÑOS de 1 mes a 18 años: IV lenta hasta por 30 seg., 100 mcg/kg (máx. 4 mg)"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Constipación, cefalea, rubor, reacciones locales en el sitio de inyección. Menos comunes: hipo, bradicardia, hipotensión, dolor en el pecho, arritmias, desordenes del movimiento y convulsiones. Con la administración IV, raramente: somnolencia, alteraciones visuales transitorias, muy raramente ceguera transitoria"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ondansetron_1
+                                )
+                            ),
+                        )
+                    ),
+                )
+            ),
+
+            Capitulo(
+                nombre = "NEUMOLOGIA Y ALERGIA",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "Broncodilatadores",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                    "Ipratropio",
+                                descripcion =
+                                    "Bromuro de ipratropio | Broncodilatador anticolinérgico de acción corta\n" +
+                                            "Solución para aerosol al 0.02% (20 µg /dosis inhalada), fco. de 200 dosis.\n" +
+                                            "Solución para nebulizar al 0.25% (250 µg/mL), fco. de 20 mL\n",
+                                indicaciones = listOf(
+                                    "Solución para nebulizar"
+                                    ,"Crisis de asma grave que pone en peligro la vida, en asociación con los β2 agonistas *(A)"
+                                    ,"Crisis de asma grave con pobre respuesta a β2 agonistas"
+                                    ,"Obstrucción reversible de las vías respiratorias"
+                                    ,"En EPOC"
+                                    ,"Inhalación por aerosol"
+                                    ,"EPOC leve: para el alivio de la disnea y mejorar tolerancia al ejercicio, como alternativa al salbutamol spray 8 (B)"
+                                    ,"EPOC: de manera continua en caso de disnea persistente o exacerbaciones si no se dispone de anticolinérgico de acción larga  (ej. tiotropio) (B)"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad conocida a la atropina o sus derivados, o al bromuro de ipratropio. Pacientes con arritmias preexistentes y otros problemas cardíacos"
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de hipertrofia prostática, obstrucción de la vesícula y susceptibilidad al glaucoma de ángulo cerrado"
+                                    ,"Interacciones: no hay interacción notable con la forma inhalada"
+                                    ,"Embarazo: se puede usar  (Categoría B de FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "Crisis de asma grave (nebulización)"
+                                    ,"ADULTOS: añadir 0.5 mg de ipratropio al salbutamol, puede repetirse a los 15 min. y luego cada 4-6 h"
+                                    ,"NIÑOS <12 años: en las primeras 2 h nebulizar con 250 µg de ipratropio + 5 mg de salbutamol y luego cada 20-30 min"
+                                    ,"Si hay buena respuesta clínica, reducir la dosis de ipratropio en 4-6 h o descontinuar"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: boca seca (el más común), estreñimiento y diarrea, tos, dolor de cabeza; Menos frecuentes: reflujo gastroesofágico, disfagia, irritación de garganta, faringitis, disfonía, estomatitis, taquicardia, palpitaciones, fibrilación auricular, broncoespasmo paradójico, retención urinaria, midriasis, glaucoma de ángulo cerrado, visión borrosa, mareo, prurito, vómitos, espasmos de la laringe, estomatitis; Raros: caries dental o piel seca 8"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ipratropio_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                    "Salbutamol",
+                                descripcion =
+                                    "β2 agonista de acción corta\n" +
+                                            "Solución para aerosol, 100 µg/inhalación. Fco 200-250 dosis.\n" +
+                                            "Solución para nebulizar al 5%, 5 mg/mL. Fco 20 mL, diluir con SSN estéril 8\n",
+                                indicaciones = listOf(
+                                    "Asma agudo tanto en adultos como en niños de todas edades (de primera elección)"
+                                    ,"Crisis de sibilancia en menores de 5 años"
+                                    ,"Profilaxis y tratamiento de asma inducido por el ejercicio"
+                                    ,"Exacerbaciones agudas de EPOC"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de hipertiroidismo, enfermedad cardiovascular, arritmias, susceptibilidad a la prolongación del intervalo QT, hipertensión, diabetes. Monitorear el potasio sérico en el asma grave por el riesgo de hipopotasemia favorecido por otros medicamentos y la hipoxia"
+                                    ,"Interacciones: riesgo aumentado de hipopotasemia cuando altas dosis de β2 agonista se usan con teofilina, corticoides o diuréticos"
+                                    ,"Embarazo: se puede usar (Categoría C de FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "La dosis para nebulizar es sustancialmente mayor que la que se da por aerosol"
+                                    ,"Crisis de asma, sibilancias o exacerbación de EPOC"
+                                    ,"Inhalación por aerosol"
+                                    ,"ADULTOS y NIÑOS: 100-200 µg (1-2 puff). Si persisten los síntomas hasta qid 5,8"
+                                    ,"Inhalación de solución nebulizada  158 Asma y EPOC"
+                                    ,"Inhalación de solución nebulizada"
+                                    ,"ADULTOS y NIÑOS >5 años: 2.5-5 mg, repetir hasta qid o con mayor frecuencia en casos graves"
+                                    ,"NIÑOS <5 años: 2.5 mg, repetir hasta qid o con mayor frecuencia en los casos graves"
+                                    ,"Profilaxis del broncoespasmo inducido por alérgeno o ejercicio:"
+                                    ,"ADULTOS: 200 µg (2 puff)"
+                                    ,"NIÑOS: 100-200 µg (1-2 puff)"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: temblor fino (sobre todo en las manos), tensión nerviosa, dolor de cabeza, calambres musculares y palpitaciones; Menos frecuentes: taquicardia, arritmias, vasodilatación periférica, isquemia miocárdica, y trastornos del sueño y del comportamiento; Raros: broncoespasmo paradójico (ocasionalmente grave), urticaria, angioedema, hipotensión y colapso. Dosis altas se asocian con hipopotasemia"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.salbutamol_1
+                                )
+                            ),
+                        )
+                    ),
                 )
             ),
 
