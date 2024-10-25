@@ -120,16 +120,29 @@ class MedicamentoDetailActivity : AppCompatActivity() {
             createNotificationChannel()
 
             if (isMedicamentoProgrammed(medicamento)) {
-                binding.btnTakeMedicament.text = "Cancelar Programación"
+                binding.btnTakeMedicament.text = "Cancelar Programacion"
             } else {
                 binding.btnTakeMedicament.text = "Programar Medicamento"
             }
 
 
             binding.btnTakeMedicament.setOnClickListener {
-
-                if (binding.btnTakeMedicament.text == "Cancelar Programación") {
+                if (binding.btnTakeMedicament.text == "Cancelar Programacion") {
+                    // Cancelar cualquier trabajo pendiente de WorkManager si es necesario
                     WorkManager.getInstance(this).cancelAllWorkByTag(medicamento.nombre)
+
+                    // Cancelar la alarma programada
+                    val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                    val intent = Intent(this, NotificationReceiver::class.java)
+                    val pendingIntent = PendingIntent.getBroadcast(
+                        this,
+                        medicamento.nombre.hashCode(),
+                        intent,
+                        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                    )
+                    alarmManager.cancel(pendingIntent)
+
+                    // Actualizar el estado de programación
                     saveProgrammingState(medicamento, false)
                     binding.btnTakeMedicament.text = "Programar Medicamento"
                     Toast.makeText(this, "Programación cancelada", Toast.LENGTH_SHORT).show()
@@ -189,7 +202,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                         // Programar medicamento
                         saveProgrammingState(medicamento, true)
                         // Cambiar el texto del botón a "Cancelar Programación"
-                        binding.btnTakeMedicament.text = "Cancelar Programación"
+                        binding.btnTakeMedicament.text = "Cancelar Programacion"
 
                         // Cerrar el dialog
                         dialog.dismiss()
