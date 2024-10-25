@@ -44,6 +44,11 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
         binding.back.setOnClickListener { finish() }
 
+        binding.btnManual.setOnClickListener {
+            val intent = Intent(this@MedicamentoDetailActivity,ManualNotificationActivity::class.java)
+            startActivity(intent)
+        }
+
         if (medicamento != null) {
             // Mostrar detalles del medicamento
             binding.tvApp.text = medicamento.nombre

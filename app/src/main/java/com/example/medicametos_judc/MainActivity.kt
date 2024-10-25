@@ -25,6 +25,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnManual.setOnClickListener {
+            val intent = Intent( this@MainActivity, ManualPrincipalActivity::class.java)
+            startActivity(intent)
+        }
+
         val capitulos = DataProvider.obtenerCapitulos()
         val capitulosEspeciales = DataProvider.obtenerCapitulosEspeciales()
         val medicamentos = capitulos.flatMap { it -> it.subgrupos.flatMap { it.medicamentos } }

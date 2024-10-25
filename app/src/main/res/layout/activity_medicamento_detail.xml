@@ -75,6 +75,22 @@
             android:minHeight="48dp"
             tools:ignore="HardcodedText" />
 
+        <Button
+            android:id="@+id/btn_manual"
+            android:layout_width="52dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_take_medicament"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_title"
+            style="@drawable/search_button_background"
+            android:text="!"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/btn_color"
+            android:elevation="4dp"
+            tools:ignore="HardcodedText" />
+
         <TextView
             android:id="@+id/label_description"
             android:layout_width="match_parent"
