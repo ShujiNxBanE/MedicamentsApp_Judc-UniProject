@@ -805,52 +805,6 @@ object DataProvider {
                                     R.drawable.clindamicina_1
                                 )
                             ),
-                            Medicamento(
-                                nombre =
-                                "Clindamicina",
-                                descripcion =
-                                "Cápsula de 300 mg; solución inyectable (FAM) de 150 mg/mL",
-                                indicaciones = listOf(
-                                    "ADULTOS Y NIÑOS"
-                                    ,"Alternativa en neumonía aguda complicada Neumonía asociada a ventilación mecánica cuando se sospecha anaerobios"
-                                    ,"Alternativa en infecciones con foco intraabdominal,incluyendo apendicitis aguda complicada (en asociación con otro antibacteriano)"
-                                    ,"ADULTOS"
-                                    ,"Alternativa en casos de politraumatizados, colecistitis aguda grave y la coledocolitiasis con colangitis no tóxica"
-                                    ,"Alternativa en ruptura prematura de membranas en mujeres alérgicas a penicilinas y sospecha de anaerobio, y alternativa en la hemorragia postparto y retención placentaria"
-                                    ,"Aborto séptico, cuando se sospecha anaerobios involucrados, endometritis, anexitis, tromboflebitis pélvica grave, shock séptico (sepsis grave), absceso pélvico, peritonitis pélvica, peritonitis generalizada, absceso intraabdominal, septicemia"
-                                    ,"Alternativa en el absceso dentoalveolar que no ha respondido a la penicilina o metronidazol"
-                                    ,"Alternativa en mastitis puerperal (3ra)"
-                                    ,"Alternativa a cefazolina en antibioterapia profiláctica en la mayoría de los procedimientos quirúrgicos en caso de alergia a betalactámico"
-                                    ,"NIÑOS"
-                                    ,"Alternativa en osteomielitis y artritis séptica"
-                                    ,"Alternativa en infecciones graves de piel y tejidos blandos como ectima y foliculitis extensa"
-                                    ,"Alternativa en infecciones por Toxoplasma gondii (asociada a otros antimicrobianos)"
-                                ),
-                                contraindicaciones = listOf(
-                                    "Episodios de diarrea; evitar inyecciones que contienen alcohol bencílico en neonatos (provoca jadeos “gasping” en neonatos prematuros)"
-                                ),
-                                precauciones = listOf(
-                                    "Interrumpir inmediatamente si se desarrolla diarrea o colitis; monitorear las funciones hepática y renal en recién nacidos y lactantes y si el tratamiento es por más de 10 días, evitar la administración intravenosa rápida"
-                                    ,"Interacciones"
-                                    ,"Incrementa el efecto de los miorrelajantes no despolarizantes (pancuronio, vecuronio)"
-                                    ,"Antagoniza el efecto de laneostigmina y de la piridostigmina"
-                                    ,"Embarazo: se puede usar (Categoría B de la FDA)"
-                                    ,"Lactancia: se puede usar"
-                                ),
-                                dosificacion = listOf(
-                                    "ADULTOS IV, 900 mg c/8 h; endometritis y anexitis, 900 mg IV c/6 h. PO, 150-300 mg c/6 h, hasta 450 mg c/6 h en"
-                                    ,"Infecciones graves"
-                                    ,"NIÑOS IV; osteomielitis, artritis séptica, neumonía 40 mg/kg/d, IV en 4 dosis; septicemia y neumonía grave hasta 60 mg/kg/d, IV en 4 dosis; encefalitis por toxoplasmosis, 20-30 mg/kg/día en 4 dosis. PO: 3-6 mg/kg c/6 h 1"
-                                ),
-                                dosificacionImagenes = listOf(
-                                ),
-                                efectosAdversos = listOf(
-                                    "Diarrea (suspender el tratamiento), molestias abdominales, esofagitis, úlceras esofágicas, alteraciones del gusto, náuseas, vómitos, colitis asociada a antibióticos, ictericia, leucopenia, eosinofilia, trombocitopenia, poliartritis. Además, exantema, prurito, urticaria, reacciones anafilácticas, síndrome de Stevens-Johnson, necrólisis epidérmica tóxica, dermatitis exfoliativa y versículo ampollosa. También dolor, induración y absceso en el sitio de inyección intramuscular; tromboflebitis después de inyección IV"
-                                ),
-                                imagenesResIds = listOf(
-                                    R.drawable.clindamicina_1
-                                )
-                            ),
                         )
                     ),
                     Subgrupo(
