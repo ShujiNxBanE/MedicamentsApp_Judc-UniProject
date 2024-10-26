@@ -57,14 +57,8 @@ class MedicamentoDetailActivity : AppCompatActivity() {
             // Limpiar el LinearLayout antes de agregar nuevas imágenes (por si se reutiliza la vista)
             binding.medicamentImages.removeAllViews()
 
-            // Iterar sobre las imágenes del medicamento
-            for ((index, _) in medicamento.imagenesResIds.withIndex()) {
-                // Generar el nombre del recurso basado en el nombre del medicamento y el índice
-                val imageName = "${medicamento.nombre.lowercase()}_${index + 1}"
-
-                // Obtener el ID del recurso de la imagen desde drawable
-                val imageResId = resources.getIdentifier(imageName, "drawable", packageName)
-
+            // Iterar directamente sobre los IDs de imágenes del medicamento
+            for (imageResId in medicamento.imagenesResIds) {
                 if (imageResId != 0) { // Asegurarse de que el recurso existe
                     // Crear un ImageView dinámicamente
                     val imageView = ImageView(this).apply {
@@ -75,8 +69,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                         ).apply {
                             setMargins(16, 16, 16, 16) // Añadir márgenes si es necesario
                         }
-                        scaleType =
-                            ImageView.ScaleType.CENTER_CROP // Ajusta esto según lo necesites
+                        scaleType = ImageView.ScaleType.CENTER_CROP // Ajusta esto según lo necesites
                     }
 
                     imageView.setOnClickListener {
