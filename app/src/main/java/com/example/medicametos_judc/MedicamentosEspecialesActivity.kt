@@ -31,7 +31,14 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
         val capitulosEspeciales = intent.getParcelableArrayListExtra<Capitulo>("capitulosEspeciales")
 
         // Crear una lista de todos los medicamentos de los capítulos especiales
-        val medicamentosEspeciales = capitulosEspeciales?.flatMap { it -> it.subgrupos.flatMap { it.medicamentos } }
+        // Crear una lista de pares (Medicamento, nombre del subgrupo) en lugar de solo Medicamento
+        val medicamentosEspeciales = capitulosEspeciales?.flatMap { capitulo ->
+            capitulo.subgrupos.flatMap { subgrupo ->
+                subgrupo.medicamentos.map { medicamento ->
+                    Pair(medicamento, subgrupo.nombre) // Empareja medicamento con el nombre del subgrupo
+                }
+            }
+        }
 
         binding.back.setOnClickListener { finish() }
 
@@ -71,8 +78,6 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
             binding.labelChapters.text = "No hay capítulos especiales disponibles."
         }
     }
-
-    // Mostrar capítulos especiales (como antes)
     private fun mostrarCapitulosEspeciales(capitulosEspeciales: List<Capitulo>) {
         binding.labelChapters.visibility = TextView.VISIBLE // Mostrar el título
         binding.chapters.removeAllViews() // Limpiar capítulos anteriores
@@ -90,35 +95,33 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
                 binding.chapters.addView(subgrupoTextView)
 
                 for (medicamento in subgrupo.medicamentos) {
-                    val medicamentoButton = crearMedicamentoButton(medicamento)
+                    // Pasa el nombre del subgrupo al crear el botón del medicamento
+                    val medicamentoButton = crearMedicamentoButton(medicamento, subgrupo.nombre)
                     binding.chapters.addView(medicamentoButton)
                 }
             }
         }
     }
 
-
-    // Método para buscar medicamentos y mostrar resultados filtrados
-    private fun searchMedicaments(query: String, medicamentosEspeciales: List<Medicamento>) {
+    private fun searchMedicaments(query: String, medicamentosEspeciales: List<Pair<Medicamento, String>>) {
         binding.labelChapters.visibility = TextView.GONE // Ocultar el título
         binding.chapters.visibility = LinearLayout.GONE
         binding.searchResults.visibility = LinearLayout.VISIBLE
         binding.searchResults.removeAllViews() // Limpiar resultados anteriores
 
         // Filtrar medicamentos que coincidan con la búsqueda
-        val filteredMedicaments = medicamentosEspeciales.filter {
-            it.nombre.contains(query, ignoreCase = true)
+        val filteredMedicaments = medicamentosEspeciales.filter { (medicamento, _) ->
+            medicamento.nombre.contains(query, ignoreCase = true)
         }
 
         // Mostrar resultados filtrados
         if (filteredMedicaments.isNotEmpty()) {
-            for (medicamento in filteredMedicaments) {
-                val medicamentoButton = crearMedicamentoButton(medicamento)
+            for ((medicamento, subgrupoNombre) in filteredMedicaments) {
+                val medicamentoButton = crearMedicamentoButton(medicamento, subgrupoNombre)
                 binding.searchResults.addView(medicamentoButton)
             }
         }
     }
-
 
     // Métodos auxiliares para crear las vistas (TextView, Button)
     private fun crearCapituloTextView(capitulo: Capitulo): TextView {
@@ -157,8 +160,7 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
             setPadding(16, 8, 16, 8)
         }
     }
-
-    private fun crearMedicamentoButton(medicamento: Medicamento): Button {
+    private fun crearMedicamentoButton(medicamento: Medicamento, subgrupoNombre: String): Button {
         return Button(this).apply {
             text = medicamento.nombre
             layoutParams = LinearLayout.LayoutParams(
@@ -179,6 +181,7 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
             setOnClickListener {
                 val intent = Intent(this@MedicamentosEspecialesActivity, MedicamentoDetailActivity::class.java).apply {
                     putExtra("medicamento", medicamento)
+                    putExtra("subgrupoNombre", subgrupoNombre) // Pasar el nombre del subgrupo
                 }
                 startActivity(intent)
             }

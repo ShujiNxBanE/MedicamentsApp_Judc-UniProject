@@ -58,6 +58,7 @@ class SubgrupoDetailActivity : AppCompatActivity() {
 
                         // Pasar el medicamento seleccionado
                         intent.putExtra("medicamento", medicamento)
+                        intent.putExtra("subgrupoNombre", subgrupo.nombre) // Pasar nombre del subgrupo
 
                         // Iniciar la nueva actividad
                         startActivity(intent)

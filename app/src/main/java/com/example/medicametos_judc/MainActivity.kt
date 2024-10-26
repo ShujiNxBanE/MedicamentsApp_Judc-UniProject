@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnSearchMedicament.setOnClickListener {
             val query = binding.etSearchMedicament.text.toString().trim()
             if (query.isNotEmpty()) {
-                searchMedicaments(query, medicamentos)
+                searchMedicaments(query, capitulos)
 
                 // Ocultar el teclado
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val query = s.toString().trim()
                 if (query.isNotEmpty()) {
-                    searchMedicaments(query, medicamentos)
+                    searchMedicaments(query, capitulos)
                 } else {
                     // Si no hay query, mostramos los capítulos de nuevo
                     mostrarCapitulos(capitulos)
@@ -155,7 +155,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun searchMedicaments(query: String, medicamentos: List<Medicamento>) {
+    private fun searchMedicaments(query: String, capitulos: List<Capitulo>) {
         // Ocultar capítulos y mostrar resultados de búsqueda
         binding.chapters.visibility = LinearLayout.GONE
         binding.searchResults.visibility = LinearLayout.VISIBLE
@@ -164,13 +164,19 @@ class MainActivity : AppCompatActivity() {
         // Limpiar el LinearLayout antes de agregar nuevos botones
         binding.searchResults.removeAllViews()
 
-        // Filtrar los medicamentos según la query
-        val filteredMedicaments = medicamentos.filter {
-            it.nombre.contains(query, ignoreCase = true)
+        // Filtrar los medicamentos en todos los capítulos y subgrupos según la query
+        val filteredMedicaments = capitulos.flatMap { capitulo ->
+            capitulo.subgrupos.flatMap { subgrupo ->
+                subgrupo.medicamentos.map { medicamento ->
+                    Pair(medicamento, subgrupo.nombre) // Emparejar medicamento con el nombre del subgrupo
+                }
+            }
+        }.filter { (medicamento, _) ->
+            medicamento.nombre.contains(query, ignoreCase = true)
         }
 
         // Crear botones dinámicamente para cada medicamento filtrado y añadirlos al LinearLayout
-        for (medicamento in filteredMedicaments) {
+        for ((medicamento, subgrupoNombre) in filteredMedicaments) {
             val button = Button(this).apply {
                 text = medicamento.nombre
                 layoutParams = LinearLayout.LayoutParams(
@@ -191,11 +197,11 @@ class MainActivity : AppCompatActivity() {
                 compoundDrawablePadding = 8 // Espaciado entre texto e ícono
 
                 setOnClickListener {
-                    // Inicia la actividad de detalles del medicamento y pasa el objeto Medicamento completo
-                    val intent =
-                        Intent(this@MainActivity, MedicamentoDetailActivity::class.java).apply {
-                            putExtra("medicamento", medicamento)
-                        }
+                    // Inicia la actividad de detalles del medicamento y pasa el objeto Medicamento completo y el nombre del subgrupo
+                    val intent = Intent(this@MainActivity, MedicamentoDetailActivity::class.java).apply {
+                        putExtra("medicamento", medicamento)
+                        putExtra("subgrupoNombre", subgrupoNombre) // Pasar el nombre del subgrupo
+                    }
                     startActivity(intent)
                 }
             }

@@ -58,6 +58,21 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/label_medicament_name"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/app_tittle"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:text="Nombre"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/linear_title"
+            tools:ignore="HardcodedText,TextSizeCheck" />
+
         <Button
             android:id="@+id/btn_take_medicament"
             android:layout_marginTop="10dp"
@@ -65,7 +80,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear_title"
+            app:layout_constraintTop_toBottomOf="@+id/label_medicament_name"
             style="@drawable/search_button_background"
             android:text="Programar Medicamento"
             android:textColor="#FFFFFF"
@@ -82,7 +97,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toEndOf="@+id/btn_take_medicament"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear_title"
+            app:layout_constraintTop_toBottomOf="@id/label_medicament_name"
             style="@drawable/search_button_background"
             android:text="!"
             android:textStyle="bold"

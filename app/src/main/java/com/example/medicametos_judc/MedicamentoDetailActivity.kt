@@ -40,6 +40,7 @@ class MedicamentoDetailActivity : AppCompatActivity() {
         binding = ActivityMedicamentoDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val subgrupoNombre = intent.getStringExtra("subgrupoNombre")
         val medicamento = intent.getParcelableExtra<Medicamento>("medicamento")
 
         binding.back.setOnClickListener { finish() }
@@ -51,7 +52,8 @@ class MedicamentoDetailActivity : AppCompatActivity() {
 
         if (medicamento != null) {
             // Mostrar detalles del medicamento
-            binding.tvApp.text = medicamento.nombre
+            binding.tvApp.text = subgrupoNombre
+            binding.labelMedicamentName.text = medicamento.nombre
             binding.medicamentDescription.text = medicamento.descripcion
 
             // Limpiar el LinearLayout antes de agregar nuevas imágenes (por si se reutiliza la vista)
