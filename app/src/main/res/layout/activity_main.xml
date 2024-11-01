@@ -126,7 +126,6 @@
                 tools:ignore="HardcodedText,VisualLintButtonSize" />
         </LinearLayout>
 
-
         <TextView
             android:id="@+id/label_chapters"
             android:layout_width="match_parent"
@@ -152,7 +151,6 @@
             app:layout_constraintTop_toBottomOf="@id/linear1"
             android:orientation="vertical">
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -166,9 +164,6 @@
             android:layout_marginTop="12dp"
             tools:ignore="UselessLeaf">
 
-
-
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

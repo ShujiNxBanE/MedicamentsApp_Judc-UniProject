@@ -1716,6 +1716,300 @@ object DataProvider {
                                     R.drawable.difenhidramina_1
                                 )
                             ),
+                            Medicamento(
+                                nombre =
+                                    "Loratadina",
+                                descripcion =
+                                    "Antihistamínico no sedante\n" +
+                                            "Suspensión 1 mg/ 1 mL Fco de 100 a 120 mL. Tableta de 10 mg\n",
+                                indicaciones = listOf(
+                                    "Alivio de los síntomas de la alergia, tales como fiebre del heno (rinitis alérgica estacional), rinitis alérgica, conjuntivitis alérgica"
+                                    ,"Urticaria idiopática"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Insuficiencia hepática severa por el riesgo de coma hepático"
+                                    ,"Niños menores de 1 mes"
+                                ),
+                                precauciones = listOf(
+                                    "En la insuficiencia hepática severa se dosifica en días alternos"
+                                    ,"Embarazo y lactancia: se puede"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS y NIÑOS> 12 años o con peso>30 kg: 10 mgdiario"
+                                    ,"NIÑOS de 2-12 años con peso <30 kg: 5 mg diario 2"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: El más común es la somnolencia aunque la  estimulación paradójica puede ocurrir en raras ocasiones, especialmente con dosis altas o en niños y ancianos.  La somnolencia puede disminuir después de unos días de  tratamiento y es mucho menos problemática con los nuevos antihistamínicos"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.loratadina_1
+                                )
+                            ),
+                        )
+                    ),
+                )
+            ),
+
+            //Capitulo 4
+
+            Capitulo(
+                nombre = "CARDIOVASCULAR",
+                descripcion = "",
+                subgrupos =
+                listOf(
+                    Subgrupo(
+                        nombre = "HIPOLIPEMIANTES",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Ipratropio",
+                                descripcion =
+                                "Bromuro de ipratropio | Broncodilatador anticolinérgico de acción corta\n" +
+                                        "Solución para aerosol al 0.02% (20 µg /dosis inhalada), fco. de 200 dosis.\n" +
+                                        "Solución para nebulizar al 0.25% (250 µg/mL), fco. de 20 mL\n",
+                                indicaciones = listOf(
+                                    "Solución para nebulizar"
+                                    ,"Crisis de asma grave que pone en peligro la vida, en asociación con los β2 agonistas *(A)"
+                                    ,"Crisis de asma grave con pobre respuesta a β2 agonistas"
+                                    ,"Obstrucción reversible de las vías respiratorias"
+                                    ,"En EPOC"
+                                    ,"Inhalación por aerosol"
+                                    ,"EPOC leve: para el alivio de la disnea y mejorar tolerancia al ejercicio, como alternativa al salbutamol spray 8 (B)"
+                                    ,"EPOC: de manera continua en caso de disnea persistente o exacerbaciones si no se dispone de anticolinérgico de acción larga  (ej. tiotropio) (B)"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Hipersensibilidad conocida a la atropina o sus derivados, o al bromuro de ipratropio. Pacientes con arritmias preexistentes y otros problemas cardíacos"
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de hipertrofia prostática, obstrucción de la vesícula y susceptibilidad al glaucoma de ángulo cerrado"
+                                    ,"Interacciones: no hay interacción notable con la forma inhalada"
+                                    ,"Embarazo: se puede usar  (Categoría B de FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "Crisis de asma grave (nebulización)"
+                                    ,"ADULTOS: añadir 0.5 mg de ipratropio al salbutamol, puede repetirse a los 15 min. y luego cada 4-6 h"
+                                    ,"NIÑOS <12 años: en las primeras 2 h nebulizar con 250 µg de ipratropio + 5 mg de salbutamol y luego cada 20-30 min"
+                                    ,"Si hay buena respuesta clínica, reducir la dosis de ipratropio en 4-6 h o descontinuar"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: boca seca (el más común), estreñimiento y diarrea, tos, dolor de cabeza; Menos frecuentes: reflujo gastroesofágico, disfagia, irritación de garganta, faringitis, disfonía, estomatitis, taquicardia, palpitaciones, fibrilación auricular, broncoespasmo paradójico, retención urinaria, midriasis, glaucoma de ángulo cerrado, visión borrosa, mareo, prurito, vómitos, espasmos de la laringe, estomatitis; Raros: caries dental o piel seca 8"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.ipratropio_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Salbutamol",
+                                descripcion =
+                                "β2 agonista de acción corta\n" +
+                                        "Solución para aerosol, 100 µg/inhalación. Fco 200-250 dosis.\n" +
+                                        "Solución para nebulizar al 5%, 5 mg/mL. Fco 20 mL, diluir con SSN estéril 8\n",
+                                indicaciones = listOf(
+                                    "Asma agudo tanto en adultos como en niños de todas edades (de primera elección)"
+                                    ,"Crisis de sibilancia en menores de 5 años"
+                                    ,"Profilaxis y tratamiento de asma inducido por el ejercicio"
+                                    ,"Exacerbaciones agudas de EPOC"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "Usar con cuidado en caso de hipertiroidismo, enfermedad cardiovascular, arritmias, susceptibilidad a la prolongación del intervalo QT, hipertensión, diabetes. Monitorear el potasio sérico en el asma grave por el riesgo de hipopotasemia favorecido por otros medicamentos y la hipoxia"
+                                    ,"Interacciones: riesgo aumentado de hipopotasemia cuando altas dosis de β2 agonista se usan con teofilina, corticoides o diuréticos"
+                                    ,"Embarazo: se puede usar (Categoría C de FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "La dosis para nebulizar es sustancialmente mayor que la que se da por aerosol"
+                                    ,"Crisis de asma, sibilancias o exacerbación de EPOC"
+                                    ,"Inhalación por aerosol"
+                                    ,"ADULTOS y NIÑOS: 100-200 µg (1-2 puff). Si persisten los síntomas hasta qid 5,8"
+                                    ,"Inhalación de solución nebulizada  158 Asma y EPOC"
+                                    ,"Inhalación de solución nebulizada"
+                                    ,"ADULTOS y NIÑOS >5 años: 2.5-5 mg, repetir hasta qid o con mayor frecuencia en casos graves"
+                                    ,"NIÑOS <5 años: 2.5 mg, repetir hasta qid o con mayor frecuencia en los casos graves"
+                                    ,"Profilaxis del broncoespasmo inducido por alérgeno o ejercicio:"
+                                    ,"ADULTOS: 200 µg (2 puff)"
+                                    ,"NIÑOS: 100-200 µg (1-2 puff)"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: temblor fino (sobre todo en las manos), tensión nerviosa, dolor de cabeza, calambres musculares y palpitaciones; Menos frecuentes: taquicardia, arritmias, vasodilatación periférica, isquemia miocárdica, y trastornos del sueño y del comportamiento; Raros: broncoespasmo paradójico (ocasionalmente grave), urticaria, angioedema, hipotensión y colapso. Dosis altas se asocian con hipopotasemia"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.salbutamol_1
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "XANTINAS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Aminofilina",
+                                descripcion =
+                                "Teofilina anhidra: tableta de liberación prolongada 300 mg | Aminofilina solución para inyección 25 mg/mL (ampolla de 10 mL)",
+                                indicaciones = listOf(
+                                    "Teofilina anhidra oral"
+                                    ,"Adultos y niños >5 años con asma no controlado adecuadamente con dosis altas de β2 agonista de acción corta + esteroides inhalados + β2 agonistas de acción larga"
+                                    ,"Alternativa como adyuvante cuando el ejercicio es un problema específico en adultos o niños >5 años bien controlados con corticoide inhalados"
+                                    ,"Pacientes con EPOC que no responden adecuadamente a los broncodilatadores de acción corta y larga o en los que no se puede usar terapia inhalada"
+                                    ,"Aminofilina parenteral"
+                                    ,"Adultos y niños >2 con asma grave o que ponen en peligro la vida y que no responde a dosis máxima de β2 agonista + esteroides + bromuro de ipratropio"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "La concentración plasmática de teofilina se incrementa en la insuficiencia cardíaca, insuficiencia hepática, infecciones virales, en los ancianos y con drogas que inhiben su metabolismo. Disminuye en los fumadores, con el consumo de alcohol, y con los fármacos que inducen su metabolismo.  Estas modificaciones son importantes a tomar en cuenta por el estrecho margen terapéutico de la teofilina.  Usar con cuidado en arritmias cardíacas u otra enfermedad cardíaca, hipertensión, hipertiroidismo, úlcera péptica, epilepsia, ancianos, fiebre, riesgo de hipopotasemia"
+                                ),
+                                dosificacion = listOf(
+                                    "Para evitar una dosificación excesiva en pacientes obesos la dosis se debe calcular sobre la base del peso ideal para la altura Concentración plasmática de teofilina para respuesta óptima en asma: 10–20 mg/L"
+                                    ,"Aminofilina por inyección IV:"
+                                    ,"ADULTOS: (sólo en pacientes no tratados previamente con teofilina). Administrar muy lenta (al menos en 20 minutos) 250–500 mg (5 mg/kg), luego por infusión"
+                                    ,"NIÑOS de 1 mes a 18 años: 5 mg/kg (máx. 500 mg), luego por infusión"
+                                    ,"Aminofilina por infusión IV (con vigilancia estrecha):  Diluir a una concentración de 1 mg/mL con DW5% o SSN"
+                                    ,"ADULTOS: 500-700 µg/kg/h ajustada a la concentración plasmática de teofilina"
+                                    ,"ADULTOS MAYORES: 300 µg/kg/h"
+                                    ,"NIÑOS <12 años: 1 mg/kg/h ajustada a la concentración plasmática de teofilina"
+                                    ,"Teofilina oral:"
+                                    ,"Dosis habitual: 300-600 mg/día (presentación de liberación prolongada)"
+                                    ,"EPOC estable: 300 mg bid"
+                                    ,"La velocidad de absorción puede variar entre marcas"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: Temblor fino (sobre todo en manos), tensión nerviosa, dolor de cabeza, calambres musculares y palpitaciones; Puede existir alergia a la etilendiamina, también puede causar eritema urticaria y dermatitis exfoliativa, hipotensión, arritmias y convulsiones, sobre todo si se administra por inyección intravenosa rápida"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.aminofilina_2
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "CORTICOIDES INHALADOS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Beclometasona",
+                                descripcion =
+                                "Solución para aspersión al 0.05% (50 µg/inhalación medida).\n" +
+                                        "Solución para aspersión al 0.25% (250 µg/inhalación medida).\n",
+                                indicaciones = listOf(
+                                    "Asma crónico no controlado con agonistas β2 de corta duración"
+                                    ,"EPOC grave, en combinación con un β2 agonista de acción prolongada (de preferencia combinados en un solo inhalador)"
+                                ),
+                                contraindicaciones = listOf(
+                                ),
+                                precauciones = listOf(
+                                    "El broncoespasmo paradójico (reacción adversa muy rara) puede ser prevenido por la inhalación previa de un agonista β2 de acción corta o por sustitución de una inhalación de aerosol por inhalación de un polvo seco. Averiguar la dosis correspondiente en el producto que se va a utilizar. Estas pueden variar según la marca (ver apartado. dosificación más abajo)"
+                                    ,"La beclometasona en EPOC aumenta el riesgo de neumonia"
+                                    ,"Interacciones: no hay interacción notable con la forma inhalada"
+                                    ,"Embarazo: se puede usar. (Categoría C de FDA)"
+                                    ,"Lactancia: se puede usar"
+                                ),
+                                dosificacion = listOf(
+                                    "La dosis inicial depende del grado de la severidad y del grado de control del asma Se debe reducir luego en 2-3. meses hasta la dosis mínima necesaria para mantener el control"
+                                    ,"Dosis estándar en el asma crónico"
+                                    ,"ADULTOS y NIÑOS>12 años: 100-400 µg bid"
+                                    ,"NIÑOS <12 años: 100-200 µg bid. Se puede considerar aplicar la dosis diaria en una sola dosis en las formas más leves y bien controladas de asma"
+                                ),
+                                dosificacionImagenes = listOf(
+                                    R.drawable.dosificacion_beclometasona_1
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: ronquera, disfonía, irritación de la garganta, candidiasis bucal o de la garganta se puede reducir el riesgo de candidiasis mediante el uso de un dispositivo espaciador con el inhalador de corticoides, y enjuagándose la boca con agua o enjuague bucal al final de la inhalación. Se puede usar nistatina para tratar la candidiasis sin necesidad de interrumpir el tratamiento. Altas dosis de corticoides inhalados por tiempo prolongado puede inducir supresión adrenal, en particular en niños (evitar altas dosis), disminución de la densidad ósea y glaucoma"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.beclometasona_1
+                                    ,R.drawable.beclometasona_2
+                                )
+                            ),
+                        )
+                    ),
+                    Subgrupo(
+                        nombre = "ANTIHISTAMINICOS",
+                        descripcion = "",
+                        medicamentos =
+                        listOf(
+                            Medicamento(
+                                nombre =
+                                "Difenhidramina",
+                                descripcion =
+                                "Antihistaminico sedante.\n" +
+                                        "Solución para inyección 10 mg/mL IV o IM, tab 25 mg.\n",
+                                indicaciones = listOf(
+                                    "Alivio de los síntomas de la alergia, rinitis alérgica (fiebre del heno) y conjuntivitis alérgica, urticaria, picaduras de insectos y prurito de origen alérgico, enfermedad pruriginosa de la piel"
+                                    ,"Adjunto en el tratamiento de emergencia de un shock anafiláctico o angioedema grave Indicaciones adicionales para la difenhidramina parenteral"
+                                    ,"Nausea y vómitos en particular los asociados a quimioterapia"
+                                    ,"Vértigo, mareo del viajero"
+                                    ,"Control del Parkinsonismo"
+                                    ,"Desordenes extrapiramidales ocasionados por Medicamentos"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Insuficiencia hepática severa por el riesgo de coma hepático"
+                                    ,"Niños menores de 1 mes"
+                                ),
+                                precauciones = listOf(
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS: 10-50 mg, puede ser necesario hasta 100 mg(máx.400 mg/día)3."
+                                    ,"NIÑOS >1 mes: 5 mg/kg/d (máx. 300mg/d) dividida en 4 dosis"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Además, con la clorfeniramina: Raro: dermatitis exfóliativa y tinnitus. Las inyecciones pueden causar hipotensión transitoria o estimulación del SNC y puede ser irritante"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.difenhidramina_1
+                                )
+                            ),
+                            Medicamento(
+                                nombre =
+                                "Loratadina",
+                                descripcion =
+                                "Antihistamínico no sedante\n" +
+                                        "Suspensión 1 mg/ 1 mL Fco de 100 a 120 mL. Tableta de 10 mg\n",
+                                indicaciones = listOf(
+                                    "Alivio de los síntomas de la alergia, tales como fiebre del heno (rinitis alérgica estacional), rinitis alérgica, conjuntivitis alérgica"
+                                    ,"Urticaria idiopática"
+                                ),
+                                contraindicaciones = listOf(
+                                    "Insuficiencia hepática severa por el riesgo de coma hepático"
+                                    ,"Niños menores de 1 mes"
+                                ),
+                                precauciones = listOf(
+                                    "En la insuficiencia hepática severa se dosifica en días alternos"
+                                    ,"Embarazo y lactancia: se puede"
+                                ),
+                                dosificacion = listOf(
+                                    "ADULTOS y NIÑOS> 12 años o con peso>30 kg: 10 mgdiario"
+                                    ,"NIÑOS de 2-12 años con peso <30 kg: 5 mg diario 2"
+                                ),
+                                dosificacionImagenes = listOf(
+                                ),
+                                efectosAdversos = listOf(
+                                    "Frecuentes: El más común es la somnolencia aunque la  estimulación paradójica puede ocurrir en raras ocasiones, especialmente con dosis altas o en niños y ancianos.  La somnolencia puede disminuir después de unos días de  tratamiento y es mucho menos problemática con los nuevos antihistamínicos"
+                                ),
+                                imagenesResIds = listOf(
+                                    R.drawable.loratadina_1
+                                )
+                            ),
                         )
                     ),
                 )

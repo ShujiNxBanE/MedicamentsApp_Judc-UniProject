@@ -18,8 +18,7 @@ import com.example.medicametos_judc.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val contraseñaCorrecta = "2024-MTKS*" // Aquí puedes definir la contraseña correcta
-
+    private val contraseñaCorrecta = "2024-MTKS*"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -32,12 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         val capitulos = DataProvider.obtenerCapitulos()
         val capitulosEspeciales = DataProvider.obtenerCapitulosEspeciales()
-        val medicamentos = capitulos.flatMap { it -> it.subgrupos.flatMap { it.medicamentos } }
 
         // Crear botones dinámicamente y añadirlos al LinearLayout
         mostrarCapitulos(capitulos)
 
-        // Configurar el botón para medicamentos especiales
         binding.btnSpecialMedicaments.setOnClickListener {
             mostrarDialogoContraseña(capitulosEspeciales)
         }

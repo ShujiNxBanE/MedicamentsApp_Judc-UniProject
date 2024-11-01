@@ -69,9 +69,9 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                             150,
                             150
                         ).apply {
-                            setMargins(16, 16, 16, 16) // Añadir márgenes si es necesario
+                            setMargins(16, 16, 16, 16)
                         }
-                        scaleType = ImageView.ScaleType.CENTER_CROP // Ajusta esto según lo necesites
+                        scaleType = ImageView.ScaleType.CENTER_CROP
                     }
 
                     imageView.setOnClickListener {
@@ -125,10 +125,8 @@ class MedicamentoDetailActivity : AppCompatActivity() {
                 binding.btnTakeMedicament.text = "Programar Medicamento"
             }
 
-
             binding.btnTakeMedicament.setOnClickListener {
                 if (binding.btnTakeMedicament.text == "Cancelar Programacion") {
-                    // Cancelar cualquier trabajo pendiente de WorkManager si es necesario
                     WorkManager.getInstance(this).cancelAllWorkByTag(medicamento.nombre)
 
                     // Cancelar la alarma programada

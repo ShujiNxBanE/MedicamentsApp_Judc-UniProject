@@ -41,7 +41,6 @@ class CapituloDetailActivity : AppCompatActivity() {
                         setMargins(16, 16, 16, 16) // Añadir márgenes entre botones
                     }
 
-                    // Aplicar los mismos estilos que en el otro código
                     backgroundTintList = ContextCompat.getColorStateList(context, R.color.btn_color) // Color de fondo
                     setTextColor(ContextCompat.getColor(context, android.R.color.white)) // Color del texto
                     setPadding(16, 16, 16, 16) // Padding

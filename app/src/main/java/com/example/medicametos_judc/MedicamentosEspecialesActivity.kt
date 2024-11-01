@@ -30,7 +30,6 @@ class MedicamentosEspecialesActivity : AppCompatActivity() {
         // Obtener la lista de capítulos especiales
         val capitulosEspeciales = intent.getParcelableArrayListExtra<Capitulo>("capitulosEspeciales")
 
-        // Crear una lista de todos los medicamentos de los capítulos especiales
         // Crear una lista de pares (Medicamento, nombre del subgrupo) en lugar de solo Medicamento
         val medicamentosEspeciales = capitulosEspeciales?.flatMap { capitulo ->
             capitulo.subgrupos.flatMap { subgrupo ->
